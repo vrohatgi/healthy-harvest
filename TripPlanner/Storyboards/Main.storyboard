@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kdt-w4-6zA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="RJb-z7-GBU">
+            <objects>
+                <viewController id="aKl-CY-dZs" customClass="EventViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="56e-6T-Vnw"/>
+                        <viewControllerLayoutGuide type="bottom" id="guB-s8-Awv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N6I-vZ-z4m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="mOy-fN-XJW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcJ-0u-9nX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="112"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qri-q0-gYD">
+            <objects>
+                <viewController id="xWM-bY-cx2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G45-8d-k5l"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dj-Ua-Pug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pc2-Cw-hCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="OxW-st-TCq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoD-Sd-w9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="775"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="7KI-Ym-OkI">
+            <objects>
+                <viewController id="pUm-Eu-FVc" customClass="HomeViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4lp-N4-dvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJR-iR-vIn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sSm-aC-QEq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
+                                <rect key="frame" x="16" y="28" width="67" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="ZTd-22-DU5"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn_lakes"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
+                                <rect key="frame" x="157" y="28" width="68" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="3rC-Hn-wiQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn_parks"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
+                                <rect key="frame" x="16" y="120" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btn_beaches"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
+                                <rect key="frame" x="157" y="120" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btn_trails"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
+                                <rect key="frame" x="293" y="120" width="66" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btn_pools"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
+                                <rect key="frame" x="291" y="28" width="68" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btn_campgrounds"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="MMs-Ab-Pzp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXP-lM-Xgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429.60000000000002" y="-542.87856071964018"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="R9B-Yn-RVw">
+            <objects>
+                <tableViewController id="7We-et-WOM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6RI-34-qbu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="eCI-Yt-phz">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qp5-st-qbC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qp5-st-qbC" id="Re0-Uh-IrX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7We-et-WOM" id="Kdc-BT-tFd"/>
+                            <outlet property="delegate" destination="7We-et-WOM" id="uKF-dJ-dGK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItV-3j-cbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="-544"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bIk-B4-ezn">
+            <objects>
+                <tabBarController id="kdt-w4-6zA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="20A-C7-wkH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pUm-Eu-FVc" kind="relationship" relationship="viewControllers" id="38V-at-RUa"/>
+                        <segue destination="aKl-CY-dZs" kind="relationship" relationship="viewControllers" id="01k-bd-Tj8"/>
+                        <segue destination="xWM-bY-cx2" kind="relationship" relationship="viewControllers" id="aiY-nn-RQm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XA2-iv-QSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-522" y="-215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_beaches" width="60" height="60"/>
+        <image name="btn_campgrounds" width="60" height="60"/>
+        <image name="btn_lakes" width="60" height="60"/>
+        <image name="btn_parks" width="60" height="60"/>
+        <image name="btn_pools" width="60" height="60"/>
+        <image name="btn_trails" width="60" height="60"/>
+    </resources>
+</document>
