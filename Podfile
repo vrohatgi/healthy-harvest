@@ -10,6 +10,8 @@ target 'TripPlanner' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+
+source 'https://github.com/CocoaPods/Specs.git'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'

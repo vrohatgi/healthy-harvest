@@ -10,17 +10,18 @@ import Foundation
 import UIKit
 import Firebase
 import GooglePlaces
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let mapsKey = "AIzaSyBzn5vgUO5z6T1g7KDRh-IAwI9ah1Burug"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        GMSPlacesClient.provideAPIKey("AIzaSyBzn5vgUO5z6T1g7KDRh-IAwI9ah1Burug")
-        GMSServices.provideAPIKey("AIzaSyBzn5vgUO5z6T1g7KDRh-IAwI9ah1Burug")
+        GMSPlacesClient.provideAPIKey(mapsKey)
+        GMSServices.provideAPIKey(mapsKey)
         configureInitialRootViewController(for: window)
         
         return true

@@ -21,35 +21,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
-                                <rect key="frame" x="16" y="162" width="135" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
+                                <rect key="frame" x="35" y="162" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_lakes"/>
                                 <connections>
                                     <action selector="lakesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="asI-CN-rq2"/>
-                                    <segue destination="7We-et-WOM" kind="show" identifier="lakes" id="SWN-8D-Tey"/>
+                                    <segue destination="Pwd-oY-wKY" kind="show" identifier="lakes" id="4YO-Om-riA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
                                 <rect key="frame" x="150" y="162" width="109" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="btn_parks"/>
                                 <connections>
                                     <action selector="parksButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9FV-nc-Raj"/>
-                                    <segue destination="7We-et-WOM" kind="show" identifier="parks" id="VYZ-Hq-YYY"/>
+                                    <segue destination="Pwd-oY-wKY" kind="show" identifier="parks" id="cRe-4a-Msb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
-                                <rect key="frame" x="19" y="260" width="129" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
+                                <rect key="frame" x="35" y="260" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_beaches"/>
                                 <connections>
                                     <action selector="beachesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="qxj-Ks-VKf"/>
-                                    <segue destination="7We-et-WOM" kind="show" identifier="beaches" id="8Pb-wQ-e0o"/>
+                                    <segue destination="Pwd-oY-wKY" kind="show" identifier="beaches" id="ZFU-lO-bsA"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City (e.g. Fremont)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
-                                <rect key="frame" x="35" y="89" width="305" height="44"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City (e.g. Fremont)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
+                                <rect key="frame" x="35" y="89" width="141.5" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Xek-Qc-yaZ"/>
                                 </constraints>
@@ -57,39 +54,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
-                                <rect key="frame" x="276" y="162" width="114" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
+                                <rect key="frame" x="276" y="160" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_campgrounds"/>
                                 <connections>
                                     <action selector="campgroundsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="Xiy-LN-2qI"/>
-                                    <segue destination="7We-et-WOM" kind="show" identifier="campgrounds" id="SCf-cy-1FL"/>
+                                    <segue destination="Pwd-oY-wKY" kind="show" identifier="campgrounds" id="qsy-GV-tZZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
-                                <rect key="frame" x="276" y="260" width="114" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
+                                <rect key="frame" x="276" y="258" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_pools"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
-                                    <segue destination="7We-et-WOM" kind="show" identifier="pools" id="7cn-ig-Ksc"/>
+                                    <segue destination="Pwd-oY-wKY" kind="show" identifier="pools" id="ht4-xl-QCN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
                                 <rect key="frame" x="150" y="260" width="112" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="btn_trails"/>
                                 <connections>
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
-                                    <segue destination="7We-et-WOM" kind="show" identifier="trails" id="zi3-Tl-vPQ"/>
+                                    <segue destination="Pwd-oY-wKY" kind="show" identifier="trails" id="rC6-Fs-GDF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlQ-mK-6Mw" userLabel="Current Location Button">
+                                <rect key="frame" x="246" y="91" width="94" height="40"/>
+                                <state key="normal" title="Button" image="btn_currentlocation"/>
+                                <connections>
+                                    <action selector="locationButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="doV-w5-SP1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KlQ-mK-6Mw" firstAttribute="leading" secondItem="mIS-F7-Zha" secondAttribute="trailing" constant="20" id="0Uq-Ik-NRS"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="top" secondItem="KlQ-mK-6Mw" secondAttribute="bottom" constant="29" id="3tC-fD-T7r"/>
+                            <constraint firstItem="gYE-ES-11t" firstAttribute="leading" secondItem="oFy-oL-LYV" secondAttribute="trailing" constant="14" id="4MB-ao-wJT"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="Puf-Tc-Wpm" secondAttribute="trailing" constant="17" id="8jm-9a-Htf"/>
+                            <constraint firstItem="oFy-oL-LYV" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="bottom" constant="38" id="CAl-Rx-rjI"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="WBa-bH-5sU" secondAttribute="trailing" constant="1" id="D9L-tl-pxw"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="GFI-gk-eas"/>
-                            <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" constant="35" id="IiF-Hw-1ZE"/>
+                            <constraint firstAttribute="trailing" secondItem="Zi5-fw-tdM" secondAttribute="trailing" constant="-15" id="M7M-TN-M7S"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="OaU-G0-kZk"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="Pij-cN-rCe"/>
+                            <constraint firstItem="KlQ-mK-6Mw" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" constant="27" id="QCV-mz-HJK"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="29" id="Tyo-yq-WWA"/>
+                            <constraint firstAttribute="trailing" secondItem="gYE-ES-11t" secondAttribute="trailing" constant="-15" id="U03-SH-xhg"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="29" id="Utv-4c-sQ6"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="38" id="aKs-yb-xoo"/>
+                            <constraint firstAttribute="trailing" secondItem="KlQ-mK-6Mw" secondAttribute="trailing" constant="35" id="jaG-Kw-XuY"/>
+                            <constraint firstItem="oFy-oL-LYV" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="trailing" constant="1" id="t0f-8u-2RP"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" constant="25" id="wep-mN-jln"/>
+                            <constraint firstItem="gYE-ES-11t" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="bottom" constant="38" id="ybC-gK-GMO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Na1-ui-gdk"/>
@@ -97,6 +114,7 @@
                         <outlet property="beachesButton" destination="eMf-nX-RwE" id="VFe-2b-s5G"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
+                        <outlet property="locationButton" destination="KlQ-mK-6Mw" id="3Qs-jv-KFI"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
                         <outlet property="parksButton" destination="Puf-Tc-Wpm" id="mcj-WV-euq"/>
                         <outlet property="poolsButton" destination="gYE-ES-11t" id="IMd-Tu-q3W"/>
@@ -107,37 +125,23 @@
             </objects>
             <point key="canvasLocation" x="1368.8" y="-542.87856071964018"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="R9B-Yn-RVw">
+        <!--Map View Controller-->
+        <scene sceneID="HCM-9s-8Ld">
             <objects>
-                <tableViewController id="7We-et-WOM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6RI-34-qbu">
+                <viewController id="Pwd-oY-wKY" customClass="MapViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bg1-GT-0PS"/>
+                        <viewControllerLayoutGuide type="bottom" id="CVh-hQ-ctF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U8g-yq-7MZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="eCI-Yt-phz">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        </navigationBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qp5-st-qbC">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qp5-st-qbC" id="Re0-Uh-IrX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7We-et-WOM" id="Kdc-BT-tFd"/>
-                            <outlet property="delegate" destination="7We-et-WOM" id="uKF-dJ-dGK"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ItV-3j-cbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oC1-xH-IkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2085.5999999999999" y="-544.67766116941539"/>
+            <point key="canvasLocation" x="2194" y="-543"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="nrU-yK-w1N">
@@ -146,7 +150,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9V-J4-tYf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -163,12 +167,13 @@
     <resources>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
+        <image name="btn_currentlocation" width="40" height="40"/>
         <image name="btn_lakes" width="60" height="60"/>
         <image name="btn_parks" width="60" height="60"/>
         <image name="btn_pools" width="60" height="60"/>
         <image name="btn_trails" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SCf-cy-1FL"/>
+        <segue reference="qsy-GV-tZZ"/>
     </inferredMetricsTieBreakers>
 </document>

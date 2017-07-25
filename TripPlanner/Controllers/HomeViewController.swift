@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import GooglePlaces
+import GoogleMaps
 
 class HomeViewController: UIViewController {
-    
+
     // MARK: - Subviews
     
     @IBOutlet weak var locationTextField: UITextField!
@@ -20,6 +22,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var campgroundsButton: UIButton!
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
+    @IBOutlet weak var locationButton: UIButton!
     
     // MARK: - IBActions
     
@@ -36,6 +39,9 @@ class HomeViewController: UIViewController {
     }
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
     }
+    @IBAction func locationButtonTapped(_ sender: UIButton) {
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
