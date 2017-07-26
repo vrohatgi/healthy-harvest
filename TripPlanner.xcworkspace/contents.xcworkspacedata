@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TripPlanner/Controllers/SearchResultsController.swift">
+   </FileRef>
+   <FileRef
       location = "group:TripPlanner.xcodeproj">
    </FileRef>
    <FileRef

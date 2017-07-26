@@ -21,7 +21,6 @@
 		2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2C041F267CD600F4B343 /* HomeViewController.swift */; };
 		2D9D2C071F267CEA00F4B343 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2C061F267CEA00F4B343 /* EventViewController.swift */; };
 		2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA75C2B1F27AA9800CAFDED /* User.swift */; };
-		2DA75C321F27C5F700CAFDED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA75C311F27C5F700CAFDED /* MapViewController.swift */; };
 		2DDDEDE01F26BAD800247AEB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDEDDF1F26BAD800247AEB /* Home.storyboard */; };
 		909CEA6548C68D7AE189A1C0 /* Pods_TripPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B85FAD71296BDC00C4359B /* Pods_TripPlanner.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +43,6 @@
 		2D9D2C041F267CD600F4B343 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		2D9D2C061F267CEA00F4B343 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Controllers/EventViewController.swift; sourceTree = "<group>"; };
 		2DA75C2B1F27AA9800CAFDED /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
-		2DA75C311F27C5F700CAFDED /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
 		2DDDEDDF1F26BAD800247AEB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
 		4BF1B069441D264BD3E7B0FC /* Pods-TripPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TripPlanner/Pods-TripPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B9B85FAD71296BDC00C4359B /* Pods_TripPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +109,6 @@
 				2D9D2BF81F266D8100F4B343 /* CreateUsernameViewController.swift */,
 				2D9D2C041F267CD600F4B343 /* HomeViewController.swift */,
 				2D9D2C061F267CEA00F4B343 /* EventViewController.swift */,
-				2DA75C311F27C5F700CAFDED /* MapViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -298,7 +295,6 @@
 				2D9D2BF41F26593B00F4B343 /* LoginViewController.swift in Sources */,
 				2D9D2BFB1F2671B300F4B343 /* UserService.swift in Sources */,
 				2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */,
-				2DA75C321F27C5F700CAFDED /* MapViewController.swift in Sources */,
 				2D9D2C001F2676B600F4B343 /* Storyboard+Utility.swift in Sources */,
 				2D9D2C071F267CEA00F4B343 /* EventViewController.swift in Sources */,
 				2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */,

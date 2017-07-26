@@ -41,38 +41,76 @@ class HomeViewController: UIViewController {
     }
     @IBAction func locationButtonTapped(_ sender: UIButton) {
     }
+    @IBAction func autocompleteClicked(_ sender: UITextField) {
+        
+    // Present the Autocomplete view controller when the button is pressed.
+    let autocompleteController = GMSAutocompleteViewController()
+    autocompleteController.delegate = self
+    present(autocompleteController, animated: true, completion: nil)
+            
+        }
+
+    }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let identifier = segue.identifier {
+//            if identifier == "pools" {
+//                print("pools button tapped")
+//            }
+//        }
+//        if let identifier = segue.identifier {
+//            if identifier == "beaches" {
+//                print("beaches button tapped")
+//            }
+//        }
+//        if let identifier = segue.identifier {
+//            if identifier == "trails" {
+//                print("trails button tapped")
+//            }
+//        }
+//        if let identifier = segue.identifier {
+//            if identifier == "campgrounds" {
+//                print("campgrounds button tapped")
+//            }
+//        }
+//        if let identifier = segue.identifier {
+//            if identifier == "lakes" {
+//                print("lakes button tapped")
+//            }
+//        }
+//        if let identifier = segue.identifier {
+//            if identifier == "parks" {
+//                print("parks button tapped")
+//            }
+//        }
+//    }
+
+extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if identifier == "pools" {
-                print("pools button tapped")
-            }
-        }
-        if let identifier = segue.identifier {
-            if identifier == "beaches" {
-                print("beaches button tapped")
-            }
-        }
-        if let identifier = segue.identifier {
-            if identifier == "trails" {
-                print("trails button tapped")
-            }
-        }
-        if let identifier = segue.identifier {
-            if identifier == "campgrounds" {
-                print("campgrounds button tapped")
-            }
-        }
-        if let identifier = segue.identifier {
-            if identifier == "lakes" {
-                print("lakes button tapped")
-            }
-        }
-        if let identifier = segue.identifier {
-            if identifier == "parks" {
-                print("parks button tapped")
-            }
-        }
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Place name: \(place.name)")
+        print("Place address: \(place.formattedAddress)")
+        print("Place attributions: \(place.attributions)")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
