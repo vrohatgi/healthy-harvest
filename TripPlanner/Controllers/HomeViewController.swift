@@ -22,13 +22,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var campgroundsButton: UIButton!
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var listOfPlacesTableView: UITableView!
     
     
     // MARK: - IBActions
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
+        // make a call to google places api
+        // send in find "lakes" near "selectedLocation"
     }
+    
     @IBAction func parksButtonTapped(_ sender: UIButton) {
     }
     
@@ -52,7 +55,11 @@ class HomeViewController: UIViewController {
         
         
     }
+    
+    func listOfInterestedPlaces(place: String, location: String) {
+    }
 }
+
 
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
@@ -62,8 +69,8 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
         
-        locationLabel.text = place.name
-
+        locationTextField.text = place.name
+        
         dismiss(animated: true, completion: nil)
     }
     

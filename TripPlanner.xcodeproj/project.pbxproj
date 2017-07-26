@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */; };
 		2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */; };
 		2D9D2BD21F259E5F00F4B343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D2BD11F259E5F00F4B343 /* Assets.xcassets */; };
 		2D9D2BEB1F26565700F4B343 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D2BEA1F26565700F4B343 /* GoogleService-Info.plist */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1AA502DB4EBE6CDE9B7EE6EB /* Pods-TripPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripPlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-TripPlanner/Pods-TripPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		2D9D2BC71F259E5F00F4B343 /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D9D2BD11F259E5F00F4B343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				2D9D2BF31F26593B00F4B343 /* LoginViewController.swift */,
 				2D9D2BF81F266D8100F4B343 /* CreateUsernameViewController.swift */,
 				2D9D2C041F267CD600F4B343 /* HomeViewController.swift */,
+				2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */,
 				2D9D2C061F267CEA00F4B343 /* EventViewController.swift */,
 			);
 			name = "View Controllers";
@@ -297,6 +300,7 @@
 				2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */,
 				2D9D2C001F2676B600F4B343 /* Storyboard+Utility.swift in Sources */,
 				2D9D2C071F267CEA00F4B343 /* EventViewController.swift in Sources */,
+				2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */,
 				2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */,
 				2D9D2BFE1F2674D000F4B343 /* Constants.swift in Sources */,
 				2D9D2BF91F266D8100F4B343 /* CreateUsernameViewController.swift in Sources */,
