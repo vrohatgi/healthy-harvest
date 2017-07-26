@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
                                 <rect key="frame" x="19" y="205" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_lakes"/>
                                 <connections>
                                     <action selector="lakesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="asI-CN-rq2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
                                 <rect key="frame" x="150" y="205" width="109" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="FG3-XX-NTU"/>
@@ -38,30 +39,29 @@
                                     <action selector="parksButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9FV-nc-Raj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
                                 <rect key="frame" x="19" y="303" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_beaches"/>
                                 <connections>
                                     <action selector="beachesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="qxj-Ks-VKf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
                                 <rect key="frame" x="276" y="205" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_campgrounds"/>
                                 <connections>
                                     <action selector="campgroundsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="Xiy-LN-2qI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
                                 <rect key="frame" x="276" y="303" width="114" height="60"/>
                                 <state key="normal" title="Button" image="btn_pools"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
                                 <rect key="frame" x="150" y="303" width="112" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="btn_trails"/>
                                 <connections>
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
@@ -79,9 +79,8 @@
                                     <action selector="editingSearchBegin:" destination="pUm-Eu-FVc" eventType="editingDidBegin" id="UB2-Tw-9vZ"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-aC-TTq">
-                                <rect key="frame" x="0.0" y="394" width="375" height="224"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-aC-TTq">
+                                <rect key="frame" x="0.0" y="442" width="375" height="176"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="90" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
@@ -91,14 +90,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
                                                     <rect key="frame" x="30" y="8" width="104" height="74"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="104" id="eIM-ba-xab"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="centerY" secondItem="yLY-Oj-aMN" secondAttribute="centerY" id="A9d-n2-jxo"/>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="top" secondItem="yLY-Oj-aMN" secondAttribute="topMargin" id="P2B-2z-Dg4"/>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="leading" secondItem="yLY-Oj-aMN" secondAttribute="leadingMargin" constant="22" id="RUA-Cw-A9U"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placesLabel" destination="pm6-uO-9rx" id="7yh-pb-yy1"/>
@@ -109,13 +115,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Zi5-fw-tdM" secondAttribute="trailing" constant="-15" id="0wq-9f-n6A"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" constant="37" id="LMs-Ih-9Lo"/>
-                            <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="MZ7-na-nqc"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="TIC-yd-UjB"/>
-                            <constraint firstAttribute="trailing" secondItem="gYE-ES-11t" secondAttribute="trailing" constant="-15" id="o4J-Dx-VFS"/>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="19" id="rhL-3s-FdJ"/>
-                            <constraint firstItem="eMf-nX-RwE" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="19" id="whS-82-ofF"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="gYE-ES-11t" secondAttribute="leading" id="9AD-1d-2hp"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="WBa-bH-5sU" secondAttribute="trailing" constant="17" id="9jn-uX-ZrZ"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" constant="37" id="Dbu-o5-q92"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leadingMargin" constant="3" id="GYX-4t-I5t"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="centerY" secondItem="sSm-aC-QEq" secondAttribute="centerY" id="H30-7g-wvH"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="31" id="I6e-Ss-Lps"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="jFG-aC-TTq" secondAttribute="leading" id="K7B-yp-71F"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="leading" id="M6f-ua-QTp"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="baseline" secondItem="Puf-Tc-Wpm" secondAttribute="baseline" id="OZp-Kw-QyQ"/>
+                            <constraint firstItem="oFy-oL-LYV" firstAttribute="baseline" secondItem="gYE-ES-11t" secondAttribute="baseline" id="Q8I-gp-cut"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="trailing" secondItem="jFG-aC-TTq" secondAttribute="trailing" id="U5l-n6-XVc"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="VKb-TI-RaR"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="baseline" secondItem="oFy-oL-LYV" secondAttribute="baseline" id="VNk-Gs-1wD"/>
+                            <constraint firstItem="gYE-ES-11t" firstAttribute="leading" secondItem="oFy-oL-LYV" secondAttribute="trailing" constant="14" id="eDJ-qH-cRs"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="38" id="fiN-HK-15f"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="baseline" secondItem="Zi5-fw-tdM" secondAttribute="baseline" id="hsf-eg-67U"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="kun-Yt-MGC"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="oFy-oL-LYV" secondAttribute="leading" id="qoo-Is-tIh"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="Puf-Tc-Wpm" secondAttribute="trailing" constant="17" id="uAE-LA-aFP"/>
+                            <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="vTR-A0-NW7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TripPlanner" id="Na1-ui-gdk"/>
@@ -123,9 +142,9 @@
                         <outlet property="beachesButton" destination="eMf-nX-RwE" id="VFe-2b-s5G"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
-                        <outlet property="listOfPlacesTableView" destination="jFG-aC-TTq" id="BFa-1U-Ojm"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
                         <outlet property="parksButton" destination="Puf-Tc-Wpm" id="mcj-WV-euq"/>
+                        <outlet property="placesTableView" destination="jFG-aC-TTq" id="oh3-Oj-NQQ"/>
                         <outlet property="poolsButton" destination="gYE-ES-11t" id="IMd-Tu-q3W"/>
                         <outlet property="trailsButton" destination="oFy-oL-LYV" id="LTZ-aX-PDx"/>
                     </connections>

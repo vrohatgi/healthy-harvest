@@ -11,7 +11,20 @@ import UIKit
 import GooglePlaces
 import GoogleMaps
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var places = [String]()
+    
+    // MARK: - Private Methods
+    
+    private func loadSamplePlaces() {
+        let place1 = "Fremont"
+        let place2 = "Newark"
+        let place3 = "Hayward"
+        
+        places += [place1, place2, place3]
+    }
+    
     
     // MARK: - Subviews
     
@@ -22,9 +35,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var campgroundsButton: UIButton!
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
-    @IBOutlet weak var listOfPlacesTableView: UITableView!
     
-    
+    @IBOutlet weak var placesTableView: UITableView!
     // MARK: - IBActions
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
@@ -56,8 +68,40 @@ class HomeViewController: UIViewController {
         
     }
     
-    func listOfInterestedPlaces(place: String, location: String) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadSamplePlaces()
+        
+        placesTableView.delegate = self
+        placesTableView.dataSource = self
     }
+    
+    // MARK: - Table view data source
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return places.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "PlacesTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlacesTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of PlacesTableViewCell.")
+        }
+        
+        let place = places[indexPath.row]
+        cell.placesLabel.text = place
+        
+        // Configure the cell...
+        
+        return cell
+    }
+    
 }
 
 
