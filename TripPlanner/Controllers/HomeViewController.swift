@@ -22,7 +22,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var campgroundsButton: UIButton!
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
-    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
+    
     
     // MARK: - IBActions
     
@@ -40,22 +41,17 @@ class HomeViewController: UIViewController {
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
     }
     
-    @IBAction func locationButtonTapped(_ sender: UIButton) {
-    }
-    
     @IBAction func editingSearchBegin(_ sender: UITextField) {
         
         // Present the Autocomplete view controller when the button is pressed.
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
+        
+        
         present(autocompleteController, animated: true, completion: nil)
-
-    }
-    
-    @IBAction func autocompleteClicked(_ sender: UITextField) {
+        
         
     }
-    
 }
 
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
@@ -65,6 +61,9 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
+        
+        locationLabel.text = place.name
+
         dismiss(animated: true, completion: nil)
     }
     

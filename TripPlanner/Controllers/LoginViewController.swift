@@ -17,7 +17,7 @@ typealias FIRUser = FirebaseAuth.User
 class LoginViewController: UIViewController {
     
     // MARK: - Subviews
-
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         print("login button tapped")
@@ -56,7 +56,7 @@ extension LoginViewController: FUIAuthDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 if let initialViewController = storyboard.instantiateInitialViewController() {
                     self.view.window?.rootViewController = initialViewController
-//                    self.view.window?.makeKeyAndVisible()
+                    //                    self.view.window?.makeKeyAndVisible()
                 }
             } else {
                 self.performSegue(withIdentifier: "toCreateUsername", sender: self)

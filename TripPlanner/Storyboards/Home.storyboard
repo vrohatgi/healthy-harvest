@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p9a-K4-4Nv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p9a-K4-4Nv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -69,17 +69,16 @@
                                     <segue destination="Pwd-oY-wKY" kind="show" identifier="trails" id="rC6-Fs-GDF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlQ-mK-6Mw" userLabel="Current Location Button">
-                                <rect key="frame" x="246" y="91" width="94" height="40"/>
-                                <state key="normal" title="Button" image="btn_currentlocation"/>
-                                <connections>
-                                    <action selector="locationButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="doV-w5-SP1"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCQ-LQ-fnV">
+                                <rect key="frame" x="48" y="109" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="top" secondItem="KlQ-mK-6Mw" secondAttribute="bottom" constant="29" id="3tC-fD-T7r"/>
                             <constraint firstItem="gYE-ES-11t" firstAttribute="leading" secondItem="oFy-oL-LYV" secondAttribute="trailing" constant="14" id="4MB-ao-wJT"/>
                             <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="Puf-Tc-Wpm" secondAttribute="trailing" constant="17" id="8jm-9a-Htf"/>
                             <constraint firstItem="oFy-oL-LYV" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="bottom" constant="38" id="CAl-Rx-rjI"/>
@@ -87,26 +86,20 @@
                             <constraint firstAttribute="trailing" secondItem="Zi5-fw-tdM" secondAttribute="trailing" constant="-15" id="M7M-TN-M7S"/>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="OaU-G0-kZk"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="Pij-cN-rCe"/>
-                            <constraint firstItem="KlQ-mK-6Mw" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" constant="27" id="QCV-mz-HJK"/>
                             <constraint firstAttribute="trailing" secondItem="gYE-ES-11t" secondAttribute="trailing" constant="-15" id="U03-SH-xhg"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="38" id="aKs-yb-xoo"/>
-                            <constraint firstAttribute="trailing" secondItem="KlQ-mK-6Mw" secondAttribute="trailing" constant="35" id="jaG-Kw-XuY"/>
                             <constraint firstItem="oFy-oL-LYV" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="trailing" constant="1" id="t0f-8u-2RP"/>
                             <constraint firstItem="gYE-ES-11t" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="bottom" constant="38" id="ybC-gK-GMO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Na1-ui-gdk">
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City (e.g. Fremont)" textAlignment="natural" minimumFontSize="17" id="mIS-F7-Zha">
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where do you want to go?" textAlignment="natural" minimumFontSize="17" id="mIS-F7-Zha">
                             <rect key="frame" x="23.5" y="0.0" width="328" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="Xek-Qc-yaZ"/>
-                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <action selector="autocompleteClicked:" destination="pUm-Eu-FVc" eventType="editingDidEnd" id="1ZO-Qp-ve1"/>
                                 <action selector="editingSearchBegin:" destination="pUm-Eu-FVc" eventType="editingDidBegin" id="UB2-Tw-9vZ"/>
                             </connections>
                         </textField>
@@ -115,7 +108,7 @@
                         <outlet property="beachesButton" destination="eMf-nX-RwE" id="VFe-2b-s5G"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
-                        <outlet property="locationButton" destination="KlQ-mK-6Mw" id="3Qs-jv-KFI"/>
+                        <outlet property="locationLabel" destination="aCQ-LQ-fnV" id="En2-Qi-ec0"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
                         <outlet property="parksButton" destination="Puf-Tc-Wpm" id="mcj-WV-euq"/>
                         <outlet property="poolsButton" destination="gYE-ES-11t" id="IMd-Tu-q3W"/>
@@ -168,7 +161,6 @@
     <resources>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
-        <image name="btn_currentlocation" width="40" height="40"/>
         <image name="btn_lakes" width="60" height="60"/>
         <image name="btn_parks" width="60" height="60"/>
         <image name="btn_pools" width="60" height="60"/>
