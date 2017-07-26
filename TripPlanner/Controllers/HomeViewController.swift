@@ -12,7 +12,7 @@ import GooglePlaces
 import GoogleMaps
 
 class HomeViewController: UIViewController {
-
+    
     // MARK: - Subviews
     
     @IBOutlet weak var locationTextField: UITextField!
@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     }
     @IBAction func parksButtonTapped(_ sender: UIButton) {
     }
-
+    
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
     }
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
@@ -39,51 +39,24 @@ class HomeViewController: UIViewController {
     }
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
     }
+    
     @IBAction func locationButtonTapped(_ sender: UIButton) {
     }
-    @IBAction func autocompleteClicked(_ sender: UITextField) {
+    
+    @IBAction func editingSearchBegin(_ sender: UITextField) {
         
-    // Present the Autocomplete view controller when the button is pressed.
-    let autocompleteController = GMSAutocompleteViewController()
-    autocompleteController.delegate = self
-    present(autocompleteController, animated: true, completion: nil)
-            
-        }
+        // Present the Autocomplete view controller when the button is pressed.
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
 
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let identifier = segue.identifier {
-//            if identifier == "pools" {
-//                print("pools button tapped")
-//            }
-//        }
-//        if let identifier = segue.identifier {
-//            if identifier == "beaches" {
-//                print("beaches button tapped")
-//            }
-//        }
-//        if let identifier = segue.identifier {
-//            if identifier == "trails" {
-//                print("trails button tapped")
-//            }
-//        }
-//        if let identifier = segue.identifier {
-//            if identifier == "campgrounds" {
-//                print("campgrounds button tapped")
-//            }
-//        }
-//        if let identifier = segue.identifier {
-//            if identifier == "lakes" {
-//                print("lakes button tapped")
-//            }
-//        }
-//        if let identifier = segue.identifier {
-//            if identifier == "parks" {
-//                print("parks button tapped")
-//            }
-//        }
-//    }
+    @IBAction func autocompleteClicked(_ sender: UITextField) {
+        
+    }
+    
+}
 
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
