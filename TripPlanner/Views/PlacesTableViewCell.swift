@@ -6,12 +6,12 @@
 //  Copyright © 2017 Vanya Rohatgi. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class PlacesTableViewCell: UITableViewCell {
-
     @IBOutlet weak var placesLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
