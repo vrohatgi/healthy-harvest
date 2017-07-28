@@ -16,9 +16,12 @@ import SwiftyJSON
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var places = [String]()
+    var selectedActivities = [String]()
+    
     var selectedLongitude: Double = 0.0
     var selectedLatitude: Double = 0.0
-    
+    let activitiesKey = "AIzaSyA1lOPwR0gcLPOV5oy0FYKbc01UDLeVMfE"
+
     // MARK: - Private Methods
     
     private func loadSamplePlaces() {
@@ -41,34 +44,57 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var lakesButton: UIButton!
     
     @IBOutlet weak var placesTableView: UITableView!
+    
     // MARK: - IBActions
     
-    @IBAction func lakesButtonTapped(_ sender: UIButton) {
-        Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.7749295,-122.4194155&radius=30000&maxprice=4&type=restaurant&keyword=dining&key=AIzaSyA1lOPwR0gcLPOV5oy0FYKbc01UDLeVMfE").responseJSON { response in
-            print("Request: \(String(describing: response.request))")
-            print("Response: \(String(describing: response.response))")
-            print("Result: \(response.result)")
-            
+    func fetchActivities(location: String, radius: Int, type: String, keyword: String, key: String) {
+        var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
+        url += "location=\(location)"
+        url += "&radius=\(radius)"
+        url += "&type=\(type)"
+        url += "&keyword=\(keyword)"
+        url += "&key=\(key)"
+        
+        // fill in places array
+        // places = []String{}
+        Alamofire.request(url).responseJSON { response in
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 if let dataFromString = utf8Text.data(using: .utf8, allowLossyConversion: false) {
                     let json = JSON(data: dataFromString)
-                    //print("Data: \(json)") // original server data as UTF8 string
-                    print("name: \(json["results"][0]["name"])")
+                    for i in json["results"] {
+                        print("\(i)")
+                        // places += i["name"]
+                    }
                 }
             }
+            
+            // places array is now filled from google
+            // now ask the table to "re-draw" itself
+            
         }
+        
+        
+    }
+    
+    @IBAction func lakesButtonTapped(_ sender: UIButton) {
+        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
+        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
+        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
     }
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
+        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
     }
     @IBAction func trailsButtonTapped(_ sender: UIButton) {
+        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
     }
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
+        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
     }
     
     @IBAction func editingSearchBegin(_ sender: UITextField) {
@@ -76,17 +102,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Present the Autocomplete view controller when the button is pressed.
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
-        
-        
         present(autocompleteController, animated: true, completion: nil)
-        
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSamplePlaces()
-        
         placesTableView.delegate = self
         placesTableView.dataSource = self
     }
