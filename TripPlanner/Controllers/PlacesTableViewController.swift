@@ -17,18 +17,17 @@ class PlacesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSamplePlaces()
     }
     
     // MARK: - Private Methods
-    
-    private func loadSamplePlaces() {
-        let place1 = "City Beach"
-        let place2 = "Lake Elizabeth"
-        let place3 = "Mission Peak"
-        
-        places += [place1, place2, place3]
-    }
+
+//    private func loadSamplePlaces() {
+//        let place1 = "City Beach"
+//        let place2 = "Lake Elizabeth"
+//        let place3 = "Mission Peak"
+//        
+//        places += [place1, place2, place3]
+//    }
     
     // MARK: - Table view data source
     

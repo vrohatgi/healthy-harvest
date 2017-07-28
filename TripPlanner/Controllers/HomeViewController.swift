@@ -13,15 +13,29 @@ import GoogleMaps
 
 class HomeViewController: UIViewController {
     
-    enum Activities {
-        case lakes
-        case beaches
-        case trails
-        case pools
-        case campgrounds
-        case parks
+    var places = [String]()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "lakes" {
+            places += ["lakes"]
+        }
+        else if segue.identifier == "pools" {
+            places += ["pools"]
+        }
+        else if segue.identifier == "beaches" {
+            places += ["beaches"]
+        }
+        else if segue.identifier == "trails" {
+            places += ["trails"]
+        }
+        else if segue.identifier == "campgrounds" {
+            places += ["campgrounds"]
+        }
+        else if segue.identifier == "parks" {
+            places += ["parks"]
+        }
     }
-
+    
     // MARK: - Subviews
     
     @IBOutlet weak var locationTextField: UITextField!
@@ -32,7 +46,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
     @IBOutlet weak var placesTableView: UITableView!
-   
+    
     // MARK: - IBActions
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
@@ -41,15 +55,20 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
+        
     }
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
+        
     }
     @IBAction func trailsButtonTapped(_ sender: UIButton) {
+        
     }
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func editingSearchBegin(_ sender: UITextField) {
@@ -66,8 +85,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        placesTableView.delegate = self
-//        placesTableView.dataSource = self
+        //        placesTableView.delegate = self
+        //        placesTableView.dataSource = self
     }
     
     
