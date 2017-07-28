@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6896B71F2B9F8900EEAEFE /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */; };
+		2D6896B91F2BA45C00EEAEFE /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B81F2BA45C00EEAEFE /* Events.storyboard */; };
 		2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */; };
 		2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */; };
 		2D9D2BD21F259E5F00F4B343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D2BD11F259E5F00F4B343 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		1AA502DB4EBE6CDE9B7EE6EB /* Pods-TripPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripPlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-TripPlanner/Pods-TripPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Friends.storyboard; path = Storyboards/Friends.storyboard; sourceTree = "<group>"; };
+		2D6896B81F2BA45C00EEAEFE /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		2D9D2BC71F259E5F00F4B343 /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2D6896BC1F2BAD7800EEAEFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		2D9D2BBE1F259E5F00F4B343 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 				2D9D2BF71F2666D900F4B343 /* Models */,
 				2D9D2BFC1F2671BC00F4B343 /* Services */,
 				2D9D2C011F2676BA00F4B343 /* Extensions */,
+				2D6896BC1F2BAD7800EEAEFE /* Views */,
 			);
 			path = TripPlanner;
 			sourceTree = "<group>";
@@ -110,7 +123,6 @@
 				2D9D2BF31F26593B00F4B343 /* LoginViewController.swift */,
 				2D9D2BF81F266D8100F4B343 /* CreateUsernameViewController.swift */,
 				2D9D2C041F267CD600F4B343 /* HomeViewController.swift */,
-				2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */,
 				2D9D2C061F267CEA00F4B343 /* EventViewController.swift */,
 			);
 			name = "View Controllers";
@@ -120,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				2D9D2C021F26792600F4B343 /* Main.storyboard */,
+				2D6896B81F2BA45C00EEAEFE /* Events.storyboard */,
+				2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */,
 				2DDDEDDF1F26BAD800247AEB /* Home.storyboard */,
 				2D9D2BEF1F2658C200F4B343 /* Login.storyboard */,
 			);
@@ -232,9 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9D2BEB1F26565700F4B343 /* GoogleService-Info.plist in Resources */,
+				2D6896B71F2B9F8900EEAEFE /* Friends.storyboard in Resources */,
 				2D9D2C031F26792600F4B343 /* Main.storyboard in Resources */,
 				2D9D2BD21F259E5F00F4B343 /* Assets.xcassets in Resources */,
 				2DDDEDE01F26BAD800247AEB /* Home.storyboard in Resources */,
+				2D6896B91F2BA45C00EEAEFE /* Events.storyboard in Resources */,
 				2D9D2BF21F2658E600F4B343 /* LaunchScreen.storyboard in Resources */,
 				2D9D2BF01F2658C200F4B343 /* Login.storyboard in Resources */,
 			);

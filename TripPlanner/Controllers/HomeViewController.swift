@@ -21,17 +21,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var selectedLongitude: Double = 0.0
     var selectedLatitude: Double = 0.0
     let activitiesKey = "AIzaSyA1lOPwR0gcLPOV5oy0FYKbc01UDLeVMfE"
-
-    // MARK: - Private Methods
-    
-    private func loadSamplePlaces() {
-        let place1 = "Fremont"
-        let place2 = "Newark"
-        let place3 = "Hayward"
-        
-        places += [place1, place2, place3]
-    }
-    
     
     // MARK: - Subviews
     
@@ -42,7 +31,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var campgroundsButton: UIButton!
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
-    
     @IBOutlet weak var placesTableView: UITableView!
     
     // MARK: - IBActions
@@ -55,46 +43,44 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         url += "&keyword=\(keyword)"
         url += "&key=\(key)"
         
+        print(url)
+        
         // fill in places array
-        // places = []String{}
-        Alamofire.request(url).responseJSON { response in
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                if let dataFromString = utf8Text.data(using: .utf8, allowLossyConversion: false) {
-                    let json = JSON(data: dataFromString)
-                    for i in json["results"] {
-                        print("\(i)")
-                        // places += i["name"]
-                    }
-                }
+        
+        Alamofire.request(url).responseJSON { (response) in
+            //print(response.result.value)
+            self.places.removeAll()
+            let result = response.result.value as! [String: Any]
+            let placeArr = result["results"] as! NSArray
+            for place in placeArr {
+                let name = place as! NSDictionary
+                self.places.append(name["name"] as! String)
+                print(place)
             }
-            
-            // places array is now filled from google
-            // now ask the table to "re-draw" itself
-            
+            self.placesTableView.reloadData()
         }
-        
-        
     }
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
+        
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "lake", key: activitiesKey)
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "park", keyword: "", key: activitiesKey)
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "campground", keyword: "", key: activitiesKey)
     }
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "beach", key: activitiesKey)
     }
     @IBAction func trailsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "trail", key: activitiesKey)
     }
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude,selectedLongitude)", radius: 30000, type: "lakes", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "pool", key: activitiesKey)
     }
     
     @IBAction func editingSearchBegin(_ sender: UITextField) {
@@ -107,17 +93,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSamplePlaces()
         placesTableView.delegate = self
         placesTableView.dataSource = self
     }
     
     // MARK: - Table view data source
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return places.count
