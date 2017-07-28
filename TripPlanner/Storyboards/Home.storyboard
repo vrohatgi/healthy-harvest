@@ -23,46 +23,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
-                                <rect key="frame" x="19" y="205" width="114" height="60"/>
-                                <state key="normal" title="Button" image="btn_lakes"/>
+                                <rect key="frame" x="19" y="205" width="60" height="60"/>
+                                <state key="normal" image="btn_lakes"/>
                                 <connections>
                                     <action selector="lakesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="asI-CN-rq2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
-                                <rect key="frame" x="150" y="205" width="109" height="60"/>
+                                <rect key="frame" x="96" y="205" width="109" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="FG3-XX-NTU"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="btn_parks"/>
+                                <state key="normal" image="btn_parks"/>
                                 <connections>
                                     <action selector="parksButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9FV-nc-Raj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
-                                <rect key="frame" x="19" y="303" width="114" height="60"/>
-                                <state key="normal" title="Button" image="btn_beaches"/>
+                                <rect key="frame" x="19" y="303" width="60" height="60"/>
+                                <state key="normal" image="btn_beaches"/>
                                 <connections>
                                     <action selector="beachesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="qxj-Ks-VKf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
-                                <rect key="frame" x="276" y="205" width="114" height="60"/>
-                                <state key="normal" title="Button" image="btn_campgrounds"/>
+                                <rect key="frame" x="222" y="205" width="60" height="60"/>
+                                <state key="normal" image="btn_campgrounds"/>
                                 <connections>
                                     <action selector="campgroundsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="Xiy-LN-2qI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
-                                <rect key="frame" x="276" y="303" width="114" height="60"/>
-                                <state key="normal" title="Button" image="btn_pools"/>
+                                <rect key="frame" x="222" y="303" width="60" height="60"/>
+                                <state key="normal" image="btn_pools"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
-                                <rect key="frame" x="150" y="303" width="112" height="60"/>
-                                <state key="normal" title="Button" image="btn_trails"/>
+                                <rect key="frame" x="96" y="303" width="112" height="60"/>
+                                <state key="normal" image="btn_trails"/>
                                 <connections>
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
                                 </connections>

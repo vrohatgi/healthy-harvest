@@ -15,5 +15,6 @@ source 'https://github.com/CocoaPods/Specs.git'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
+  pod 'Alamofire', '~> 4.4'
 
 end
