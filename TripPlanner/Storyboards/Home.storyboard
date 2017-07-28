@@ -153,14 +153,14 @@
             </objects>
             <point key="canvasLocation" x="1368.8" y="-542.87856071964018"/>
         </scene>
-        <!--Item 1-->
+        <!--Create Event-->
         <scene sceneID="nrU-yK-w1N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p9a-K4-4Nv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="MMs-Ab-Pzp"/>
+                    <tabBarItem key="tabBarItem" title="Create Event" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9V-J4-tYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

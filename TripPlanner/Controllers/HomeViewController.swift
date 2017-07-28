@@ -10,10 +10,14 @@ import Foundation
 import UIKit
 import GooglePlaces
 import GoogleMaps
+import Alamofire
+import SwiftyJSON
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var places = [String]()
+    var selectedLongitude: Double = 0.0
+    var selectedLatitude: Double = 0.0
     
     // MARK: - Private Methods
     
@@ -40,8 +44,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - IBActions
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
-        // make a call to google places api
-        // send in find "lakes" near "selectedLocation"
+        Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.7749295,-122.4194155&radius=30000&maxprice=4&type=restaurant&keyword=dining&key=AIzaSyA1lOPwR0gcLPOV5oy0FYKbc01UDLeVMfE").responseJSON { response in
+            print("Request: \(String(describing: response.request))")
+            print("Response: \(String(describing: response.response))")
+            print("Result: \(response.result)")
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                if let dataFromString = utf8Text.data(using: .utf8, allowLossyConversion: false) {
+                    let json = JSON(data: dataFromString)
+                    //print("Data: \(json)") // original server data as UTF8 string
+                    print("name: \(json["results"][0]["name"])")
+                }
+            }
+        }
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
@@ -112,6 +127,10 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
+        
+        print("\(place.coordinate)")
+        selectedLatitude = place.coordinate.latitude
+        selectedLongitude = place.coordinate.longitude
         
         locationTextField.text = place.name
         

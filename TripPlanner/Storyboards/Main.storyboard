@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Invite Friends-->
         <scene sceneID="RJb-z7-GBU">
             <objects>
                 <viewController id="aKl-CY-dZs" customClass="EventViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mOy-fN-XJW"/>
+                    <tabBarItem key="tabBarItem" title="Invite Friends" id="mOy-fN-XJW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcJ-0u-9nX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="-215"/>
         </scene>
-        <!--Item-->
+        <!--My Events-->
         <scene sceneID="qri-q0-gYD">
             <objects>
                 <viewController id="xWM-bY-cx2" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="OxW-st-TCq"/>
+                    <tabBarItem key="tabBarItem" title="My Events" id="OxW-st-TCq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoD-Sd-w9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
