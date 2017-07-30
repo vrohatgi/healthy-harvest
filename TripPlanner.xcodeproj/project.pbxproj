@@ -218,6 +218,7 @@
 				TargetAttributes = {
 					2D9D2BC61F259E5F00F4B343 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = D8FYK73U57;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -425,6 +426,7 @@
 			baseConfigurationReference = 4BF1B069441D264BD3E7B0FC /* Pods-TripPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D8FYK73U57;
 				INFOPLIST_FILE = "$(SRCROOT)/TripPlanner/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.TripPlanner;
@@ -438,6 +440,7 @@
 			baseConfigurationReference = 1AA502DB4EBE6CDE9B7EE6EB /* Pods-TripPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D8FYK73U57;
 				INFOPLIST_FILE = "$(SRCROOT)/TripPlanner/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.TripPlanner;
