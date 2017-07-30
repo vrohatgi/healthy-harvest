@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D567CE01F2D6AEE006F3976 /* InviteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CDF1F2D6AEE006F3976 /* InviteService.swift */; };
 		2D6896B71F2B9F8900EEAEFE /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */; };
 		2D6896B91F2BA45C00EEAEFE /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B81F2BA45C00EEAEFE /* Events.storyboard */; };
 		2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		1AA502DB4EBE6CDE9B7EE6EB /* Pods-TripPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripPlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-TripPlanner/Pods-TripPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		2D567CDF1F2D6AEE006F3976 /* InviteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InviteService.swift; path = Services/InviteService.swift; sourceTree = "<group>"; };
 		2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Friends.storyboard; path = Storyboards/Friends.storyboard; sourceTree = "<group>"; };
 		2D6896B81F2BA45C00EEAEFE /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9D2BFA1F2671B300F4B343 /* UserService.swift */,
+				2D567CDF1F2D6AEE006F3976 /* InviteService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */,
 				2D9D2C001F2676B600F4B343 /* Storyboard+Utility.swift in Sources */,
 				2D9D2C071F267CEA00F4B343 /* EventViewController.swift in Sources */,
+				2D567CE01F2D6AEE006F3976 /* InviteService.swift in Sources */,
 				2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */,
 				2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */,
 				2D9D2BFE1F2674D000F4B343 /* Constants.swift in Sources */,
