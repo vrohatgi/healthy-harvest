@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="60" id="h6k-HR-R6Y"/>
                                     <constraint firstAttribute="height" constant="60" id="k1M-qK-Owf"/>
                                 </constraints>
-                                <state key="normal" image="btn_pools" backgroundImage="GMSNavNightModeSprites-0-1x.png"/>
+                                <state key="normal" image="btn_pools"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
                                 </connections>
@@ -93,15 +93,15 @@
                                 <rect key="frame" x="0.0" y="289" width="375" height="329"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="90" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="80" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
-                                                    <rect key="frame" x="30" y="8" width="104" height="74"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
+                                                    <rect key="frame" x="30" y="8" width="104" height="63.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="104" id="eIM-ba-xab"/>
                                                     </constraints>
@@ -174,11 +174,11 @@
             </objects>
             <point key="canvasLocation" x="1368.8" y="-542.87856071964018"/>
         </scene>
-        <!--Create Event-->
+        <!--Select Activity-->
         <scene sceneID="nrU-yK-w1N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p9a-K4-4Nv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Create Event" id="MMs-Ab-Pzp"/>
+                    <tabBarItem key="tabBarItem" title="Select Activity" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
@@ -196,7 +196,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GMSNavNightModeSprites-0-1x.png" width="128" height="142"/>
         <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>

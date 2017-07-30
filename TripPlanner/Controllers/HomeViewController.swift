@@ -54,8 +54,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let placeArr = result["results"] as! NSArray
             for place in placeArr {
                 let name = place as! NSDictionary
-                self.places.append(name["name"] as! String)
-                print(place)
+                let space = ""
+                self.places.append("\(name["name"] ?? space)\n\(name["vicinity"] ?? space)\n\(name["types"] ?? space)")
+                print("**** \(place)")
             }
             
             self.placesTableView.reloadData()
