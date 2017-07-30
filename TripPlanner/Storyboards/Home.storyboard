@@ -178,7 +178,7 @@
         <scene sceneID="nrU-yK-w1N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p9a-K4-4Nv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Select Activity" id="MMs-Ab-Pzp"/>
+                    <tabBarItem key="tabBarItem" title="Select Activity" image="activity" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
@@ -197,6 +197,7 @@
     </scenes>
     <resources>
         <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
+        <image name="activity" width="512" height="512"/>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
         <image name="btn_lakes" width="60" height="60"/>
