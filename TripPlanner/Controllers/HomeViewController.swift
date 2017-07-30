@@ -57,9 +57,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.places.append(name["name"] as! String)
                 print(place)
             }
+            
             self.placesTableView.reloadData()
         }
     }
+    
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
         
@@ -139,6 +141,13 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         selectedLongitude = place.coordinate.longitude
         
         locationTextField.text = place.name
+        
+        beachesButton.isEnabled = true
+        trailsButton.isEnabled = true
+        poolsButton.isEnabled = true
+        campgroundsButton.isEnabled = true
+        parksButton.isEnabled = true
+        lakesButton.isEnabled = true
         
         dismiss(animated: true, completion: nil)
     }
