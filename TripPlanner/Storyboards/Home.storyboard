@@ -197,7 +197,7 @@
     </scenes>
     <resources>
         <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
-        <image name="activity" width="512" height="512"/>
+        <image name="activity" width="32" height="32"/>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
         <image name="btn_lakes" width="60" height="60"/>
