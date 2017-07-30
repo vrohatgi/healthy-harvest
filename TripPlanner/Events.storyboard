@@ -78,10 +78,10 @@
         <scene sceneID="LCb-37-eKE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBd-b6-agT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Events" image="ic_email.png" id="OxW-st-TCq"/>
+                    <tabBarItem key="tabBarItem" title="My Events" image="events" id="OxW-st-TCq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiE-6E-SOT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -96,6 +96,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_email.png" width="24" height="24"/>
+        <image name="events" width="32" height="32"/>
     </resources>
 </document>
