@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
                                 <rect key="frame" x="35" y="124" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="aho-PG-aAj"/>
@@ -33,7 +33,7 @@
                                     <action selector="lakesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="asI-CN-rq2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
                                 <rect key="frame" x="35" y="211" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PVq-sU-TYg"/>
@@ -44,7 +44,7 @@
                                     <action selector="beachesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="qxj-Ks-VKf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
                                 <rect key="frame" x="280" y="124" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="JAs-WF-y0E"/>
@@ -55,18 +55,18 @@
                                     <action selector="campgroundsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="Xiy-LN-2qI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
                                 <rect key="frame" x="280" y="211" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="h6k-HR-R6Y"/>
                                     <constraint firstAttribute="height" constant="60" id="k1M-qK-Owf"/>
                                 </constraints>
-                                <state key="normal" image="btn_pools"/>
+                                <state key="normal" image="btn_pools" backgroundImage="GMSNavNightModeSprites-0-1x.png"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
                                 <rect key="frame" x="157.5" y="211" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="NMH-Sb-UEF"/>
@@ -77,7 +77,7 @@
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where do you want to go?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start by selecting a location" textAlignment="center" minimumFontSize="17" background="GMSNavNightModeSprites-0-2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Evx-Hb-Alg"/>
@@ -123,7 +123,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
                                 <rect key="frame" x="157.5" y="124" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KdI-zB-Njt"/>
@@ -181,7 +181,7 @@
                     <tabBarItem key="tabBarItem" title="Create Event" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9V-J4-tYf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -196,6 +196,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GMSNavNightModeSprites-0-1x.png" width="128" height="142"/>
+        <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
         <image name="btn_lakes" width="60" height="60"/>

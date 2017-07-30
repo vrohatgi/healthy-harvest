@@ -132,22 +132,24 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        let space = ""
         print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
+        print("Place address: \(place.formattedAddress ?? space)")
+        print("Place attributions: \(String(describing: place.attributions))")
         
         print("\(place.coordinate)")
+
         selectedLatitude = place.coordinate.latitude
         selectedLongitude = place.coordinate.longitude
         
-        locationTextField.text = place.name
+        locationTextField.text = "\(place.formattedAddress ?? space)"
         
-        beachesButton.isEnabled = true
-        trailsButton.isEnabled = true
-        poolsButton.isEnabled = true
-        campgroundsButton.isEnabled = true
-        parksButton.isEnabled = true
-        lakesButton.isEnabled = true
+        beachesButton.isHidden = false
+        trailsButton.isHidden = false
+        poolsButton.isHidden = false
+        campgroundsButton.isHidden = false
+        parksButton.isHidden = false
+        lakesButton.isHidden = false
         
         dismiss(animated: true, completion: nil)
     }
