@@ -39,4 +39,39 @@ struct UserService {
             })
         }
     }
+    
+    static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
+        let currentUser = User.current
+        // 1
+        let ref = Database.database().reference().child("users")
+        
+        // 2
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else { return completion([]) }
+            
+            // 3
+            let users =
+                snapshot
+                    .flatMap(User.init)
+                    .filter { $0.uid != currentUser.uid }
+            
+            // 4
+            let dispatchGroup = DispatchGroup()
+            users.forEach { (user) in
+                dispatchGroup.enter()
+                
+                // 5
+                InviteService.isUserInvited(user) { (isInvited) in
+                    user.isInvited = isInvited
+                    dispatchGroup.leave()
+                }
+            }
+            
+            // 6
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(users)
+            })
+        })
+    }
 }

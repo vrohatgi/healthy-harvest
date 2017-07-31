@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MbA-bU-rrr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MbA-bU-rrr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Event View Controller-->
+        <!--Friends View Controller-->
         <scene sceneID="RJb-z7-GBU">
             <objects>
-                <viewController id="aKl-CY-dZs" customClass="EventViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aKl-CY-dZs" customClass="FriendsViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="56e-6T-Vnw"/>
                         <viewControllerLayoutGuide type="bottom" id="guB-s8-Awv"/>
@@ -64,22 +64,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cO9-sk-sED">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" id="cO9-sk-sED" customClass="FriendsTableViewCell" customModule="TripPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cO9-sk-sED" id="pkh-RB-dQU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-LW-Mns">
-                                                    <rect key="frame" x="21" y="12" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-LW-Mns">
+                                                    <rect key="frame" x="15" y="0.0" width="223" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrU-CP-53J">
+                                                    <rect key="frame" x="250" y="10" width="115" height="23.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="Vuh-1W-Qxd"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="inviteButtonTapped:" destination="cO9-sk-sED" eventType="touchUpInside" id="MYL-6c-C5E"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ljx-LW-Mns" secondAttribute="bottom" id="5fK-fI-Amd"/>
+                                                <constraint firstAttribute="bottom" secondItem="wrU-CP-53J" secondAttribute="bottom" constant="10" id="TuB-m5-Mbq"/>
+                                                <constraint firstItem="wrU-CP-53J" firstAttribute="leading" secondItem="ljx-LW-Mns" secondAttribute="trailing" constant="12" id="bF7-5h-Eus"/>
+                                                <constraint firstItem="wrU-CP-53J" firstAttribute="top" secondItem="pkh-RB-dQU" secondAttribute="top" constant="10" id="hlG-Ic-hdm"/>
+                                                <constraint firstAttribute="trailing" secondItem="wrU-CP-53J" secondAttribute="trailing" constant="10" id="neP-qF-bOp"/>
+                                                <constraint firstItem="ljx-LW-Mns" firstAttribute="top" secondItem="pkh-RB-dQU" secondAttribute="top" id="thN-PX-2Bp"/>
+                                                <constraint firstItem="ljx-LW-Mns" firstAttribute="leading" secondItem="pkh-RB-dQU" secondAttribute="leading" constant="15" id="zlk-If-7UN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inviteButton" destination="wrU-CP-53J" id="FGx-6T-JNq"/>
+                                            <outlet property="usernameLabel" destination="ljx-LW-Mns" id="llk-JE-lph"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -102,6 +124,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0cl-gc-W2b"/>
+                    <connections>
+                        <outlet property="friendsTableView" destination="08S-7Y-zF2" id="jUa-cI-SRM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcJ-0u-9nX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +139,7 @@
                     <tabBarItem key="tabBarItem" title="Invite Friends" image="Social" id="mOy-fN-XJW"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vdH-yc-MI1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vdH-yc-MI1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
