@@ -40,6 +40,19 @@ struct UserService {
         }
     }
     
+    static func friendsInvited(for user: User, completion: @escaping ([String]) -> Void) {
+        let friendsRef = Database.database().reference().child("friends").child(user.uid)
+        
+        friendsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let friendsDict = snapshot.value as? [String : Bool] else {
+                return completion([])
+            }
+            
+            let friendsKeys = Array(friendsDict.keys)
+            completion(friendsKeys)
+        })
+    }
+    
     static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
         let currentUser = User.current
         // 1

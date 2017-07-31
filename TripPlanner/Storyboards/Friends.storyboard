@@ -59,26 +59,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Event"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08S-7Y-zF2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08S-7Y-zF2">
                                 <rect key="frame" x="0.0" y="358" width="375" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" id="cO9-sk-sED" customClass="FriendsTableViewCell" customModule="TripPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cO9-sk-sED" id="pkh-RB-dQU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-LW-Mns">
-                                                    <rect key="frame" x="15" y="0.0" width="223" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-LW-Mns">
+                                                    <rect key="frame" x="15" y="0.0" width="223" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrU-CP-53J">
-                                                    <rect key="frame" x="250" y="10" width="115" height="23.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrU-CP-53J">
+                                                    <rect key="frame" x="250" y="10" width="115" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="115" id="Vuh-1W-Qxd"/>
                                                     </constraints>
@@ -89,13 +89,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="ljx-LW-Mns" secondAttribute="bottom" id="5fK-fI-Amd"/>
-                                                <constraint firstAttribute="bottom" secondItem="wrU-CP-53J" secondAttribute="bottom" constant="10" id="TuB-m5-Mbq"/>
                                                 <constraint firstItem="wrU-CP-53J" firstAttribute="leading" secondItem="ljx-LW-Mns" secondAttribute="trailing" constant="12" id="bF7-5h-Eus"/>
-                                                <constraint firstItem="wrU-CP-53J" firstAttribute="top" secondItem="pkh-RB-dQU" secondAttribute="top" constant="10" id="hlG-Ic-hdm"/>
-                                                <constraint firstAttribute="trailing" secondItem="wrU-CP-53J" secondAttribute="trailing" constant="10" id="neP-qF-bOp"/>
-                                                <constraint firstItem="ljx-LW-Mns" firstAttribute="top" secondItem="pkh-RB-dQU" secondAttribute="top" id="thN-PX-2Bp"/>
-                                                <constraint firstItem="ljx-LW-Mns" firstAttribute="leading" secondItem="pkh-RB-dQU" secondAttribute="leading" constant="15" id="zlk-If-7UN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -104,12 +98,13 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aKl-CY-dZs" id="ett-J2-Zk6"/>
+                                    <outlet property="delegate" destination="aKl-CY-dZs" id="LMA-Qv-Pro"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Invite friends by username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6C-F3-9Gc">
                                 <rect key="frame" x="0.0" y="312" width="375" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="FfN-MK-Yim"/>
-                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
