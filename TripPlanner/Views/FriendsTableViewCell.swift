@@ -27,10 +27,10 @@ class FriendsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        inviteButton.layer.borderColor = UIColor.lightGray.cgColor
-        inviteButton.layer.borderWidth = 1
-        inviteButton.layer.cornerRadius = 6
-        inviteButton.clipsToBounds = true
+//        inviteButton.layer.borderColor = UIColor.lightGray.cgColor
+//        inviteButton.layer.borderWidth = 1
+//        inviteButton.layer.cornerRadius = 6
+//        inviteButton.clipsToBounds = true
         
         inviteButton.setTitle("Invite", for: .normal)
         inviteButton.setTitle("Invited", for: .selected)

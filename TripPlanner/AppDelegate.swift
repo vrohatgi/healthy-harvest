@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseAuthUI
 import GooglePlaces
 import GoogleMaps
 
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let mapsKey = "AIzaSyBzn5vgUO5z6T1g7KDRh-IAwI9ah1Burug"
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         GMSPlacesClient.provideAPIKey(mapsKey)
@@ -25,6 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureInitialRootViewController(for: window)
         
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        
+        // other URL handling goes here
+        
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
