@@ -30,22 +30,24 @@ class LoginViewController: UIViewController {
         // 2
         authUI.delegate = self
         
-        // configure Auth UI for Facebook login
-        let providers: [FUIAuthProvider] = [FUIFacebookAuth()]
-        authUI.providers = providers
-        
         // add google provider
-        let provider: [FUIAuthProvider] = [FUIGoogleAuth(), FUIFacebookAuth()]
-        authUI.providers = provider
+        let myProviders: [FUIAuthProvider] = [FUIGoogleAuth(), FUIFacebookAuth()]
+
+        authUI.providers += myProviders
         
         // 3
         let authViewController = authUI.authViewController()
+        
+        authViewController.isNavigationBarHidden = true
+
         present(authViewController, animated: true)
     }
 }
 
 extension LoginViewController: FUIAuthDelegate {
+    
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
+        
         if let error = error {
             assertionFailure("Error signing in: \(error.localizedDescription)")
             return
