@@ -32,8 +32,8 @@ class LoginViewController: UIViewController {
         
         // add google provider
         let myProviders: [FUIAuthProvider] = [FUIGoogleAuth(), FUIFacebookAuth()]
+        authUI.providers = myProviders
 
-        authUI.providers += myProviders
         
         // 3
         let authViewController = authUI.authViewController()
@@ -68,7 +68,7 @@ extension LoginViewController: FUIAuthDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 if let initialViewController = storyboard.instantiateInitialViewController() {
                     self.view.window?.rootViewController = initialViewController
-                    //                    self.view.window?.makeKeyAndVisible()
+                    self.view.window?.makeKeyAndVisible()
                 }
             } else {
                 self.performSegue(withIdentifier: "toCreateUsername", sender: self)

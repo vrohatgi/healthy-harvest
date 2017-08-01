@@ -70,11 +70,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "park", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "park", key: activitiesKey)
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "campground", keyword: "", key: activitiesKey)
+        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "campground", key: activitiesKey)
     }
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
         fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "beach", key: activitiesKey)
@@ -119,6 +119,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         let place = places[indexPath.row]
+        cell.accessoryType = .none
         cell.placesLabel.text = place
         
         // Configure the cell...
@@ -126,6 +127,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .checkmark
+            
+        }
+    }
 }
 
 

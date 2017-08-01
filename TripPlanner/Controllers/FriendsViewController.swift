@@ -13,6 +13,9 @@ class FriendsViewController: UIViewController {
     
     // MARK: - Subviews
     
+    
+    @IBOutlet weak var selectedEventsTableView: UITableView!
+    
     @IBOutlet weak var friendsTableView: UITableView!
     
     // MARK: - Properties

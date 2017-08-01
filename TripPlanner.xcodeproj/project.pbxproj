@@ -28,6 +28,7 @@
 		2D9D2C071F267CEA00F4B343 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2C061F267CEA00F4B343 /* EventsViewController.swift */; };
 		2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA75C2B1F27AA9800CAFDED /* User.swift */; };
 		2DDDEDE01F26BAD800247AEB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDEDDF1F26BAD800247AEB /* Home.storyboard */; };
+		2DFD1F331F30DE78001C47DB /* SelectedEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD1F321F30DE78001C47DB /* SelectedEventsTableViewCell.swift */; };
 		909CEA6548C68D7AE189A1C0 /* Pods_TripPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B85FAD71296BDC00C4359B /* Pods_TripPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		2D9D2C061F267CEA00F4B343 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Controllers/EventsViewController.swift; sourceTree = "<group>"; };
 		2DA75C2B1F27AA9800CAFDED /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		2DDDEDDF1F26BAD800247AEB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
+		2DFD1F321F30DE78001C47DB /* SelectedEventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedEventsTableViewCell.swift; path = Views/SelectedEventsTableViewCell.swift; sourceTree = "<group>"; };
 		4BF1B069441D264BD3E7B0FC /* Pods-TripPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TripPlanner/Pods-TripPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B9B85FAD71296BDC00C4359B /* Pods_TripPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 		2D6896BC1F2BAD7800EEAEFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DFD1F321F30DE78001C47DB /* SelectedEventsTableViewCell.swift */,
 				2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */,
 				2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */,
 			);
@@ -332,6 +335,7 @@
 				2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */,
 				2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */,
 				2D9D2BFE1F2674D000F4B343 /* Constants.swift in Sources */,
+				2DFD1F331F30DE78001C47DB /* SelectedEventsTableViewCell.swift in Sources */,
 				2D9D2BF91F266D8100F4B343 /* CreateUsernameViewController.swift in Sources */,
 				2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */,
 			);
