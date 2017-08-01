@@ -6,6 +6,7 @@
 ////  Copyright © 2017 Vanya Rohatgi. All rights reserved.
 ////
 //
+
 import Foundation
 import UIKit
 import FirebaseAuth
@@ -38,6 +39,9 @@ class EventsViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
+    
+    @IBOutlet weak var eventsTableView: UITableView!
     
     // MARK: - IBActions
     

@@ -38,6 +38,7 @@ class FriendsTableViewCell: UITableViewCell {
     
     // MARK: - IBActions
     
+    
     @IBAction func inviteButtonTapped(_ sender: UIButton) {
         print("invite button tapped")
         delegate?.didTapInviteButton(sender, on: self)

@@ -129,8 +129,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .checkmark
-            
+            if cell.accessoryType == .checkmark {
+                cell.accessoryType = .none
+                
+            } else {
+                cell.accessoryType = .checkmark
+            }
         }
     }
 }

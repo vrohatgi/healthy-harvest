@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="289" width="375" height="329"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="80" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="80" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
@@ -164,7 +164,13 @@
                             <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="yYg-7s-49A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TripPlanner" id="Na1-ui-gdk"/>
+                    <navigationItem key="navigationItem" title="TripPlanner" id="Na1-ui-gdk">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="jU7-Fy-8pr">
+                            <connections>
+                                <segue destination="l8r-7H-fq4" kind="show" id="vO7-x6-wZi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="beachesButton" destination="eMf-nX-RwE" id="VFe-2b-s5G"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
@@ -180,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1368.8" y="-542.87856071964018"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends View Controller-->
         <scene sceneID="hOF-ax-DpV">
             <objects>
-                <viewController id="l8r-7H-fq4" sceneMemberID="viewController">
+                <viewController id="l8r-7H-fq4" customClass="FriendsViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hJO-b3-7tq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHH-Mh-EFL"/>
@@ -191,12 +197,87 @@
                     <view key="view" contentMode="scaleToFill" id="u97-Io-ZfC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O63-wO-C2X">
+                                <rect key="frame" x="138" y="570" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="ZQd-du-TSc"/>
+                                </constraints>
+                                <state key="normal" title="Create Event"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your event" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-Qo-3gE">
+                                <rect key="frame" x="16" y="72" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LmH-Rt-4MG"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="itI-1P-Hci">
+                                <rect key="frame" x="0.0" y="131" width="375" height="422"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" id="qgS-q7-fBz" customClass="FriendsTableViewCell" customModule="TripPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgS-q7-fBz" id="Pmi-6j-Bwp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blj-cw-2FF">
+                                                    <rect key="frame" x="20" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-zt-HwG">
+                                                    <rect key="frame" x="305" y="7" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="inviteButtonTapped:" destination="qgS-q7-fBz" eventType="touchUpInside" id="2bC-5O-VZl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="G7S-zt-HwG" secondAttribute="trailing" constant="16" id="DfH-hy-1O9"/>
+                                                <constraint firstItem="Blj-cw-2FF" firstAttribute="leading" secondItem="Pmi-6j-Bwp" secondAttribute="leadingMargin" constant="12" id="iAF-ab-KPf"/>
+                                                <constraint firstItem="Blj-cw-2FF" firstAttribute="centerY" secondItem="Pmi-6j-Bwp" secondAttribute="centerY" id="jgc-Kb-HDz"/>
+                                                <constraint firstItem="Blj-cw-2FF" firstAttribute="centerY" secondItem="G7S-zt-HwG" secondAttribute="centerY" id="r5c-ab-CJT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inviteButton" destination="G7S-zt-HwG" id="8fj-eP-FqL"/>
+                                            <outlet property="usernameLabel" destination="Blj-cw-2FF" id="wSk-1T-kOc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l8r-7H-fq4" id="L42-pd-51J"/>
+                                    <outlet property="delegate" destination="l8r-7H-fq4" id="Lpw-f1-yNi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O63-wO-C2X" firstAttribute="top" secondItem="itI-1P-Hci" secondAttribute="bottom" constant="17" id="1Cu-Ck-WL7"/>
+                            <constraint firstItem="h9x-Qo-3gE" firstAttribute="top" secondItem="hJO-b3-7tq" secondAttribute="bottom" constant="8" symbolic="YES" id="GPd-wM-gmr"/>
+                            <constraint firstItem="h9x-Qo-3gE" firstAttribute="leading" secondItem="u97-Io-ZfC" secondAttribute="leadingMargin" id="Viu-vU-gTT"/>
+                            <constraint firstItem="itI-1P-Hci" firstAttribute="top" secondItem="h9x-Qo-3gE" secondAttribute="bottom" constant="15" id="Y4K-Eh-gfk"/>
+                            <constraint firstItem="itI-1P-Hci" firstAttribute="leading" secondItem="u97-Io-ZfC" secondAttribute="leading" id="eKU-ve-Fqp"/>
+                            <constraint firstAttribute="trailing" secondItem="itI-1P-Hci" secondAttribute="trailing" id="gM5-eF-9Da"/>
+                            <constraint firstItem="itI-1P-Hci" firstAttribute="centerX" secondItem="O63-wO-C2X" secondAttribute="centerX" id="lvm-Pp-bQe"/>
+                            <constraint firstItem="h9x-Qo-3gE" firstAttribute="centerX" secondItem="itI-1P-Hci" secondAttribute="centerX" id="tWJ-G0-e7y"/>
+                            <constraint firstItem="qHH-Mh-EFL" firstAttribute="top" secondItem="O63-wO-C2X" secondAttribute="bottom" constant="18" id="w12-Dr-x9X"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="friendsTableView" destination="itI-1P-Hci" id="3Ev-W1-RAd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW8-9C-GUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="-543"/>
+            <point key="canvasLocation" x="2109.5999999999999" y="-543.77811094452773"/>
         </scene>
         <!--Select Activity-->
         <scene sceneID="nrU-yK-w1N">

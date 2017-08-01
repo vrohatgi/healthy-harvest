@@ -10,7 +10,6 @@
 		2D567CE01F2D6AEE006F3976 /* InviteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CDF1F2D6AEE006F3976 /* InviteService.swift */; };
 		2D567CE21F2F8C33006F3976 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */; };
 		2D567CE41F2F8EFA006F3976 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */; };
-		2D6896B71F2B9F8900EEAEFE /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */; };
 		2D6896B91F2BA45C00EEAEFE /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B81F2BA45C00EEAEFE /* Events.storyboard */; };
 		2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */; };
 		2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */; };
@@ -28,7 +27,7 @@
 		2D9D2C071F267CEA00F4B343 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2C061F267CEA00F4B343 /* EventsViewController.swift */; };
 		2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA75C2B1F27AA9800CAFDED /* User.swift */; };
 		2DDDEDE01F26BAD800247AEB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDEDDF1F26BAD800247AEB /* Home.storyboard */; };
-		2DFD1F331F30DE78001C47DB /* SelectedEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD1F321F30DE78001C47DB /* SelectedEventsTableViewCell.swift */; };
+		2DFD1F371F3138C3001C47DB /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD1F361F3138C3001C47DB /* EventsTableViewCell.swift */; };
 		909CEA6548C68D7AE189A1C0 /* Pods_TripPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B85FAD71296BDC00C4359B /* Pods_TripPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		2D567CDF1F2D6AEE006F3976 /* InviteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InviteService.swift; path = Services/InviteService.swift; sourceTree = "<group>"; };
 		2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = Controllers/FriendsViewController.swift; sourceTree = "<group>"; };
 		2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewCell.swift; path = Views/FriendsTableViewCell.swift; sourceTree = "<group>"; };
-		2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Friends.storyboard; path = Storyboards/Friends.storyboard; sourceTree = "<group>"; };
 		2D6896B81F2BA45C00EEAEFE /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		2D9D2BC71F259E5F00F4B343 /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +55,7 @@
 		2D9D2C061F267CEA00F4B343 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = Controllers/EventsViewController.swift; sourceTree = "<group>"; };
 		2DA75C2B1F27AA9800CAFDED /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		2DDDEDDF1F26BAD800247AEB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
-		2DFD1F321F30DE78001C47DB /* SelectedEventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedEventsTableViewCell.swift; path = Views/SelectedEventsTableViewCell.swift; sourceTree = "<group>"; };
+		2DFD1F361F3138C3001C47DB /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsTableViewCell.swift; path = Views/EventsTableViewCell.swift; sourceTree = "<group>"; };
 		4BF1B069441D264BD3E7B0FC /* Pods-TripPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TripPlanner/Pods-TripPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		B9B85FAD71296BDC00C4359B /* Pods_TripPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,9 +84,9 @@
 		2D6896BC1F2BAD7800EEAEFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2DFD1F321F30DE78001C47DB /* SelectedEventsTableViewCell.swift */,
 				2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */,
 				2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */,
+				2DFD1F361F3138C3001C47DB /* EventsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -144,7 +142,6 @@
 			children = (
 				2D9D2C021F26792600F4B343 /* Main.storyboard */,
 				2D6896B81F2BA45C00EEAEFE /* Events.storyboard */,
-				2D6896B61F2B9F8900EEAEFE /* Friends.storyboard */,
 				2DDDEDDF1F26BAD800247AEB /* Home.storyboard */,
 				2D9D2BEF1F2658C200F4B343 /* Login.storyboard */,
 			);
@@ -259,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9D2BEB1F26565700F4B343 /* GoogleService-Info.plist in Resources */,
-				2D6896B71F2B9F8900EEAEFE /* Friends.storyboard in Resources */,
 				2D9D2C031F26792600F4B343 /* Main.storyboard in Resources */,
 				2D9D2BD21F259E5F00F4B343 /* Assets.xcassets in Resources */,
 				2DDDEDE01F26BAD800247AEB /* Home.storyboard in Resources */,
@@ -332,10 +328,10 @@
 				2D567CE21F2F8C33006F3976 /* FriendsViewController.swift in Sources */,
 				2D9D2C071F267CEA00F4B343 /* EventsViewController.swift in Sources */,
 				2D567CE01F2D6AEE006F3976 /* InviteService.swift in Sources */,
+				2DFD1F371F3138C3001C47DB /* EventsTableViewCell.swift in Sources */,
 				2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */,
 				2DA75C2C1F27AA9800CAFDED /* User.swift in Sources */,
 				2D9D2BFE1F2674D000F4B343 /* Constants.swift in Sources */,
-				2DFD1F331F30DE78001C47DB /* SelectedEventsTableViewCell.swift in Sources */,
 				2D9D2BF91F266D8100F4B343 /* CreateUsernameViewController.swift in Sources */,
 				2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */,
 			);
