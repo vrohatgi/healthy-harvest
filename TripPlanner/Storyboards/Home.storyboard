@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -165,17 +166,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TripPlanner" id="1Uq-E0-Ivp">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="VPV-rP-ZOp">
-                            <connections>
-                                <action selector="nextButtonTapped:" destination="pUm-Eu-FVc" id="Zs1-PT-Qdz"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Next" id="VPV-rP-ZOp">
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="pUm-Eu-FVc" id="Zs1-PT-Qdz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="h7r-2b-01o">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sP8-DX-m3Q">
+                                    <rect key="frame" x="232" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="beachesButton" destination="eMf-nX-RwE" id="VFe-2b-s5G"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
+                        <outlet property="nextButton" destination="VPV-rP-ZOp" id="8o8-PP-Rfn"/>
                         <outlet property="parksButton" destination="Puf-Tc-Wpm" id="mcj-WV-euq"/>
                         <outlet property="placesTableView" destination="jFG-aC-TTq" id="oh3-Oj-NQQ"/>
                         <outlet property="poolsButton" destination="gYE-ES-11t" id="IMd-Tu-q3W"/>

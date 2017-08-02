@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Subviews
     
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var beachesButton: UIButton!
     @IBOutlet weak var trailsButton: UIButton!
@@ -39,6 +40,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         //self.performSegue(withIdentifier: "nextButton", sender: self)
+        self.nextButton.isHidden = true
         let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
         myVC.eventPlaces = self.eventPlaces
         navigationController?.pushViewController(myVC, animated: true)
