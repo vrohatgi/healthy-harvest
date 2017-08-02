@@ -16,7 +16,7 @@ import SwiftyJSON
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var places = [String]()
-    var selectedActivities = [String]()
+    var eventPlaces = [Int: String]()
     
     var selectedLongitude: Double = 0.0
     var selectedLatitude: Double = 0.0
@@ -134,6 +134,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
             } else {
                 cell.accessoryType = .checkmark
+                eventPlaces[indexPath.row] = places[indexPath.row]
+                
             }
         }
     }
