@@ -11,7 +11,7 @@ import UIKit
 import FirebaseDatabase
 
 //struct VoteService {
-//    static func create(for selectedEvents: String, success: @escaping (Bool) -> Void) {
+//    static func create(for selectedEvents: places, success: @escaping (Bool) -> Void) {
 //        
 //        guard let key = selectedEvents.key else {
 //            return success(false)
