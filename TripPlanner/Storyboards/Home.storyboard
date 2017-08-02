@@ -190,7 +190,7 @@
         <!--Friends View Controller-->
         <scene sceneID="hOF-ax-DpV">
             <objects>
-                <viewController id="l8r-7H-fq4" customClass="FriendsViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FriendsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l8r-7H-fq4" customClass="FriendsViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hJO-b3-7tq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHH-Mh-EFL"/>
