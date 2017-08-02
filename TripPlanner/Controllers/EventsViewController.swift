@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-class EventsViewController: UIViewController {
+class EventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Properties
     
@@ -56,4 +56,25 @@ class EventsViewController: UIViewController {
         
         print("iamsignedout")
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "PlacesTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlacesTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of PlacesTableViewCell.")
+        }
+        
+        //let place = places[indexPath.row]
+        cell.accessoryType = .none
+        //cell.placesLabel.text = place
+        
+        // Configure the cell...
+        
+        return cell
+    }
+
 }
