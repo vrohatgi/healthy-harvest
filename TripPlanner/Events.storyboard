@@ -82,7 +82,7 @@
                     <tabBarItem key="tabBarItem" title="My Events" image="events" id="OxW-st-TCq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiE-6E-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
