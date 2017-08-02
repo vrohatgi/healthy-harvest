@@ -12,11 +12,13 @@ import GooglePlaces
 import GoogleMaps
 import Alamofire
 import SwiftyJSON
+import FirebaseDatabase
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var places = [String]()
     var eventPlaces = [Int: String]()
+    var selectedEvents = [String]()
     
     var selectedLongitude: Double = 0.0
     var selectedLatitude: Double = 0.0
@@ -34,6 +36,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var placesTableView: UITableView!
     
     // MARK: - IBActions
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "nextButton", sender: self)
+        print("hi next working")
+    }
     
     func fetchActivities(location: String, radius: Int, type: String, keyword: String, key: String) {
         var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
@@ -131,6 +138,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
+                eventPlaces.removeValue(forKey: indexPath.row)
                 
             } else {
                 cell.accessoryType = .checkmark

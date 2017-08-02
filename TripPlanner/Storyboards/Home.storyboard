@@ -164,10 +164,10 @@
                             <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="yYg-7s-49A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TripPlanner" id="Na1-ui-gdk">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="jU7-Fy-8pr">
+                    <navigationItem key="navigationItem" title="TripPlanner" id="1Uq-E0-Ivp">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="VPV-rP-ZOp">
                             <connections>
-                                <segue destination="l8r-7H-fq4" kind="show" id="vO7-x6-wZi"/>
+                                <action selector="nextButtonTapped:" destination="pUm-Eu-FVc" id="Zs1-PT-Qdz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -180,6 +180,7 @@
                         <outlet property="placesTableView" destination="jFG-aC-TTq" id="oh3-Oj-NQQ"/>
                         <outlet property="poolsButton" destination="gYE-ES-11t" id="IMd-Tu-q3W"/>
                         <outlet property="trailsButton" destination="oFy-oL-LYV" id="LTZ-aX-PDx"/>
+                        <segue destination="l8r-7H-fq4" kind="show" identifier="nextButton" id="yoR-wh-9Cv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXP-lM-Xgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
