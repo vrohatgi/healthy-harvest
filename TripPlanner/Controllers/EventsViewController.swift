@@ -16,6 +16,8 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - Properties
     
     var authHandle: AuthStateDidChangeListenerHandle?
+    var eventPlaces = [Int: String]()
+
     
     // MARK: - VC Lifecycle
     

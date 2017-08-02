@@ -38,7 +38,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - IBActions
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "nextButton", sender: self)
+        //self.performSegue(withIdentifier: "nextButton", sender: self)
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
+        myVC.eventPlaces = self.eventPlaces
+        navigationController?.pushViewController(myVC, animated: true)
+        
         print("hi next working")
     }
     
