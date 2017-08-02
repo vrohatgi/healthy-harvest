@@ -25,6 +25,8 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(eventPlaces)
+        
         // remove separators for empty cells
         friendsTableView.tableFooterView = UIView()
         friendsTableView.rowHeight = 71
