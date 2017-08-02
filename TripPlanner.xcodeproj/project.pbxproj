@@ -11,6 +11,8 @@
 		2D567CE21F2F8C33006F3976 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */; };
 		2D567CE41F2F8EFA006F3976 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */; };
 		2D6073F61F32363F004C63DA /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F51F32363F004C63DA /* VoteService.swift */; };
+		2D6073F81F324E09004C63DA /* EventsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */; };
+		2D6073FA1F324F16004C63DA /* EventsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F91F324F16004C63DA /* EventsDetailsViewController.swift */; };
 		2D6896B91F2BA45C00EEAEFE /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B81F2BA45C00EEAEFE /* Events.storyboard */; };
 		2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */; };
 		2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = Controllers/FriendsViewController.swift; sourceTree = "<group>"; };
 		2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewCell.swift; path = Views/FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		2D6073F51F32363F004C63DA /* VoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoteService.swift; path = Services/VoteService.swift; sourceTree = "<group>"; };
+		2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetailsTableViewCell.swift; path = Views/EventsDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		2D6073F91F324F16004C63DA /* EventsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetailsViewController.swift; path = Controllers/EventsDetailsViewController.swift; sourceTree = "<group>"; };
 		2D6896B81F2BA45C00EEAEFE /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		2D9D2BC71F259E5F00F4B343 /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,7 @@
 				2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */,
 				2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */,
 				2DFD1F361F3138C3001C47DB /* EventsTableViewCell.swift */,
+				2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				2D9D2C041F267CD600F4B343 /* HomeViewController.swift */,
 				2D9D2C061F267CEA00F4B343 /* EventsViewController.swift */,
 				2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */,
+				2D6073F91F324F16004C63DA /* EventsDetailsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 			files = (
 				2D9D2BF41F26593B00F4B343 /* LoginViewController.swift in Sources */,
 				2D9D2BFB1F2671B300F4B343 /* UserService.swift in Sources */,
+				2D6073F81F324E09004C63DA /* EventsDetailsTableViewCell.swift in Sources */,
 				2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */,
+				2D6073FA1F324F16004C63DA /* EventsDetailsViewController.swift in Sources */,
 				2D6073F61F32363F004C63DA /* VoteService.swift in Sources */,
 				2D9D2C001F2676B600F4B343 /* Storyboard+Utility.swift in Sources */,
 				2D567CE41F2F8EFA006F3976 /* FriendsTableViewCell.swift in Sources */,

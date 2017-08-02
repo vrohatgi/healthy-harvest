@@ -78,6 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
         
         fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "lake", key: activitiesKey)
+        
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
