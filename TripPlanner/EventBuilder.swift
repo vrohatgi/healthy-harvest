@@ -29,6 +29,10 @@ class EventBuilder: NSObject {
         self.selectedPlaces = x
     }
     
+    func anySelections() -> Bool {
+        return self.selectedPlaces.count > 0
+    }
+    
     func buildList(places: [Place], selectedOnly: Bool) -> [Place] {
         var x = [Place]()
         

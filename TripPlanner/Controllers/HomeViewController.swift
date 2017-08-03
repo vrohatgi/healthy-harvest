@@ -18,6 +18,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var displayArr = [Place]() {
         didSet {
+            if self.myPlaces.anySelections() {
+                self.nextButton.isEnabled = true
+            } else {
+                self.nextButton.isEnabled = false
+            }
             self.placesTableView.reloadData()
         }
     }
@@ -154,7 +159,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = nil // hides next button. how/where to bring back?
+       // self.navigationItem.rightBarButtonItem = nil // hides next button. how/where to bring back?
+        self.nextButton.isEnabled = false
         placesTableView.delegate = self
         placesTableView.dataSource = self
     }
