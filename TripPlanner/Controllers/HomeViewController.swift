@@ -16,9 +16,19 @@ import FirebaseDatabase
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var places = [String]()
     var eventPlaces = [Int: String]()
-    var selectedEvents = [String]()
+    var selectedEvents = [Place]()
+    var displayArr = [Place]() {
+        didSet {
+            self.placesTableView.reloadData()
+        }
+    }
+    var beaches = [Place]()
+    var lakes = [Place]()
+    var campgrounds = [Place]()
+    var pools = [Place]()
+    var trails = [Place]()
+    var parks = [Place]()
     
     var selectedLongitude: Double = 0.0
     var selectedLatitude: Double = 0.0
@@ -26,7 +36,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Subviews
     
-    @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet var nextButton: UIBarButtonItem!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var beachesButton: UIButton!
     @IBOutlet weak var trailsButton: UIButton!
@@ -40,7 +50,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         //self.performSegue(withIdentifier: "nextButton", sender: self)
-        self.nextButton.isHidden = true
+        
         let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
         myVC.eventPlaces = self.eventPlaces
         navigationController?.pushViewController(myVC, animated: true)
@@ -58,46 +68,93 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         print(url)
         
-        // fill in places array
+//        if keyword == "lake" {
+//            
+//        } else if keyword == "campground" {
+//        } else if keyword == "trail" {
+//            
+//        } else if keyword == "park" {
+//            
+//        } else if keyword == "pool" {
+//            
+//        }
         
         Alamofire.request(url).responseJSON { (response) in
             //print(response.result.value)
-            self.places.removeAll()
+            self.displayArr.removeAll()
             let result = response.result.value as! [String: Any]
             let placeArr = result["results"] as! NSArray
             for place in placeArr {
-                let name = place as! NSDictionary
-                let space = ""
-                self.places.append("\(name["name"] ?? space)\n\(name["vicinity"] ?? space)\n\(name["types"] ?? space)")
-                print("**** \(place)")
+                let name = place as! [String: Any]
+                
+                self.displayArr.append(Place(name: name["name"] as! String, vicinity: name["vicinity"] as! String, types: name["types"] as! [String]))
             }
             
+            if keyword == "beach" {
+                self.beaches = self.displayArr
+            } else if keyword == "lake" {
+                self.lakes = self.displayArr
+            } else if keyword == "campground" {
+                self.campgrounds = self.displayArr
+            } else if keyword == "trail" {
+                self.trails = self.displayArr
+            } else if keyword == "park" {
+                self.parks = self.displayArr
+            } else if keyword == "pool" {
+                self.pools = self.displayArr
+            }
+
             self.placesTableView.reloadData()
         }
     }
     
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
+        if self.lakes.count != 0 {
+            self.displayArr = self.lakes
+        } else {
+            fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "lake", key: activitiesKey)
+        }
         
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "lake", key: activitiesKey)
         
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "park", key: activitiesKey)
+        if self.parks.count != 0 {
+            self.displayArr = self.parks
+        } else {
+            fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "park", key: activitiesKey)
+        }
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "campground", key: activitiesKey)
+        if self.campgrounds.count != 0 {
+            self.displayArr = self.campgrounds
+        } else {
+            fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "campground", key: activitiesKey)
+        }
+
     }
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "beach", key: activitiesKey)
+        if self.beaches.count != 0 {
+            self.displayArr = self.beaches
+        } else {
+            fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "beach", key: activitiesKey)
+        }
     }
     @IBAction func trailsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "trail", key: activitiesKey)
+        if self.trails.count != 0 {
+            self.displayArr = self.trails
+        } else {
+            fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "trail", key: activitiesKey)
+        }
     }
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
-        fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "pool", key: activitiesKey)
+        if self.pools.count != 0 {
+            self.displayArr = self.pools
+        } else {
+            fetchActivities(location: "\(selectedLatitude),\(selectedLongitude)", radius: 30000, type: "", keyword: "pool", key: activitiesKey)
+        }
     }
     
     @IBAction func editingSearchBegin(_ sender: UITextField) {
@@ -110,6 +167,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = nil // hides next button. how/where to bring back?
         placesTableView.delegate = self
         placesTableView.dataSource = self
     }
@@ -122,7 +180,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return places.count
+        return displayArr.count
     }
     
     
@@ -132,11 +190,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             fatalError("The dequeued cell is not an instance of PlacesTableViewCell.")
         }
         
-        let place = places[indexPath.row]
-        cell.accessoryType = .none
-        cell.placesLabel.text = place
+        let place = displayArr[indexPath.row]
         
-        // Configure the cell...
+        if place.isChecked == true {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        
+        
+        //Loop through place.types and add to a new variable sting to display down here \/
+        cell.placesLabel.text = "\(place.name) \(place.vicinity) \(place.types)"
+        
         
         return cell
     }
@@ -145,11 +210,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
-                eventPlaces.removeValue(forKey: indexPath.row)
+                displayArr[indexPath.row].isChecked = false
+                //eventPlaces.removeValue(forKey: indexPath.row)
                 
             } else {
                 cell.accessoryType = .checkmark
-                eventPlaces[indexPath.row] = places[indexPath.row]
+                displayArr[indexPath.row].isChecked = true
+
+                //eventPlaces[indexPath.row] = displayArr[indexPath.row]
                 
             }
         }
@@ -159,7 +227,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
-    // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         let space = ""
         print("Place name: \(place.name)")
@@ -184,16 +251,13 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
         print("Error: ", error.localizedDescription)
     }
     
-    // User canceled the operation.
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         dismiss(animated: true, completion: nil)
     }
     
-    // Turn the network activity indicator on and off again.
     func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
