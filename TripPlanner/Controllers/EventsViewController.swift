@@ -61,13 +61,13 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "PlacesTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlacesTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of PlacesTableViewCell.")
+        let cellIdentifier = "EventsTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventsTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of EventsTableViewCell.")
         }
         
         //let place = places[indexPath.row]
@@ -77,6 +77,14 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         // Configure the cell...
         
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
     }
 
 }

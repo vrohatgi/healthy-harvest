@@ -14,16 +14,16 @@ struct InviteService {
     private static func inviteUser(_ user: User, places: [Place], eventName: String, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         
         let currentUID = User.current.uid
-        let followData = ["followers/\(user.uid)/\(currentUID)" : true,
-                          "following/\(currentUID)/\(user.uid)" : true]
+        let inviteData = ["peopleWhoInvitedMe/\(user.uid)/\(currentUID)" : true, "friendsInvited/\(currentUID)/\(user.uid)" : true]
         
         let ref = Database.database().reference()
-        ref.updateChildValues(followData) { (error, _) in
+        ref.updateChildValues(inviteData) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                success(false)
             }
             
-            success(error == nil)
+            //need to add stuff for storing data here (STEP 21) UserService.
         }
     }
     
@@ -61,5 +61,31 @@ struct InviteService {
                 completion(false)
             }
         })
+    }
+    
+    private static func create(aspectHeight: CGFloat) {
+        let currentUser = User.current
+        
+        
+        let rootRef = Database.database().reference()
+        let newEventRef = rootRef.child("events").child(currentUser.uid).childByAutoId()
+        let newEventKey = newEventRef.key
+        
+        
+        UserService.friendsInvited(for: currentUser) { (followerUIDs) in
+            
+            let eventCreatedDict = ["creator_uid" : currentUser.uid]
+            
+            
+            var updatedData: [String : Any] = ["eventsVC/\(currentUser.uid)/\(newEventKey)" : eventCreatedDict]
+            
+            
+            for uid in followerUIDs {
+                updatedData["eventsVC/\(uid)/\(newEventKey)"] = eventCreatedDict
+            }
+            
+            
+            rootRef.updateChildValues(updatedData)
+        }
     }
 }

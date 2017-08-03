@@ -45,7 +45,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.64597826313756368" green="0.89528473984771573" blue="0.78588511727694732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47194267445406951" green="0.86171478426395942" blue="0.78992422196157552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="QZf-AP-jWf" firstAttribute="centerY" secondItem="wKX-cU-aCV" secondAttribute="centerY" id="BH6-cH-Ria"/>
                                     <constraint firstAttribute="height" constant="265" id="EDW-Nk-loa"/>
@@ -169,7 +169,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BI7-gV-Nfn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iy0-WG-jMq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iy0-WG-jMq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

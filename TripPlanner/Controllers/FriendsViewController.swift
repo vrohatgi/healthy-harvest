@@ -26,7 +26,7 @@ class FriendsViewController: UIViewController {
     // MARK: - IBActions 
     
     @IBAction func didTapCreateEventButton(_ sender: UIButton) {
-        
+        self.tabBarController?.selectedIndex = 1
     }
     
     // MARK: - VC Lifecycle

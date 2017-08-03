@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-//struct VoteService {
+struct EventService {
 //    static func create(for selectedEvents: places, success: @escaping (Bool) -> Void) {
 //        
 //        guard let key = selectedEvents.key else {
@@ -21,4 +21,4 @@ import FirebaseDatabase
 //        let currentUID = User.current.uid
 //        
 //    }
-//}
+}
