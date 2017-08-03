@@ -14,7 +14,7 @@ class FriendsViewController: UIViewController {
     // MARK: - Subviews
     
     @IBOutlet weak var friendsTableView: UITableView!
-    var eventPlaces = [Int: String]()
+    var eventPlaces = [Place]()
     
     // MARK: - Properties
     
