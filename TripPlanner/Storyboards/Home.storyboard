@@ -102,7 +102,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
@@ -206,6 +206,9 @@
                                     <constraint firstAttribute="width" constant="99" id="ZQd-du-TSc"/>
                                 </constraints>
                                 <state key="normal" title="Create Event"/>
+                                <connections>
+                                    <action selector="didTapCreateEventButton:" destination="l8r-7H-fq4" eventType="touchUpInside" id="T6y-aI-KkI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your event" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-Qo-3gE">
                                 <rect key="frame" x="16" y="72" width="343" height="44"/>
@@ -224,7 +227,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgS-q7-fBz" id="Pmi-6j-Bwp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blj-cw-2FF">
@@ -274,6 +277,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="eventNameTextField" destination="h9x-Qo-3gE" id="y6A-UI-ioH"/>
                         <outlet property="friendsTableView" destination="itI-1P-Hci" id="3Ev-W1-RAd"/>
                     </connections>
                 </viewController>
@@ -288,7 +292,7 @@
                     <tabBarItem key="tabBarItem" title="Select Activity" image="activity" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9V-J4-tYf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

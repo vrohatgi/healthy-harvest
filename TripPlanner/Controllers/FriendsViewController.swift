@@ -14,11 +14,20 @@ class FriendsViewController: UIViewController {
     // MARK: - Subviews
     
     @IBOutlet weak var friendsTableView: UITableView!
+    
     var eventPlaces = [Place]()
+    
+    @IBOutlet weak var eventNameTextField: UITextField!
     
     // MARK: - Properties
     
     var users = [User]()
+    
+    // MARK: - IBActions 
+    
+    @IBAction func didTapCreateEventButton(_ sender: UIButton) {
+        
+    }
     
     // MARK: - VC Lifecycle
     
@@ -75,7 +84,7 @@ extension FriendsViewController: FriendsTableViewCellDelegate {
         inviteButton.isUserInteractionEnabled = false
         let friend = users[indexPath.row]
         
-        InviteService.setIsInvited(!friend.isInvited, fromCurrentUserTo: friend) { (success) in
+        InviteService.setIsInvited(!friend.isInvited, places: eventPlaces, eventName: eventNameTextField.text!, fromCurrentUserTo: friend) { (success) in
             defer {
                 inviteButton.isUserInteractionEnabled = true
             }

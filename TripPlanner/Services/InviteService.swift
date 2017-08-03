@@ -11,20 +11,18 @@ import UIKit
 import FirebaseDatabase
 
 struct InviteService {
-    private static func inviteUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
-        // 1
+    private static func inviteUser(_ user: User, places: [Place], eventName: String, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
+        
         let currentUID = User.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : true,
                           "following/\(currentUID)/\(user.uid)" : true]
         
-        // 2
         let ref = Database.database().reference()
         ref.updateChildValues(followData) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
             }
             
-            // 3
             success(error == nil)
         }
     }
@@ -44,9 +42,9 @@ struct InviteService {
         }
     }
     
-    static func setIsInvited(_ isFollowing: Bool, fromCurrentUserTo followee: User, success: @escaping (Bool) -> Void) {
+    static func setIsInvited(_ isFollowing: Bool, places: [Place], eventName: String, fromCurrentUserTo followee: User, success: @escaping (Bool) -> Void) {
         if isFollowing {
-            inviteUser(followee, forCurrentUserWithSuccess: success)
+            inviteUser(followee, places: places, eventName: eventName, forCurrentUserWithSuccess: success)
         } else {
             uninviteUser(followee, forCurrentUserWithSuccess: success)
         }
