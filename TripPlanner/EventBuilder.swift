@@ -19,7 +19,7 @@ class EventBuilder: NSObject {
         super.init()
     }
     
-    func sync(places: [Place]) {
+    func saveSelectedPlaces(places: [Place]) {
         var x = [Place]()
         for p in places {
             if p.isChecked {
@@ -37,7 +37,7 @@ class EventBuilder: NSObject {
         var x = [Place]()
         
         x.append(contentsOf: self.selectedPlaces)
-
+        
         for p in x {
             p.isChecked = true
         }
@@ -46,8 +46,24 @@ class EventBuilder: NSObject {
             return x
         }
         
-        x.append(contentsOf: places)
+        for p in places {
+ 
+            var foundP = false
 
+            for p1 in x {
+                if p.name == p1.name {
+                    foundP = true
+                    break
+                }
+            }
+            
+            if !foundP {
+                x.append(p)
+            }
+            
+        }
+        
         return x
     }
+
 }

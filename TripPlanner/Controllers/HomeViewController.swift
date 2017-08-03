@@ -18,11 +18,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var displayArr = [Place]() {
         didSet {
-            if self.myPlaces.anySelections() {
-                self.nextButton.isEnabled = true
-            } else {
-                self.nextButton.isEnabled = false
-            }
             self.placesTableView.reloadData()
         }
     }
@@ -52,7 +47,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
         
-        self.myPlaces.sync(places: self.displayArr)
+        self.myPlaces.saveSelectedPlaces(places: self.displayArr)
 
         myVC.eventPlaces = self.myPlaces.buildList(places: [Place](), selectedOnly: true)
 
@@ -88,7 +83,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 list.append(p)
             }
             
-            self.myPlaces.sync(places: self.displayArr)
+            self.myPlaces.saveSelectedPlaces(places: self.displayArr)
             
             self.displayArr = self.myPlaces.buildList(places: list, selectedOnly: false)
         }
@@ -159,7 +154,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.navigationItem.rightBarButtonItem = nil // hides next button. how/where to bring back?
         self.nextButton.isEnabled = false
         placesTableView.delegate = self
         placesTableView.dataSource = self
@@ -200,13 +194,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
                 displayArr[indexPath.row].isChecked = false
+                
+                self.myPlaces.saveSelectedPlaces(places: displayArr)
+                
+                if !self.myPlaces.anySelections() {
+                    self.nextButton.isEnabled = false
+                }
             } else {
                 cell.accessoryType = .checkmark
                 displayArr[indexPath.row].isChecked = true
+                self.nextButton.isEnabled = true
             }
         }
     }
 }
+
+
 
 
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
