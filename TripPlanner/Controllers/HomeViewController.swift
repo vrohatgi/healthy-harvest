@@ -52,7 +52,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myVC.eventPlaces = self.myPlaces.buildList(places: [Place](), selectedOnly: true)
 
         navigationController?.pushViewController(myVC, animated: true)
-        
         print("hi next working")
     }
     
