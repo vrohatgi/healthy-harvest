@@ -118,7 +118,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="pm6-uO-9rx" secondAttribute="trailing" constant="35" id="a24-2s-mJv"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="tintColor" red="0.70769479489999998" green="0.82998743699999999" blue="0.86171478430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="placesLabel" destination="pm6-uO-9rx" id="7yh-pb-yy1"/>
                                         </connections>
@@ -162,7 +162,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Activities" id="1Uq-E0-Ivp">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="VPV-rP-ZOp">
-                            <color key="tintColor" red="1" green="0.75011481250000001" blue="0.50026987209999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="nextButtonTapped:" destination="pUm-Eu-FVc" id="Zs1-PT-Qdz"/>
                             </connections>
@@ -203,7 +203,7 @@
                                     <constraint firstAttribute="width" constant="99" id="ZQd-du-TSc"/>
                                 </constraints>
                                 <state key="normal" title="Create Event">
-                                    <color key="titleColor" red="0.70769479489999998" green="0.82998743699999999" blue="0.86171478430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapCreateEventButton:" destination="l8r-7H-fq4" eventType="touchUpInside" id="T6y-aI-KkI"/>
@@ -238,7 +238,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-zt-HwG">
                                                     <rect key="frame" x="305" y="7" width="46" height="30"/>
                                                     <state key="normal" title="Button">
-                                                        <color key="titleColor" red="0.98998647930000006" green="0.74966937300000003" blue="0.50407868619999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="inviteButtonTapped:" destination="qgS-q7-fBz" eventType="touchUpInside" id="2bC-5O-VZl"/>
