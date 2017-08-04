@@ -183,7 +183,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         //Loop through place.types and add to a new variable sting to display down here \/
-        cell.placesLabel.text = "\(place.name) \(place.vicinity) \(place.types)"
+        cell.placesLabel.text = "\(place.name) \(place.vicinity)"
         
         
         return cell

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TripPlanner-->
+        <!--Activities-->
         <scene sceneID="7KI-Ym-OkI">
             <objects>
                 <viewController id="pUm-Eu-FVc" customClass="HomeViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,7 +24,6 @@
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
                                 <rect key="frame" x="35" y="124" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.69484758946272518" green="0.95686274510000002" blue="0.80528596967544197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="aho-PG-aAj"/>
                                     <constraint firstAttribute="height" constant="60" id="tBM-iC-Nak"/>
@@ -36,7 +35,7 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
                                 <rect key="frame" x="35" y="211" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.91546259253136808" blue="0.11015847079732193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PVq-sU-TYg"/>
                                     <constraint firstAttribute="width" constant="60" id="nNG-xB-hYG"/>
@@ -48,7 +47,6 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
                                 <rect key="frame" x="280" y="124" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.7549089578396867" blue="0.0083067499490086846" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="JAs-WF-y0E"/>
                                     <constraint firstAttribute="height" constant="60" id="p2h-2O-YqF"/>
@@ -60,7 +58,6 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
                                 <rect key="frame" x="280" y="211" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.25240206146612859" green="0.81335013690333369" blue="0.89989475388601037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="h6k-HR-R6Y"/>
                                     <constraint firstAttribute="height" constant="60" id="k1M-qK-Owf"/>
@@ -72,7 +69,6 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
                                 <rect key="frame" x="157.5" y="211" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.24069526535127056" green="0.70280116580310881" blue="0.55816837604446978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="NMH-Sb-UEF"/>
                                     <constraint firstAttribute="height" constant="60" id="RpC-b5-aEc"/>
@@ -88,7 +84,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Evx-Hb-Alg"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="editingSearchBegin:" destination="pUm-Eu-FVc" eventType="editingDidBegin" id="UB2-Tw-9vZ"/>
@@ -102,7 +98,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
@@ -110,7 +106,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="104" id="eIM-ba-xab"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -122,7 +118,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="pm6-uO-9rx" secondAttribute="trailing" constant="35" id="a24-2s-mJv"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="tintColor" red="0.47177779674530029" green="0.86217325925827026" blue="0.7874714732170105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.70769479489999998" green="0.82998743699999999" blue="0.86171478430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="placesLabel" destination="pm6-uO-9rx" id="7yh-pb-yy1"/>
                                         </connections>
@@ -131,7 +127,6 @@
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
                                 <rect key="frame" x="157.5" y="124" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.82338144722205575" green="0.95686274510000002" blue="0.66319479233034118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KdI-zB-Njt"/>
                                     <constraint firstAttribute="width" constant="60" id="sQx-VY-qzV"/>
@@ -165,8 +160,9 @@
                             <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="yYg-7s-49A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TripPlanner" id="1Uq-E0-Ivp">
+                    <navigationItem key="navigationItem" title="Activities" id="1Uq-E0-Ivp">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="VPV-rP-ZOp">
+                            <color key="tintColor" red="1" green="0.75011481250000001" blue="0.50026987209999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="nextButtonTapped:" destination="pUm-Eu-FVc" id="Zs1-PT-Qdz"/>
                             </connections>
@@ -206,7 +202,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="ZQd-du-TSc"/>
                                 </constraints>
-                                <state key="normal" title="Create Event"/>
+                                <state key="normal" title="Create Event">
+                                    <color key="titleColor" red="0.70769479489999998" green="0.82998743699999999" blue="0.86171478430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="didTapCreateEventButton:" destination="l8r-7H-fq4" eventType="touchUpInside" id="T6y-aI-KkI"/>
                                 </connections>
@@ -217,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="44" id="LmH-Rt-4MG"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="itI-1P-Hci">
@@ -228,18 +226,20 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgS-q7-fBz" id="Pmi-6j-Bwp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blj-cw-2FF">
-                                                    <rect key="frame" x="20" y="12" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="10.5" width="43" height="24"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-zt-HwG">
                                                     <rect key="frame" x="305" y="7" width="46" height="30"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="0.98998647930000006" green="0.74966937300000003" blue="0.50407868619999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="inviteButtonTapped:" destination="qgS-q7-fBz" eventType="touchUpInside" id="2bC-5O-VZl"/>
                                                     </connections>

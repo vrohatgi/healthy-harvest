@@ -11,6 +11,7 @@ import UIKit
 import FirebaseDatabase
 
 struct InviteService {
+    
     private static func inviteUser(_ user: User, places: [Place], eventName: String, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         
         let currentUID = User.current.uid
@@ -22,18 +23,16 @@ struct InviteService {
                 assertionFailure(error.localizedDescription)
                 success(false)
             }
-            
-            //need to add stuff for storing data here (STEP 21) UserService.
         }
     }
     
     private static func uninviteUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
-        let followData = ["followers/\(user.uid)/\(currentUID)" : NSNull(),
-                          "following/\(currentUID)/\(user.uid)" : NSNull()]
+        let inviteData = ["peopleWhoInvitedMe/\(user.uid)/\(currentUID)" : NSNull(),
+                          "friendsInvited/\(currentUID)/\(user.uid)" : NSNull()]
         
         let ref = Database.database().reference()
-        ref.updateChildValues(followData) { (error, ref) in
+        ref.updateChildValues(inviteData) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
             }
@@ -41,6 +40,8 @@ struct InviteService {
             success(error == nil)
         }
     }
+    
+    // follower = friend who got invited; followee = friend who invited current user
     
     static func setIsInvited(_ isFollowing: Bool, places: [Place], eventName: String, fromCurrentUserTo followee: User, success: @escaping (Bool) -> Void) {
         if isFollowing {
@@ -63,29 +64,29 @@ struct InviteService {
         })
     }
     
-    private static func create(aspectHeight: CGFloat) {
-        let currentUser = User.current
-        
-        
-        let rootRef = Database.database().reference()
-        let newEventRef = rootRef.child("events").child(currentUser.uid).childByAutoId()
-        let newEventKey = newEventRef.key
-        
-        
-        UserService.friendsInvited(for: currentUser) { (followerUIDs) in
-            
-            let eventCreatedDict = ["creator_uid" : currentUser.uid]
-            
-            
-            var updatedData: [String : Any] = ["eventsVC/\(currentUser.uid)/\(newEventKey)" : eventCreatedDict]
-            
-            
-            for uid in followerUIDs {
-                updatedData["eventsVC/\(uid)/\(newEventKey)"] = eventCreatedDict
-            }
-            
-            
-            rootRef.updateChildValues(updatedData)
-        }
-    }
+//    private static func create(aspectHeight: CGFloat) {
+//        let currentUser = User.current
+//        
+//        
+//        let rootRef = Database.database().reference()
+//        let newEventRef = rootRef.child("events").child(currentUser.uid).childByAutoId()
+//        let newEventKey = newEventRef.key
+//        
+//        
+//        UserService.friendsInvited(for: currentUser) { (followerUIDs) in
+//            
+//            let eventCreatedDict = ["creator_uid" : currentUser.uid]
+//            
+//            
+//            var updatedData: [String : Any] = ["eventsVC/\(currentUser.uid)/\(newEventKey)" : eventCreatedDict]
+//            
+//            
+//            for uid in followerUIDs {
+//                updatedData["eventsVC/\(uid)/\(newEventKey)"] = eventCreatedDict
+//            }
+//            
+//            
+//            rootRef.updateChildValues(updatedData)
+//        }
+//    }
 }
