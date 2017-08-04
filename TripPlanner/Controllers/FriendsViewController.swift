@@ -23,7 +23,7 @@ class FriendsViewController: UIViewController {
     
     var users = [User]()
     
-    // MARK: - IBActions 
+    // MARK: - IBActions
     
     @IBAction func didTapCreateEventButton(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 1
@@ -81,18 +81,20 @@ extension FriendsViewController: FriendsTableViewCellDelegate {
     func didTapInviteButton(_ inviteButton: UIButton, on cell: FriendsTableViewCell) {
         guard let indexPath = friendsTableView.indexPath(for: cell) else { return }
         
-        inviteButton.isUserInteractionEnabled = false
         let friend = users[indexPath.row]
         
-        InviteService.setIsInvited(!friend.isInvited, places: eventPlaces, eventName: eventNameTextField.text!, fromCurrentUserTo: friend) { (success) in
-            defer {
-                inviteButton.isUserInteractionEnabled = true
-            }
-            
-            guard success else { return }
-            
-            friend.isInvited = !friend.isInvited
-            self.friendsTableView.reloadRows(at: [indexPath], with: .none)
+        cell.inviteButton.isSelected = !cell.inviteButton.isSelected
+        
+        InviteService.setIsInvited(!friend.isInvited,
+                                   places: eventPlaces,
+                                   eventName: eventNameTextField.text!,
+                                   fromCurrentUserTo: friend) { (success) in
+                                    
+                                    guard success else { return }
+                                    
+                                    friend.isInvited = !friend.isInvited
+                                    
+                                    self.friendsTableView.reloadRows(at: [indexPath], with: .none)
         }
     }
 }

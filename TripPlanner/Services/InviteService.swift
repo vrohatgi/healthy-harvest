@@ -51,42 +51,27 @@ struct InviteService {
         }
     }
     
-    static func isUserInvited(_ user: User, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
-        let currentUID = User.current.uid
-        let ref = Database.database().reference().child("followers").child(user.uid)
+    static func isUserInvited(_ user: User,
+                              byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
         
-        ref.queryEqual(toValue: nil, childKey: currentUID).observeSingleEvent(of: .value, with: { (snapshot) in
-            if let _ = snapshot.value as? [String : Bool] {
-                completion(true)
-            } else {
-                completion(false)
-            }
-        })
+        let currentUID = User.current.uid
+        
+        let ref = Database
+            .database()
+            .reference()
+            .child("followers")
+            .child(user.uid)
+        
+        ref.queryEqual(toValue: nil, childKey: currentUID)
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let _ = snapshot.value as? [String : Bool] {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+                
+            })
     }
     
-//    private static func create(aspectHeight: CGFloat) {
-//        let currentUser = User.current
-//        
-//        
-//        let rootRef = Database.database().reference()
-//        let newEventRef = rootRef.child("events").child(currentUser.uid).childByAutoId()
-//        let newEventKey = newEventRef.key
-//        
-//        
-//        UserService.friendsInvited(for: currentUser) { (followerUIDs) in
-//            
-//            let eventCreatedDict = ["creator_uid" : currentUser.uid]
-//            
-//            
-//            var updatedData: [String : Any] = ["eventsVC/\(currentUser.uid)/\(newEventKey)" : eventCreatedDict]
-//            
-//            
-//            for uid in followerUIDs {
-//                updatedData["eventsVC/\(uid)/\(newEventKey)"] = eventCreatedDict
-//            }
-//            
-//            
-//            rootRef.updateChildValues(updatedData)
-//        }
-//    }
 }
