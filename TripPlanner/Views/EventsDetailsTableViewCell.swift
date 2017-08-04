@@ -1,5 +1,5 @@
 //
-//  EventsDetailsTableViewCell.swift
+//  VotingTableViewCell.swift
 //  TripPlanner
 //
 //  Created by vanya rohatgi on 8/2/17.
@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class EventsDetailsTableViewCell: UITableViewCell {
+class VotingTableViewCell: UITableViewCell {
     
     // MARK: -IBOutlets
+    
     @IBOutlet weak var placeInfoLabel: UILabel!
     @IBOutlet weak var voteButton: UIButton!
     

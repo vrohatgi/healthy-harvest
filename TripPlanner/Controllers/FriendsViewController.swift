@@ -17,6 +17,8 @@ class FriendsViewController: UIViewController {
     
     var eventPlaces = [Place]()
     
+    var invitedUsers = [User]()
+    
     @IBOutlet weak var eventNameTextField: UITextField!
     
     // MARK: - Properties
@@ -27,6 +29,31 @@ class FriendsViewController: UIViewController {
     
     @IBAction func didTapCreateEventButton(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 1
+        
+        var userIDs = [String]()
+        var placeInfo = [[String: String]]()
+        
+        guard let eventName = eventNameTextField.text, !eventName.isEmpty else {
+            return
+        }
+        
+        for user in users {
+            if user.isInvited == true {
+                userIDs.append(user.uid)
+            }
+        }
+        
+        for place in eventPlaces {
+            placeInfo.append(["name": place.name, "vicinity": place.vicinity])
+        }
+        
+        EventService.saveEvent(places: placeInfo, users: userIDs, eventName: eventName) { (success) in
+            guard success else {
+                var alert = UIAlertView()
+                alert.title = "Unable to save event!"
+                return
+            }
+        }
     }
     
     // MARK: - VC Lifecycle
@@ -82,19 +109,27 @@ extension FriendsViewController: FriendsTableViewCellDelegate {
         guard let indexPath = friendsTableView.indexPath(for: cell) else { return }
         
         let friend = users[indexPath.row]
-        
-        cell.inviteButton.isSelected = !cell.inviteButton.isSelected
-        
-        InviteService.setIsInvited(!friend.isInvited,
-                                   places: eventPlaces,
-                                   eventName: eventNameTextField.text!,
-                                   fromCurrentUserTo: friend) { (success) in
-                                    
-                                    guard success else { return }
-                                    
-                                    friend.isInvited = !friend.isInvited
-                                    
-                                    self.friendsTableView.reloadRows(at: [indexPath], with: .none)
+        if friend.isInvited == true {
+            cell.inviteButton.isSelected = false
+            friend.isInvited = false
+        }
+        else {
+            cell.inviteButton.isSelected = true
+            friend.isInvited = true
         }
     }
+    
+    
+    //        InviteService.setIsInvited(!friend.isInvited,
+    //                                   places: eventPlaces,
+    //                                   eventName: eventNameTextField.text!,
+    //                                   fromCurrentUserTo: friend) { (success) in
+    //
+    //                                    guard success else { return }
+    //
+    //                                    friend.isInvited = !friend.isInvited
+    //
+    //                                    self.friendsTableView.reloadRows(at: [indexPath], with: .none)
+    //        }
 }
+

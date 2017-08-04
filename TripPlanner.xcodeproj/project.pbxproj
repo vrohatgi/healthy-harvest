@@ -12,7 +12,7 @@
 		2D567CE41F2F8EFA006F3976 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */; };
 		2D6073F61F32363F004C63DA /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F51F32363F004C63DA /* EventService.swift */; };
 		2D6073F81F324E09004C63DA /* EventsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */; };
-		2D6073FA1F324F16004C63DA /* EventsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F91F324F16004C63DA /* EventsDetailsViewController.swift */; };
+		2D6073FA1F324F16004C63DA /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F91F324F16004C63DA /* VotingViewController.swift */; };
 		2D6073FC1F32810B004C63DA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073FB1F32810B004C63DA /* Place.swift */; };
 		2D6896B91F2BA45C00EEAEFE /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6896B81F2BA45C00EEAEFE /* Events.storyboard */; };
 		2D70A3391F285FD400342660 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */; };
@@ -43,7 +43,7 @@
 		2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewCell.swift; path = Views/FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		2D6073F51F32363F004C63DA /* EventService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventService.swift; path = Services/EventService.swift; sourceTree = "<group>"; };
 		2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetailsTableViewCell.swift; path = Views/EventsDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		2D6073F91F324F16004C63DA /* EventsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetailsViewController.swift; path = Controllers/EventsDetailsViewController.swift; sourceTree = "<group>"; };
+		2D6073F91F324F16004C63DA /* VotingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VotingViewController.swift; path = Controllers/VotingViewController.swift; sourceTree = "<group>"; };
 		2D6073FB1F32810B004C63DA /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
 		2D6896B81F2BA45C00EEAEFE /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		2D70A3381F285FD400342660 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				2D9D2C041F267CD600F4B343 /* HomeViewController.swift */,
 				2D9D2C061F267CEA00F4B343 /* EventsViewController.swift */,
 				2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */,
-				2D6073F91F324F16004C63DA /* EventsDetailsViewController.swift */,
+				2D6073F91F324F16004C63DA /* VotingViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -339,7 +339,7 @@
 				2D9D2BFB1F2671B300F4B343 /* UserService.swift in Sources */,
 				2D6073F81F324E09004C63DA /* EventsDetailsTableViewCell.swift in Sources */,
 				2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */,
-				2D6073FA1F324F16004C63DA /* EventsDetailsViewController.swift in Sources */,
+				2D6073FA1F324F16004C63DA /* VotingViewController.swift in Sources */,
 				2D6073F61F32363F004C63DA /* EventService.swift in Sources */,
 				2D9D2C001F2676B600F4B343 /* Storyboard+Utility.swift in Sources */,
 				2D567CE41F2F8EFA006F3976 /* FriendsTableViewCell.swift in Sources */,

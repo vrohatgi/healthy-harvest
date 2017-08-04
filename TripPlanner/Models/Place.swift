@@ -13,14 +13,14 @@ class Place: NSObject {
     
     var name: String
     var vicinity: String
-    var types: [String]
+    //var types: [String]
     var isChecked: Bool = false
     
     
     init(name: String, vicinity: String, types: [String]) {
         self.name = name
         self.vicinity = vicinity
-        self.types = types
+        //self.types = types
         
         super.init()
     }

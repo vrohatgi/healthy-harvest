@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FSC-zI-jH1" id="MXZ-9f-vhK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3O-4E-NJH">
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1356" y="930.58470764617698"/>
         </scene>
-        <!--Events Details View Controller-->
+        <!--Voting View Controller-->
         <scene sceneID="uWd-5N-hmO">
             <objects>
-                <viewController id="Jfc-Ke-6SG" customClass="EventsDetailsViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jfc-Ke-6SG" customClass="VotingViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LFz-hD-R9s"/>
                         <viewControllerLayoutGuide type="bottom" id="Dr2-wt-LHT"/>
@@ -98,15 +98,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beY-1F-1Uw" customClass="EventsDetailsTableView" customModule="TripPlanner" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beY-1F-1Uw" userLabel="Voting Table View">
                                 <rect key="frame" x="0.0" y="70" width="375" height="289"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vqh-pt-ZHc" customClass="EventsDetailsTableViewCell" customModule="TripPlanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VotingTableViewCell" id="vqh-pt-ZHc" userLabel="VotingTableViewCell" customClass="VotingTableViewCell" customModule="TripPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqh-pt-ZHc" id="68c-zP-Qkh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
@@ -139,6 +139,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jfc-Ke-6SG" id="gBD-Qp-IEV"/>
+                                    <outlet property="delegate" destination="Jfc-Ke-6SG" id="b2l-9C-qp7"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,6 +153,9 @@
                             <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="br8-2d-sT2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="votingTableViewController" destination="beY-1F-1Uw" id="GL6-vY-iBB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y13-21-F0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +168,7 @@
                     <tabBarItem key="tabBarItem" title="My Events" image="events" id="OxW-st-TCq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiE-6E-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
