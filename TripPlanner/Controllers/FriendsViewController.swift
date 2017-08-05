@@ -49,8 +49,9 @@ class FriendsViewController: UIViewController {
         
         EventService.saveEvent(places: placeInfo, users: userIDs, eventName: eventName) { (success) in
             guard success else {
-                var alert = UIAlertView()
+                let alert = UIAlertView()
                 alert.title = "Unable to save event!"
+                alert.addButton(withTitle: "Ok")
                 return
             }
         }

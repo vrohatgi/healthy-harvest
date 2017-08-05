@@ -17,9 +17,9 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     var authHandle: AuthStateDidChangeListenerHandle?
     var eventPlaces = [Int: String]()
+    
     var eventNames = [String]()
     
-
     
     // MARK: - VC Lifecycle
     
@@ -74,7 +74,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
         //let place = places[indexPath.row]
         cell.accessoryType = .none
-        //cell.placesLabel.text = place
+        cell.eventsLabel.text = "\(eventNames[indexPath.row])"
         
         // Configure the cell...
         
@@ -87,6 +87,18 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        EventService.getEvents { [unowned self] (events) in
+            self.eventNames = events
+            
+            DispatchQueue.main.async {
+                self.eventsTableView.reloadData()
+            }
+        }
     }
 
 }

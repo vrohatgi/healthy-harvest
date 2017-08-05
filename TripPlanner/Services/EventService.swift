@@ -12,12 +12,24 @@ import FirebaseDatabase
 
 struct EventService {
 
-    /*
-    static func getEvents(success: @escaping () -> (Void)) {
-        let ref2 = Database.database().reference().child("users").child(User.current.uid)
+    
+    static func getEvents(success: @escaping ([String]) -> (Void)) {
+        // 1. lets get current user key
+        let ref = Database.database().reference().child("users").child(User.current.uid)
         
+        // 2. now lets get events he is invited to
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let snap = snapshot.value as! [String: Any]
+            var eventsArr = [String]()
+            
+            if let event = (snap["events"] as? [String]) {
+                eventsArr = event
+            }
+            
+            success(eventsArr)
+        })        
     }
- */
+ 
     
     static func saveEvent(places: [[String: String]], users: [String], eventName: String, success: @escaping (Bool) -> (Void)) {
         
