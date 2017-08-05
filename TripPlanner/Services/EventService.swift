@@ -12,6 +12,11 @@ import FirebaseDatabase
 
 struct EventService {
 
+    //for the voting vc i need to get the places, who invited & users invited, event name
+    
+    static func getEventInfo(success: @escaping ([String]) -> (Void)) {
+        
+    }
     
     static func getEvents(success: @escaping ([String]) -> (Void)) {
         // 1. lets get current user key

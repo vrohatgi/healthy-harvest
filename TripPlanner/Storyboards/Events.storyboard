@@ -34,19 +34,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3O-4E-NJH">
-                                                    <rect key="frame" x="19" y="-0.5" width="60" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="bNT-ww-joZ"/>
-                                                        <constraint firstAttribute="height" constant="44" id="qzM-BW-UAe"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="19" y="10" width="348" height="24"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="centerY" secondItem="MXZ-9f-vhK" secondAttribute="centerY" id="5nj-Vh-zgc"/>
-                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="leading" secondItem="MXZ-9f-vhK" secondAttribute="leadingMargin" constant="11" id="sDb-cc-7i7"/>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="centerY" secondItem="MXZ-9f-vhK" secondAttribute="centerY" id="Li1-zW-PFO"/>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="leading" secondItem="MXZ-9f-vhK" secondAttribute="leadingMargin" constant="11" id="R9C-4n-abc"/>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="trailing" secondItem="MXZ-9f-vhK" secondAttribute="trailingMargin" id="oMs-d0-eY6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -63,10 +60,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pby-aO-6Y3" firstAttribute="leading" secondItem="Pc2-Cw-hCQ" secondAttribute="leading" id="7EJ-g6-9BP"/>
-                            <constraint firstAttribute="bottom" secondItem="pby-aO-6Y3" secondAttribute="bottom" id="8sL-ms-2sA"/>
-                            <constraint firstAttribute="trailing" secondItem="pby-aO-6Y3" secondAttribute="trailing" id="JZg-Sa-7JY"/>
-                            <constraint firstItem="pby-aO-6Y3" firstAttribute="top" secondItem="Pc2-Cw-hCQ" secondAttribute="top" id="gcW-Ks-Xqm"/>
+                            <constraint firstAttribute="bottom" secondItem="pby-aO-6Y3" secondAttribute="bottom" id="DK6-LL-WfT"/>
+                            <constraint firstItem="pby-aO-6Y3" firstAttribute="leading" secondItem="Pc2-Cw-hCQ" secondAttribute="leading" id="Phd-o5-nSP"/>
+                            <constraint firstAttribute="trailing" secondItem="pby-aO-6Y3" secondAttribute="trailing" id="Ub4-Do-Cx6"/>
+                            <constraint firstItem="pby-aO-6Y3" firstAttribute="top" secondItem="Pc2-Cw-hCQ" secondAttribute="top" id="tz5-Cn-aOA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TSw-4v-6KL">
