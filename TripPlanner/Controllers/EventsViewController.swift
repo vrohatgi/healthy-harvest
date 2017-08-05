@@ -66,6 +66,17 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         return eventNames.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "VotingViewController") as! VotingViewController
+        
+        myVC.eventID = self.eventNames[indexPath.row]
+        
+        navigationController?.pushViewController(myVC, animated: true)
+        
+        print("hi selectRow working")
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "EventsTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventsTableViewCell  else {

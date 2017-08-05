@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +50,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="eventsLabel" destination="Y3O-4E-NJH" id="frE-xx-cQQ"/>
-                                            <segue destination="Jfc-Ke-6SG" kind="show" id="Vtz-p4-0iv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -77,6 +78,7 @@
                     <connections>
                         <outlet property="eventsTableView" destination="pby-aO-6Y3" id="CVn-o2-iF9"/>
                         <outlet property="logOutButton" destination="4kx-o5-0il" id="o6K-2n-sLI"/>
+                        <segue destination="Jfc-Ke-6SG" kind="show" id="6od-28-Ez5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoD-Sd-w9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,7 +88,7 @@
         <!--Voting View Controller-->
         <scene sceneID="uWd-5N-hmO">
             <objects>
-                <viewController id="Jfc-Ke-6SG" customClass="VotingViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VotingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jfc-Ke-6SG" customClass="VotingViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LFz-hD-R9s"/>
                         <viewControllerLayoutGuide type="bottom" id="Dr2-wt-LHT"/>
@@ -113,22 +115,35 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
-                                                    <rect key="frame" x="308" y="6" width="46" height="30"/>
+                                                    <rect key="frame" x="265" y="6" width="46" height="30"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didTapVoteButton:" destination="vqh-pt-ZHc" eventType="touchUpInside" id="1da-Xx-Ym2"/>
+                                                    </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
+                                                    <rect key="frame" x="325" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leadingMargin" constant="12" id="9Ts-wg-jtj"/>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="centerY" secondItem="muA-Ax-YLw" secondAttribute="centerY" id="Bwa-TN-Ago"/>
-                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="68c-zP-Qkh" secondAttribute="centerY" id="D5S-YM-btu"/>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="topMargin" constant="3" id="O9Y-YD-c4o"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="muA-Ax-YLw" secondAttribute="trailing" constant="13" id="xEg-ob-v58"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="baseline" secondItem="bos-Bo-AkZ" secondAttribute="baseline" id="6LT-1G-YGv"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="baseline" secondItem="bos-Bo-AkZ" secondAttribute="firstBaseline" id="7vq-dV-1A7"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="trailing" secondItem="68c-zP-Qkh" secondAttribute="trailingMargin" id="F4h-1q-Tnj"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="muA-Ax-YLw" secondAttribute="trailing" constant="14" id="WjS-7f-Vmb"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leadingMargin" constant="12" id="e2i-b9-ce7"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="68c-zP-Qkh" secondAttribute="centerY" id="gyQ-Ly-16l"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="centerY" secondItem="muA-Ax-YLw" secondAttribute="centerY" id="kDn-Nv-63t"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="bos-Bo-AkZ" secondAttribute="centerY" id="nvE-se-tJK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placeInfoLabel" destination="5Hz-QE-RwH" id="CaG-oF-3CB"/>
+                                            <outlet property="totalVotesLabel" destination="bos-Bo-AkZ" id="nbW-H1-tEa"/>
                                             <outlet property="voteButton" destination="muA-Ax-YLw" id="jef-cv-h7t"/>
                                         </connections>
                                     </tableViewCell>
@@ -153,18 +168,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="unk-wz-Ktb" firstAttribute="top" secondItem="LFz-hD-R9s" secondAttribute="bottom" constant="36" id="J7k-0u-Azi"/>
-                            <constraint firstItem="ToY-ks-wiw" firstAttribute="top" secondItem="unk-wz-Ktb" secondAttribute="bottom" constant="27" id="M7z-s3-CdI"/>
-                            <constraint firstItem="beY-1F-1Uw" firstAttribute="bottom" secondItem="Dr2-wt-LHT" secondAttribute="top" id="Xzr-ab-LRa"/>
-                            <constraint firstItem="beY-1F-1Uw" firstAttribute="top" secondItem="ToY-ks-wiw" secondAttribute="bottom" constant="8" symbolic="YES" id="YwK-GS-R86"/>
-                            <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="c5r-NX-5dT"/>
-                            <constraint firstItem="beY-1F-1Uw" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" id="cwU-Np-BAV"/>
-                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="ToY-ks-wiw" secondAttribute="leading" id="ljW-ew-bJ7"/>
-                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leadingMargin" constant="11" id="mwi-09-IDd"/>
+                            <constraint firstItem="ToY-ks-wiw" firstAttribute="top" secondItem="unk-wz-Ktb" secondAttribute="bottom" constant="27" id="0y9-In-8BS"/>
+                            <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="3Ed-Mv-gGd"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="top" secondItem="LFz-hD-R9s" secondAttribute="bottom" constant="36" id="5ja-pi-M1Z"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="top" secondItem="ToY-ks-wiw" secondAttribute="bottom" constant="8" symbolic="YES" id="6Dd-YK-9pC"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="ToY-ks-wiw" secondAttribute="leading" id="HlB-E0-Ruy"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="bottom" secondItem="Dr2-wt-LHT" secondAttribute="top" id="oI2-mT-Wf8"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leadingMargin" constant="11" id="pE6-yj-e6v"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" id="yY3-mV-12k"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="votingTableViewController" destination="beY-1F-1Uw" id="GL6-vY-iBB"/>
+                        <outlet property="eventName" destination="unk-wz-Ktb" id="pmP-Dp-ONt"/>
+                        <outlet property="peopleVoting" destination="ToY-ks-wiw" id="uZj-es-mt3"/>
+                        <outlet property="votingTableView" destination="beY-1F-1Uw" id="iKa-qv-di0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y13-21-F0h" userLabel="First Responder" sceneMemberID="firstResponder"/>

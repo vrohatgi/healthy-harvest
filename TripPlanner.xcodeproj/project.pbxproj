@@ -11,13 +11,14 @@
 		2D567CE21F2F8C33006F3976 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */; };
 		2D567CE41F2F8EFA006F3976 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */; };
 		2D6073F61F32363F004C63DA /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F51F32363F004C63DA /* EventService.swift */; };
-		2D6073F81F324E09004C63DA /* EventsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */; };
+		2D6073F81F324E09004C63DA /* VotingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F71F324E09004C63DA /* VotingTableViewCell.swift */; };
 		2D6073FA1F324F16004C63DA /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073F91F324F16004C63DA /* VotingViewController.swift */; };
 		2D6073FC1F32810B004C63DA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6073FB1F32810B004C63DA /* Place.swift */; };
 		2D8B24901F35852600A3DE7A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B248F1F35852600A3DE7A /* Event.swift */; };
 		2D8B24921F3585CF00A3DE7A /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8B24911F3585CF00A3DE7A /* Events.storyboard */; };
 		2D8B24941F3585DD00A3DE7A /* EventBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B24931F3585DD00A3DE7A /* EventBuilder.swift */; };
 		2D8B24961F3585EE00A3DE7A /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B24951F3585EE00A3DE7A /* PlacesTableViewCell.swift */; };
+		2D8B24981F35A6E700A3DE7A /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B24971F35A6E700A3DE7A /* VoteService.swift */; };
 		2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */; };
 		2D9D2BD21F259E5F00F4B343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D2BD11F259E5F00F4B343 /* Assets.xcassets */; };
 		2D9D2BEB1F26565700F4B343 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D9D2BEA1F26565700F4B343 /* GoogleService-Info.plist */; };
@@ -43,13 +44,14 @@
 		2D567CE11F2F8C33006F3976 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = Controllers/FriendsViewController.swift; sourceTree = "<group>"; };
 		2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewCell.swift; path = Views/FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		2D6073F51F32363F004C63DA /* EventService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventService.swift; path = Services/EventService.swift; sourceTree = "<group>"; };
-		2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetailsTableViewCell.swift; path = Views/EventsDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		2D6073F71F324E09004C63DA /* VotingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VotingTableViewCell.swift; path = Views/VotingTableViewCell.swift; sourceTree = "<group>"; };
 		2D6073F91F324F16004C63DA /* VotingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VotingViewController.swift; path = Controllers/VotingViewController.swift; sourceTree = "<group>"; };
 		2D6073FB1F32810B004C63DA /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
 		2D8B248F1F35852600A3DE7A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
 		2D8B24911F3585CF00A3DE7A /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Events.storyboard; path = Storyboards/Events.storyboard; sourceTree = "<group>"; };
 		2D8B24931F3585DD00A3DE7A /* EventBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventBuilder.swift; path = Models/EventBuilder.swift; sourceTree = "<group>"; };
 		2D8B24951F3585EE00A3DE7A /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesTableViewCell.swift; path = Views/PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		2D8B24971F35A6E700A3DE7A /* VoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoteService.swift; path = Services/VoteService.swift; sourceTree = "<group>"; };
 		2D9D2BC71F259E5F00F4B343 /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D9D2BD11F259E5F00F4B343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 				2D8B24951F3585EE00A3DE7A /* PlacesTableViewCell.swift */,
 				2D567CE31F2F8EFA006F3976 /* FriendsTableViewCell.swift */,
 				2DFD1F361F3138C3001C47DB /* EventsTableViewCell.swift */,
-				2D6073F71F324E09004C63DA /* EventsDetailsTableViewCell.swift */,
+				2D6073F71F324E09004C63DA /* VotingTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -190,6 +192,7 @@
 				2D9D2BFA1F2671B300F4B343 /* UserService.swift */,
 				2D567CDF1F2D6AEE006F3976 /* InviteService.swift */,
 				2D6073F51F32363F004C63DA /* EventService.swift */,
+				2D8B24971F35A6E700A3DE7A /* VoteService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -340,7 +343,7 @@
 			files = (
 				2D9D2BF41F26593B00F4B343 /* LoginViewController.swift in Sources */,
 				2D9D2BFB1F2671B300F4B343 /* UserService.swift in Sources */,
-				2D6073F81F324E09004C63DA /* EventsDetailsTableViewCell.swift in Sources */,
+				2D6073F81F324E09004C63DA /* VotingTableViewCell.swift in Sources */,
 				2D9D2C051F267CD600F4B343 /* HomeViewController.swift in Sources */,
 				2D8B24901F35852600A3DE7A /* Event.swift in Sources */,
 				2D6073FA1F324F16004C63DA /* VotingViewController.swift in Sources */,
@@ -356,6 +359,7 @@
 				2D8B24961F3585EE00A3DE7A /* PlacesTableViewCell.swift in Sources */,
 				2D9D2BF91F266D8100F4B343 /* CreateUsernameViewController.swift in Sources */,
 				2D9D2BCB1F259E5F00F4B343 /* AppDelegate.swift in Sources */,
+				2D8B24981F35A6E700A3DE7A /* VoteService.swift in Sources */,
 				2D8B24941F3585DD00A3DE7A /* EventBuilder.swift in Sources */,
 				2D6073FC1F32810B004C63DA /* Place.swift in Sources */,
 			);

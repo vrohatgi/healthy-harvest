@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 import FirebaseDatabase
 
 struct EventService {

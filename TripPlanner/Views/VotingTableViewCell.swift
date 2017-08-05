@@ -13,7 +13,16 @@ class VotingTableViewCell: UITableViewCell {
     
     // MARK: -IBOutlets
     
+    @IBOutlet weak var totalVotesLabel: UILabel!
+    
     @IBOutlet weak var placeInfoLabel: UILabel!
+    
     @IBOutlet weak var voteButton: UIButton!
+    
+    // MARK: -IBActions
+    
+    @IBAction func didTapVoteButton(_ sender: Any) {
+    }
+    
     
 }
