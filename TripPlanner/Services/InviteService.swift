@@ -11,7 +11,7 @@ import UIKit
 import FirebaseDatabase
 
 struct InviteService {
-        
+    
     static func isUserInvited(_ user: User,
                               byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
         

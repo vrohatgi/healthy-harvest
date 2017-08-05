@@ -209,9 +209,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 
-
-
-
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {

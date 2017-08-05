@@ -17,6 +17,8 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     var authHandle: AuthStateDidChangeListenerHandle?
     var eventPlaces = [Int: String]()
+    var eventNames = [String]()
+    
 
     
     // MARK: - VC Lifecycle
@@ -61,7 +63,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return eventNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
