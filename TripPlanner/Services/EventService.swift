@@ -13,8 +13,35 @@ struct EventService {
 
     //for the voting vc i need to get the places, who invited & users invited, event name
     
-    static func getEventInfo(success: @escaping ([String]) -> (Void)) {
+    static func getEventInfo(eventID: String, success: @escaping (Event) -> (Void)) {
+        let ref = Database.database().reference().child("events").child(eventID)
         
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            print("snapshot value: \(snapshot.value ?? "")")
+            
+            
+            let eventInfo = snapshot.value as? NSDictionary
+            
+            let createdBy = eventInfo?["createdBy"] as? String ?? ""
+            let eventName = eventInfo?["eventName"] as? String ?? ""
+            let invitedUsers = eventInfo?["invitedUsers"] as? [String] ?? [""]
+            let placesArr = eventInfo?["places"] as? [Any]
+
+            var places = [Place]()
+            
+            for placeInfo in placesArr ?? [] {
+                let dict = placeInfo as? NSDictionary
+                let name = dict?["name"] as? String ?? ""
+                let vicinity = dict?["vicinity"]  as? String ?? ""
+                places.append(Place(name: name, vicinity: vicinity, types: []))
+            }
+            
+            let votes = eventInfo?["vote_count"] as? Int ?? 0
+            
+            let event = Event(id: eventID, createdBy: createdBy, eventName: eventName, invitedUsers: invitedUsers, places: places, numberOfVotes: votes)
+
+            success(event)
+        })
     }
     
     static func getEvents(success: @escaping ([String]) -> (Void)) {

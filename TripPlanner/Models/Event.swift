@@ -15,10 +15,10 @@ class Event: NSObject {
     var createdBy: String
     var eventName: String
     var invitedUsers: [String]
-    var places: [String]
+    var places: [Place]
     var numberOfVotes: Int
     
-    init(id: String, createdBy: String, eventName: String, invitedUsers: [String], places: [String], numberOfVotes: Int) {
+    init(id: String, createdBy: String, eventName: String, invitedUsers: [String], places: [Place], numberOfVotes: Int) {
         self.createdBy = createdBy
         self.eventName = eventName
         self.invitedUsers = invitedUsers

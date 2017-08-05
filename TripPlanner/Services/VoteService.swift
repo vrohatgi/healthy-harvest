@@ -13,6 +13,6 @@ struct VoteService {
     
     static func create(for event: Event, success: @escaping (Bool) -> Void) {
         
-        let votesRef = Database.database().reference().child("events").child(event.id)
+        let _ = Database.database().reference().child("events").child(event.id)
     }
 }

@@ -13,7 +13,7 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var eventID: String = ""
     
-    var event = Event(id: "hi", createdBy: "vanya", eventName: "picnic", invitedUsers: ["poop"], places: ["butt"], numberOfVotes: 10)
+    var event = Event(id: "hi", createdBy: "vanya", eventName: "picnic", invitedUsers: ["poop"], places: [Place(name: "butt", vicinity: "poop", types: [])], numberOfVotes: 10)
     
     // MARK: -IBOutlets
     
@@ -25,8 +25,16 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventName.text = event.eventName
-        peopleVoting.text = "\(event.invitedUsers)"
+        print("got eventId: \(self.eventID)")
+        
+        EventService.getEventInfo(eventID: eventID) { (eventInfo) in
+            self.eventName.text = eventInfo.eventName
+            self.peopleVoting.text = "\(eventInfo.invitedUsers)"
+            self.event = eventInfo
+            
+            self.votingTableView.reloadData()
+        }
+        
     }
 
     
@@ -39,8 +47,9 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "VotingTableViewCell") as! VotingTableViewCell
         
         cell.totalVotesLabel.text = "\(event.numberOfVotes)"
-        //        cell.voteButton.isSelected = event.
-        cell.placeInfoLabel.text = event.places[indexPath.row]
+
+        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name) \(event.places[indexPath.row].vicinity)"
+
         return cell
     }
 }
