@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -108,14 +106,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
-                                                    <rect key="frame" x="20" y="11" width="43" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
+                                                    <rect key="frame" x="20" y="6" width="225" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
                                                     <rect key="frame" x="265" y="6" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -123,23 +123,14 @@
                                                         <action selector="didTapVoteButton:" destination="vqh-pt-ZHc" eventType="touchUpInside" id="1da-Xx-Ym2"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
                                                     <rect key="frame" x="325" y="10" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="baseline" secondItem="bos-Bo-AkZ" secondAttribute="baseline" id="6LT-1G-YGv"/>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="baseline" secondItem="bos-Bo-AkZ" secondAttribute="firstBaseline" id="7vq-dV-1A7"/>
-                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="trailing" secondItem="68c-zP-Qkh" secondAttribute="trailingMargin" id="F4h-1q-Tnj"/>
-                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="muA-Ax-YLw" secondAttribute="trailing" constant="14" id="WjS-7f-Vmb"/>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leadingMargin" constant="12" id="e2i-b9-ce7"/>
-                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="68c-zP-Qkh" secondAttribute="centerY" id="gyQ-Ly-16l"/>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="centerY" secondItem="muA-Ax-YLw" secondAttribute="centerY" id="kDn-Nv-63t"/>
-                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="bos-Bo-AkZ" secondAttribute="centerY" id="nvE-se-tJK"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placeInfoLabel" destination="5Hz-QE-RwH" id="CaG-oF-3CB"/>
@@ -195,7 +186,7 @@
                     <tabBarItem key="tabBarItem" title="My Events" image="events" id="OxW-st-TCq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiE-6E-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
