@@ -44,17 +44,20 @@ struct EventService {
         })
     }
     
-    static func getEvents(success: @escaping ([String]) -> (Void)) {
+    static func getEvents(success: @escaping ([Event]) -> (Void)) {
         // 1. lets get current user key
-        let ref = Database.database().reference().child("users").child(User.current.uid)
+        let ref = Database.database().reference()
+            .child("users").child(User.current.uid).child("events")
         
         // 2. now lets get events he is invited to
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            let snap = snapshot.value as! [String: Any]
-            var eventsArr = [String]()
+            let events = snapshot.value as! [String: Any]
             
-            if let event = (snap["events"] as? [String]) {
-                eventsArr = event
+            var eventsArr = [Event]()
+            
+            for (eventId, value) in events {
+                let dict = value as? [String: String]
+                eventsArr.append(Event(id: eventId, createdBy: dict?["createdBy"] ?? "", name: dict?["name"] ?? ""))
             }
             
             success(eventsArr)
@@ -62,7 +65,7 @@ struct EventService {
     }
  
     
-    static func saveEvent(places: [[String: String]], users: [String], eventName: String, success: @escaping (Bool) -> (Void)) {
+    static func saveEvent(places: [[String: String]], users: [User], eventName: String, success: @escaping (Bool) -> (Void)) {
         
         // 1. lets save a new event under "events" key
         
@@ -74,8 +77,13 @@ struct EventService {
         // 1.b lets create eventData to attach to the eventID we created above
         var userList = [String]()
         
-        userList.append(User.current.uid)
-        userList.append(contentsOf: users)
+        userList.append(User.current.username)
+        
+        for user in users {
+            if user.isInvited {
+                userList.append(user.username)
+            }
+        }
         
         let eventData = ["invitedUsers": userList, "places": places, "eventName": eventName, "createdBy": User.current.uid] as [String : Any]
         
@@ -87,25 +95,27 @@ struct EventService {
             }
         }
         
-        // 2. update the event inside of "users.currentUserId.events[]" array
-        for userId in userList {
-            let ref = Database.database().reference().child("users").child(userId)
+        // 2. update the event index in "users.currentUserId.events.newEventId.{name,createdBy}" array
 
-            // 2.a get the eventsArr and append our new event to it
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let snap = snapshot.value as! [String: Any]
-                var eventsArr = [String]()
-                
-                if let event = (snap["events"] as? [String]) {
-                    eventsArr = event
-                    eventsArr.append(newEventId)
-                } else {
-                    eventsArr = [newEventId]
-                }
-                
-                let eventList = ["events": eventsArr]
-                ref.updateChildValues(eventList)
-            })
+        // 2.a make list of user ids we will be updating
+        var userIDList = [String]()
+        
+        userIDList.append(User.current.uid)
+        
+        for user in users {
+            if user.isInvited {
+                userIDList.append(user.uid)
+            }
+        }
+
+        // 2.b update them all with event information
+        let eventInfo = [newEventId: ["name": eventName, "createdBy": User.current.username]]
+        
+        for userID in userIDList {
+            let ref = Database.database().reference()
+                .child("users").child(userID).child("events")
+            
+            ref.updateChildValues(eventInfo)
         }
         
     }

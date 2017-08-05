@@ -28,4 +28,15 @@ class Event: NSObject {
         
         super.init()
     }
+    
+    init(id: String, createdBy: String, name: String) {
+        self.id = id
+        self.eventName = name
+        self.createdBy = createdBy
+        self.invitedUsers = []
+        self.places = []
+        self.numberOfVotes = 0
+        
+        super.init()
+    }
 }

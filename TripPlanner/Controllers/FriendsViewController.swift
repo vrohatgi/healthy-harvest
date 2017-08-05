@@ -30,24 +30,17 @@ class FriendsViewController: UIViewController {
     @IBAction func didTapCreateEventButton(_ sender: UIButton) {
         self.tabBarController?.selectedIndex = 1
         
-        var userIDs = [String]()
         var placeInfo = [[String: String]]()
         
         guard let eventName = eventNameTextField.text, !eventName.isEmpty else {
             return
         }
         
-        for user in users {
-            if user.isInvited == true {
-                userIDs.append(user.uid)
-            }
-        }
-        
         for place in eventPlaces {
             placeInfo.append(["name": place.name, "vicinity": place.vicinity])
         }
         
-        EventService.saveEvent(places: placeInfo, users: userIDs, eventName: eventName) { (success) in
+        EventService.saveEvent(places: placeInfo, users: users, eventName: eventName) { (success) in
             guard success else {
                 let alert = UIAlertView()
                 alert.title = "Unable to save event!"
@@ -120,17 +113,5 @@ extension FriendsViewController: FriendsTableViewCellDelegate {
         }
     }
     
-    
-    //        InviteService.setIsInvited(!friend.isInvited,
-    //                                   places: eventPlaces,
-    //                                   eventName: eventNameTextField.text!,
-    //                                   fromCurrentUserTo: friend) { (success) in
-    //
-    //                                    guard success else { return }
-    //
-    //                                    friend.isInvited = !friend.isInvited
-    //
-    //                                    self.friendsTableView.reloadRows(at: [indexPath], with: .none)
-    //        }
 }
 
