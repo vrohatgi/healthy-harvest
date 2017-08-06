@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p9a-K4-4Nv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p9a-K4-4Nv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
-                                <rect key="frame" x="157.5" y="211" width="60" height="60"/>
+                                <rect key="frame" x="158" y="211" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="NMH-Sb-UEF"/>
                                     <constraint firstAttribute="height" constant="60" id="RpC-b5-aEc"/>
@@ -78,7 +78,7 @@
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start by selecting a location" textAlignment="center" minimumFontSize="17" background="GMSNavNightModeSprites-0-2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a location" textAlignment="center" minimumFontSize="17" background="GMSNavNightModeSprites-0-2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Evx-Hb-Alg"/>
@@ -98,11 +98,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
-                                                    <rect key="frame" x="30" y="8" width="104" height="63.5"/>
+                                                    <rect key="frame" x="30" y="8" width="104" height="64"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="104" id="eIM-ba-xab"/>
                                                     </constraints>
@@ -126,7 +126,7 @@
                                 </prototypes>
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
-                                <rect key="frame" x="157.5" y="124" width="60" height="60"/>
+                                <rect key="frame" x="158" y="124" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KdI-zB-Njt"/>
                                     <constraint firstAttribute="width" constant="60" id="sQx-VY-qzV"/>
@@ -162,7 +162,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Activities" id="1Uq-E0-Ivp">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="VPV-rP-ZOp">
-                            <color key="tintColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="nextButtonTapped:" destination="pUm-Eu-FVc" id="Zs1-PT-Qdz"/>
                             </connections>
@@ -202,9 +201,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="ZQd-du-TSc"/>
                                 </constraints>
-                                <state key="normal" title="Create Event">
-                                    <color key="titleColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Create Event"/>
                                 <connections>
                                     <action selector="didTapCreateEventButton:" destination="l8r-7H-fq4" eventType="touchUpInside" id="T6y-aI-KkI"/>
                                 </connections>
@@ -237,9 +234,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-zt-HwG">
                                                     <rect key="frame" x="305" y="7" width="46" height="30"/>
-                                                    <state key="normal" title="Button">
-                                                        <color key="titleColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
+                                                    <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="inviteButtonTapped:" destination="qgS-q7-fBz" eventType="touchUpInside" id="2bC-5O-VZl"/>
                                                     </connections>
@@ -293,7 +288,7 @@
                     <tabBarItem key="tabBarItem" title="Select Activity" image="activity" id="MMs-Ab-Pzp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9V-J4-tYf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

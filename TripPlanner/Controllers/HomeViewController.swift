@@ -48,9 +48,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
         
         self.myPlaces.saveSelectedPlaces(places: self.displayArr)
-
+        
         myVC.eventPlaces = self.myPlaces.buildList(places: [Place](), selectedOnly: true)
-
+        
         navigationController?.pushViewController(myVC, animated: true)
         print("hi next working")
     }
