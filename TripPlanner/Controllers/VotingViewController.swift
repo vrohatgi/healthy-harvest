@@ -39,7 +39,6 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return event.places.count
     }
     
@@ -48,8 +47,18 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.totalVotesLabel.text = "\(event.numberOfVotes)"
 
-        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name) \(event.places[indexPath.row].vicinity)"
+        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name)\n\(event.places[indexPath.row].vicinity)"
+        
+        
 
         return cell
     }
 }
+
+extension VotingViewController: VotingTableViewCellDelegate {
+    func didTapVoteButton(_ inviteButton: UIButton, on cell: VotingTableViewCell) {
+        guard let _ = votingTableView.indexPath(for: cell) else { return }
+    }
+}
+
+

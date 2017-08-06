@@ -18,7 +18,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     var authHandle: AuthStateDidChangeListenerHandle?
     var eventPlaces = [Int: String]()
     
-    var eventNames = [String]()
+    var eventNames = [Event]()
     
     
     // MARK: - VC Lifecycle
@@ -70,7 +70,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "VotingViewController") as! VotingViewController
         
-        myVC.eventID = self.eventNames[indexPath.row]
+        myVC.eventID = self.eventNames[indexPath.row].id
         
         navigationController?.pushViewController(myVC, animated: true)
         
@@ -85,7 +85,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
         //let place = places[indexPath.row]
         cell.accessoryType = .none
-        cell.eventsLabel.text = "\(eventNames[indexPath.row])"
+        cell.eventsLabel.text = "\(eventNames[indexPath.row].eventName) by \(eventNames[indexPath.row].createdBy)"
         
         // Configure the cell...
         
