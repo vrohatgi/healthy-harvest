@@ -100,8 +100,8 @@ struct UserService {
             var eventsArr = [Event]()
             
             for (eventId, value) in events {
-                let dict = value as? [String: String]
-                eventsArr.append(Event(id: eventId, createdBy: dict?["createdBy"] ?? "", name: dict?["name"] ?? ""))
+                let dict = value as? [String: Any]
+                eventsArr.append(Event(id: eventId, createdBy: dict?["createdBy"] as? String ?? "", name: dict?["name"] as? String ?? ""))
             }
             
             success(eventsArr)
