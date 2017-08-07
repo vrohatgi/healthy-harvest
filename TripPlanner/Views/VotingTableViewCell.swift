@@ -24,20 +24,16 @@ class VotingTableViewCell: UITableViewCell {
     @IBOutlet weak var placeInfoLabel: UILabel!
     
     @IBOutlet weak var voteButton: UIButton!
+    @IBAction func didTapVoteButton(_ sender: UIButton) {
+        print("i am here")
+        
+            delegate?.didTapVoteButton(sender, on: self)
+    }
     
     // MARK: -IBActions
     
-    @IBAction func didTapVoteButton(_ sender: UIButton) {
-        delegate?.didTapVoteButton(sender, on: self)
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //        inviteButton.layer.borderColor = UIColor.lightGray.cgColor
-        //        inviteButton.layer.borderWidth = 1
-        //        inviteButton.layer.cornerRadius = 6
-        //        inviteButton.clipsToBounds = true
         
         voteButton.setTitle("Vote", for: .normal)
         voteButton.setTitle("Voted", for: .selected)

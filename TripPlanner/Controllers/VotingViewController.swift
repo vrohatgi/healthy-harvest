@@ -29,7 +29,7 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         EventService.getEventInfo(eventID: eventID) { (eventInfo) in
             self.eventName.text = eventInfo.eventName
-            self.peopleVoting.text = "\(eventInfo.invitedUsers)"
+            self.peopleVoting.text = "\(eventInfo.invitedUsers.joined(separator: ", "))"
             self.event = eventInfo
             
             self.votingTableView.reloadData()
@@ -45,19 +45,23 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VotingTableViewCell") as! VotingTableViewCell
         
+        cell.delegate = self as VotingTableViewCellDelegate
+
         cell.totalVotesLabel.text = "\(event.numberOfVotes)"
 
-        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name)\n\(event.places[indexPath.row].vicinity)"
+        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name) \(event.places[indexPath.row].vicinity)"
         
-        
-
         return cell
     }
 }
 
 extension VotingViewController: VotingTableViewCellDelegate {
     func didTapVoteButton(_ inviteButton: UIButton, on cell: VotingTableViewCell) {
-        guard let _ = votingTableView.indexPath(for: cell) else { return }
+        print("inside didTapVoteButton")
+        
+        guard let indexPath = votingTableView.indexPath(for: cell) else { return }
+        
+        print("voting row: \(indexPath.row)")
     }
 }
 
