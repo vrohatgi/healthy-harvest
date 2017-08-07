@@ -103,7 +103,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        EventService.getEvents { [unowned self] (events) in
+        UserService.getEvents { [unowned self] (events) in
             self.eventNames = events
             
             DispatchQueue.main.async {

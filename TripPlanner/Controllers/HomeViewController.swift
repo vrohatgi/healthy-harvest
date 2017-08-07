@@ -78,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 let p = Place(name: info["name"] as! String,
                               vicinity: x,
-                              types: info["types"] as! [String])
+                              types: info["types"] as! [String], votes: 0)
                 
                 list.append(p)
             }

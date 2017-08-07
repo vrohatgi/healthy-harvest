@@ -13,55 +13,93 @@ struct EventService {
 
     //for the voting vc i need to get the places, who invited & users invited, event name
     
-    static func getEventInfo(eventID: String, success: @escaping (Event) -> (Void)) {
+    static func getEventInfo(eventID: String, success: @escaping (Event, [Int]) -> (Void)) {
         let ref = Database.database().reference().child("events").child(eventID)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             print("snapshot value: \(snapshot.value ?? "")")
             
-            
             let eventInfo = snapshot.value as? NSDictionary
-            
             let createdBy = eventInfo?["createdBy"] as? String ?? ""
             let eventName = eventInfo?["eventName"] as? String ?? ""
             let invitedUsers = eventInfo?["invitedUsers"] as? [String] ?? [""]
-            let placesArr = eventInfo?["places"] as? [Any]
 
-            var places = [Place]()
-            
-            for placeInfo in placesArr ?? [] {
-                let dict = placeInfo as? NSDictionary
-                let name = dict?["name"] as? String ?? ""
-                let vicinity = dict?["vicinity"]  as? String ?? ""
-                places.append(Place(name: name, vicinity: vicinity, types: []))
-            }
+            let places = buildPlaces(placesArr: eventInfo?["places"] as? [Any] ?? [])
             
             let votes = eventInfo?["vote_count"] as? Int ?? 0
             
             let event = Event(id: eventID, createdBy: createdBy, eventName: eventName, invitedUsers: invitedUsers, places: places, numberOfVotes: votes)
 
-            success(event)
+            let ref2 = Database.database().reference()
+                .child("users")
+                .child(User.current.uid)
+                .child("events")
+                .child(eventID)
+                .child("places")
+            
+            ref2.observeSingleEvent(of: .value, with: { (snap) in
+                var votedPlaces = [Int](repeating: 0, count: places.count)
+                
+                for (k, v) in snap.value as? [String: Int] ?? [:] {
+                    votedPlaces[Int(k)!] = v
+                }
+                
+                success(event, votedPlaces)
+            })
         })
+        
+
     }
     
-    static func getEvents(success: @escaping ([Event]) -> (Void)) {
-        // 1. lets get current user key
-        let ref = Database.database().reference()
-            .child("users").child(User.current.uid).child("events")
+    static func buildPlaces(placesArr: [Any]) -> [Place] {
+        var places = [Place]()
         
-        // 2. now lets get events he is invited to
+        for placeInfo in placesArr {
+            let dict = placeInfo as? NSDictionary
+            let name = dict?["name"] as? String ?? ""
+            let vicinity = dict?["vicinity"]  as? String ?? ""
+            let votes = dict?["votes"] as? Int ?? 0
+            
+            let p = Place(name: name, vicinity: vicinity, types: [], votes: votes)
+            
+            places.append(p)
+        }
+        
+        return places
+    }
+    
+    static func buildPlaceArray(places: [Place]) -> [Any] {
+        var pArr = [Any]()
+        for p in places {
+            pArr.append(["name": p.name, "vicinity": p.vicinity, "votes": p.votes])
+        }
+        
+        return pArr
+    }
+    
+    static func updateEventVote(eventId: String, placeIndex: Int, cnt: Int, success: @escaping (Bool) -> (Void)) {
+        let ref = Database.database().reference()
+            .child("events")
+            .child(eventId)
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            let events = snapshot.value as! [String: Any]
+            let eventInfo = snapshot.value as? NSDictionary
+
+            let places = buildPlaces(placesArr: eventInfo?["places"] as? [Any] ?? [])
+
+            places[placeIndex].votes += cnt
             
-            var eventsArr = [Event]()
-            
-            for (eventId, value) in events {
-                let dict = value as? [String: String]
-                eventsArr.append(Event(id: eventId, createdBy: dict?["createdBy"] ?? "", name: dict?["name"] ?? ""))
-            }
-            
-            success(eventsArr)
-        })        
+            ref.updateChildValues(["places": buildPlaceArray(places: places)])
+        })
+        
+        let ref2 = Database.database().reference()
+            .child("users")
+            .child(User.current.uid)
+            .child("events")
+            .child(eventId)
+            .child("places")
+        
+        ref2.updateChildValues(["\(placeIndex)": cnt])
     }
  
     

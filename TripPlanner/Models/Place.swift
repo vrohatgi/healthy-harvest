@@ -13,19 +13,17 @@ class Place: NSObject {
     
     var name: String
     var vicinity: String
-    //var types: [String]
     var isChecked: Bool = false
-    var voteCount: Int
     let inviter: User
+    var votes: Int
     
-    
-    init(name: String, vicinity: String, types: [String]) {
+    init(name: String, vicinity: String, types: [String], votes: Int) {
         self.name = name
         self.vicinity = vicinity
-        self.voteCount = 0
         self.inviter = User.current
-        //self.types = types
+        self.votes = votes
         
         super.init()
     }
+    
 }

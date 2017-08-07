@@ -12,8 +12,8 @@ import UIKit
 class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var eventID: String = ""
-    
-    var event = Event(id: "hi", createdBy: "vanya", eventName: "picnic", invitedUsers: ["poop"], places: [Place(name: "butt", vicinity: "poop", types: [])], numberOfVotes: 10)
+    var votedPlaces = [Int](repeating: 0, count: 1)
+    var event = Event(id: "hi", createdBy: "vanya", eventName: "picnic", invitedUsers: ["poop"], places: [Place(name: "butt", vicinity: "poop", types: [], votes: 1)], numberOfVotes: 10)
     
     // MARK: -IBOutlets
     
@@ -27,10 +27,11 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         print("got eventId: \(self.eventID)")
         
-        EventService.getEventInfo(eventID: eventID) { (eventInfo) in
+        EventService.getEventInfo(eventID: eventID) { (eventInfo, votedPlaces) in
             self.eventName.text = eventInfo.eventName
             self.peopleVoting.text = "\(eventInfo.invitedUsers.joined(separator: ", "))"
             self.event = eventInfo
+            self.votedPlaces = votedPlaces
             
             self.votingTableView.reloadData()
         }
@@ -47,9 +48,13 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.delegate = self as VotingTableViewCellDelegate
 
-        cell.totalVotesLabel.text = "\(event.numberOfVotes)"
+        cell.totalVotesLabel.text = "\(event.places[indexPath.row].votes)"
 
         cell.placeInfoLabel.text = "\(event.places[indexPath.row].name) \(event.places[indexPath.row].vicinity)"
+
+        if votedPlaces[indexPath.row] > 0 {
+            cell.voteButton.isSelected = true
+        }
         
         return cell
     }
@@ -62,6 +67,23 @@ extension VotingViewController: VotingTableViewCellDelegate {
         guard let indexPath = votingTableView.indexPath(for: cell) else { return }
         
         print("voting row: \(indexPath.row)")
+
+        var cnt = 1
+        if votedPlaces[indexPath.row] > 0 {
+            cell.voteButton.isSelected = false
+            cnt = -1
+            votedPlaces[indexPath.row] = 0
+        } else {
+            cell.voteButton.isSelected = true
+            cnt = 1
+            votedPlaces[indexPath.row] = 1
+        }
+        
+        EventService.updateEventVote(eventId: event.id, placeIndex: indexPath.row, cnt: cnt)  { status in
+            print("successfully updated vote \(status)")
+        }
+        
+        
     }
 }
 

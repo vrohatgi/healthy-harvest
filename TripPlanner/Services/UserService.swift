@@ -87,48 +87,25 @@ struct UserService {
             })
         })
         
-        func events(for user: User, completion: @escaping ([Event]) -> Void) {
-            let ref = Database.database().reference().child("events")
-
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
-                    return completion([])
-                }
-                
-                let dispatchGroup = DispatchGroup()
-                /*
-                let events: [Event] =
-                    snapshot
-                        .reversed()
-                        .flatMap {
-                            guard let event = Event(snapshot: $0)
-                                else { return nil }
-                            
-                            dispatchGroup.enter()
-                            
-                            VoteService.isPlaceVotedFor(place) { (isVotedFor) in
-                                place.isVotedFor = isVotedFor
-                                
-                                dispatchGroup.leave()
-                            }
-                            
-                            return event
-                }
-                */
-                dispatchGroup.notify(queue: .main, execute: {
-                    completion([])
-                })
-            })
-        }
     }
     
-//    static func events(for user: User, completion: @escaping ([Place]) -> Void) {
-//        let ref = Database.database().reference().child("events").child(user.uid)
-//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
-//            else {
-//                return completion([])
-//            }
-//        }
-//    )}
+    static func getEvents(success: @escaping ([Event]) -> (Void)) {
+        // 1. lets get current user key
+        let ref = Database.database().reference()
+            .child("users").child(User.current.uid).child("events")
+        
+        // 2. now lets get events he is invited to
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let events = snapshot.value as! [String: Any]
+            
+            var eventsArr = [Event]()
+            
+            for (eventId, value) in events {
+                let dict = value as? [String: String]
+                eventsArr.append(Event(id: eventId, createdBy: dict?["createdBy"] ?? "", name: dict?["name"] ?? ""))
+            }
+            
+            success(eventsArr)
+        })
+    }
 }
