@@ -243,6 +243,7 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         beachesLabel.isHidden = false
         trailsLabel.isHidden = false
         poolsLabel.isHidden = false
+        placesTableView.isHidden = false
         
         dismiss(animated: true, completion: nil)
     }

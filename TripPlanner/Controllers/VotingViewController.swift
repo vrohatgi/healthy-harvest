@@ -58,6 +58,10 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
 }
 
 extension VotingViewController: VotingTableViewCellDelegate {

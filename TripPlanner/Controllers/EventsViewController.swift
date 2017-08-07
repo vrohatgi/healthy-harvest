@@ -85,7 +85,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
         //let place = places[indexPath.row]
         cell.accessoryType = .none
-        cell.eventsLabel.text = "\(eventNames[indexPath.row].eventName) by \(eventNames[indexPath.row].createdBy)"
+        cell.eventsLabel.text = "\(eventNames[indexPath.row].eventName) | \(eventNames[indexPath.row].createdBy)"
         
         // Configure the cell...
         
