@@ -86,6 +86,39 @@ struct UserService {
                 completion(users)
             })
         })
+        
+        func events(for user: User, completion: @escaping ([Event]) -> Void) {
+            let ref = Database.database().reference().child("events")
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                    return completion([])
+                }
+                
+                let dispatchGroup = DispatchGroup()
+                
+                let events: [Event] =
+                    snapshot
+                        .reversed()
+                        .flatMap {
+                            guard let event = Event(snapshot: $0)
+                                else { return nil }
+                            
+                            dispatchGroup.enter()
+                            
+                            VoteService.isPlaceVotedFor(place) { (isVotedFor) in
+                                place.isVotedFor = isVotedFor
+                                
+                                dispatchGroup.leave()
+                            }
+                            
+                            return event
+                }
+                
+                dispatchGroup.notify(queue: .main, execute: {
+                    completion(events)
+                })
+            })
+        }
     }
     
 //    static func events(for user: User, completion: @escaping ([Place]) -> Void) {

@@ -67,7 +67,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="TSw-4v-6KL">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="4kx-o5-0il">
-                            <color key="tintColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="didTapLogOutButton:" destination="xWM-bY-cx2" id="UHM-i5-3YL"/>
                             </connections>
@@ -96,41 +95,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beY-1F-1Uw" userLabel="Voting Table View">
-                                <rect key="frame" x="0.0" y="177" width="375" height="441"/>
+                                <rect key="frame" x="0.0" y="187" width="375" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VotingTableViewCell" id="vqh-pt-ZHc" userLabel="VotingTableViewCell" customClass="VotingTableViewCell" customModule="TripPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqh-pt-ZHc" id="68c-zP-Qkh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
                                                     <rect key="frame" x="20" y="6" width="225" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
-                                                    <rect key="frame" x="265" y="6" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button">
-                                                        <color key="titleColor" red="1" green="0.63135603839999999" blue="0.1652261585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
+                                                    <rect key="frame" x="305" y="11" width="62" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="62" id="Uue-EX-Jwv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
+                                                    <rect key="frame" x="239" y="6" width="58" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="58" id="uU5-f5-Xzc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                    <state key="normal" title="Vote"/>
                                                     <connections>
                                                         <action selector="didTapVoteButton:" destination="vqh-pt-ZHc" eventType="touchUpInside" id="1da-Xx-Ym2"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
-                                                    <rect key="frame" x="325" y="10" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leadingMargin" constant="12" id="1Yx-2P-UFm"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="topMargin" constant="3" id="1uj-5z-CWu"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="68c-zP-Qkh" secondAttribute="centerY" id="8j5-7Q-X64"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="baseline" secondItem="bos-Bo-AkZ" secondAttribute="baseline" id="9Wy-ke-Krw"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="bos-Bo-AkZ" secondAttribute="centerY" id="GsK-gw-NZO"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="muA-Ax-YLw" secondAttribute="trailing" constant="8" symbolic="YES" id="LOu-V1-HWh"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="topMargin" constant="-2" id="dwv-d3-50L"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="trailing" secondItem="68c-zP-Qkh" secondAttribute="trailingMargin" id="nPV-jj-AX6"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="top" secondItem="muA-Ax-YLw" secondAttribute="top" id="ocp-jb-1HF"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="5Hz-QE-RwH" secondAttribute="trailing" constant="60" id="q18-za-qeg"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placeInfoLabel" destination="5Hz-QE-RwH" id="CaG-oF-3CB"/>
@@ -145,28 +158,28 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToY-ks-wiw">
-                                <rect key="frame" x="27" y="148" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="27" y="155" width="43" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-wz-Ktb">
-                                <rect key="frame" x="27" y="100" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="27" y="100" width="52" height="28"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ToY-ks-wiw" firstAttribute="top" secondItem="unk-wz-Ktb" secondAttribute="bottom" constant="27" id="0y9-In-8BS"/>
-                            <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="3Ed-Mv-gGd"/>
-                            <constraint firstItem="unk-wz-Ktb" firstAttribute="top" secondItem="LFz-hD-R9s" secondAttribute="bottom" constant="36" id="5ja-pi-M1Z"/>
-                            <constraint firstItem="beY-1F-1Uw" firstAttribute="top" secondItem="ToY-ks-wiw" secondAttribute="bottom" constant="8" symbolic="YES" id="6Dd-YK-9pC"/>
-                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="ToY-ks-wiw" secondAttribute="leading" id="HlB-E0-Ruy"/>
-                            <constraint firstItem="beY-1F-1Uw" firstAttribute="bottom" secondItem="Dr2-wt-LHT" secondAttribute="top" id="oI2-mT-Wf8"/>
-                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leadingMargin" constant="11" id="pE6-yj-e6v"/>
-                            <constraint firstItem="beY-1F-1Uw" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" id="yY3-mV-12k"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="bottom" secondItem="Dr2-wt-LHT" secondAttribute="top" id="3xG-Rq-J0o"/>
+                            <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="4LC-B9-vOf"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="ToY-ks-wiw" secondAttribute="leading" id="67c-MK-a6U"/>
+                            <constraint firstItem="ToY-ks-wiw" firstAttribute="top" secondItem="unk-wz-Ktb" secondAttribute="bottom" constant="27" id="8UG-9w-RnY"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="top" secondItem="ToY-ks-wiw" secondAttribute="bottom" constant="8" symbolic="YES" id="EIS-Qh-GIj"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="top" secondItem="LFz-hD-R9s" secondAttribute="bottom" constant="36" id="Vuo-by-Ix8"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" id="f9j-n9-wxR"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leadingMargin" constant="11" id="il9-xp-23s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -186,7 +199,7 @@
                     <tabBarItem key="tabBarItem" title="My Events" image="events" id="OxW-st-TCq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiE-6E-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

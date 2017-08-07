@@ -15,11 +15,15 @@ class Place: NSObject {
     var vicinity: String
     //var types: [String]
     var isChecked: Bool = false
+    var voteCount: Int
+    let inviter: User
     
     
     init(name: String, vicinity: String, types: [String]) {
         self.name = name
         self.vicinity = vicinity
+        self.voteCount = 0
+        self.inviter = User.current
         //self.types = types
         
         super.init()
