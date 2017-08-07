@@ -100,7 +100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beY-1F-1Uw" userLabel="Voting Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beY-1F-1Uw" userLabel="Voting Table View">
                                 <rect key="frame" x="0.0" y="187" width="375" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -108,31 +108,37 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="vqh-pt-ZHc" id="68c-zP-Qkh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="votes for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myz-mo-3Q2">
-                                                    <rect key="frame" x="38.5" y="0.0" width="68.5" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myz-mo-3Q2">
+                                                    <rect key="frame" x="39" y="0.0" width="69" height="44"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Thin" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
-                                                    <rect key="frame" x="332" y="0.0" width="37" height="43.5"/>
+                                                    <rect key="frame" x="332" y="0.0" width="37" height="44"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <state key="normal" title="Vote"/>
                                                     <connections>
                                                         <action selector="didTapVoteButton:" destination="vqh-pt-ZHc" eventType="touchUpInside" id="29e-rx-k8a"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
-                                                    <rect key="frame" x="116" y="0.0" width="214" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
+                                                    <rect key="frame" x="116" y="0.0" width="214" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="214" id="VrP-oO-4Bp"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="43.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="28" id="Rgc-R2-MT3"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -140,6 +146,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="bos-Bo-AkZ" secondAttribute="bottom" id="AFY-4W-vTU"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="leading" secondItem="5Hz-QE-RwH" secondAttribute="trailing" constant="2" id="BMD-tL-Akp"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leading" id="Bd1-zx-IV8"/>
                                                 <constraint firstAttribute="bottom" secondItem="myz-mo-3Q2" secondAttribute="bottom" id="Bdi-Ra-64I"/>
                                                 <constraint firstAttribute="bottom" secondItem="5Hz-QE-RwH" secondAttribute="bottom" id="Qtq-jy-ge4"/>
                                                 <constraint firstItem="bos-Bo-AkZ" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="top" id="Ubf-SH-YJf"/>
@@ -148,6 +156,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="muA-Ax-YLw" secondAttribute="bottom" id="lb1-OK-5xd"/>
                                                 <constraint firstItem="myz-mo-3Q2" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="top" id="rmf-t2-Cdq"/>
                                                 <constraint firstItem="muA-Ax-YLw" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="top" id="tUA-Ur-PPv"/>
+                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="leading" secondItem="myz-mo-3Q2" secondAttribute="trailing" constant="8" symbolic="YES" id="xVb-e1-qbb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -162,15 +171,17 @@
                                     <outlet property="delegate" destination="Jfc-Ke-6SG" id="b2l-9C-qp7"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToY-ks-wiw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToY-ks-wiw">
                                 <rect key="frame" x="27" y="155" width="176" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-wz-Ktb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-wz-Ktb">
                                 <rect key="frame" x="27" y="100" width="176" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="KQw-2P-A6b"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -180,8 +191,13 @@
                         <constraints>
                             <constraint firstItem="Dr2-wt-LHT" firstAttribute="top" secondItem="beY-1F-1Uw" secondAttribute="bottom" id="5w1-9X-e00"/>
                             <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="FeJ-nN-ia0"/>
+                            <constraint firstItem="ToY-ks-wiw" firstAttribute="top" secondItem="unk-wz-Ktb" secondAttribute="bottom" constant="27" id="Hgs-t3-HUv"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leadingMargin" constant="11" id="I6R-vL-pzo"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="leading" secondItem="ToY-ks-wiw" secondAttribute="leading" id="O0s-2G-Vkw"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="trailing" secondItem="ToY-ks-wiw" secondAttribute="trailing" id="SMQ-Bu-qtm"/>
                             <constraint firstItem="beY-1F-1Uw" firstAttribute="top" secondItem="ToY-ks-wiw" secondAttribute="bottom" constant="8" id="Z7R-cH-K1M"/>
                             <constraint firstItem="beY-1F-1Uw" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" id="esW-jD-6cV"/>
+                            <constraint firstItem="unk-wz-Ktb" firstAttribute="top" secondItem="LFz-hD-R9s" secondAttribute="bottom" constant="36" id="w5h-1Z-C5F"/>
                         </constraints>
                     </view>
                     <connections>
