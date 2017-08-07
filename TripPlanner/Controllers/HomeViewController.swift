@@ -39,6 +39,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
     @IBOutlet weak var placesTableView: UITableView!
+    @IBOutlet weak var lakesLabel: UILabel!
+    @IBOutlet weak var parksLabel: UILabel!
+    @IBOutlet weak var campingLabel: UILabel!
+    @IBOutlet weak var trailsLabel: UILabel!
+    @IBOutlet weak var poolsLabel: UILabel!
+    @IBOutlet weak var beachesLabel: UILabel!
+    
     
     // MARK: - IBActions
     
@@ -230,6 +237,12 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         campgroundsButton.isHidden = false
         parksButton.isHidden = false
         lakesButton.isHidden = false
+        lakesLabel.isHidden = false
+        parksLabel.isHidden = false
+        campingLabel.isHidden = false
+        beachesLabel.isHidden = false
+        trailsLabel.isHidden = false
+        poolsLabel.isHidden = false
         
         dismiss(animated: true, completion: nil)
     }

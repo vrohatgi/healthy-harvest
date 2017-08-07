@@ -86,7 +86,6 @@ struct UserService {
                 completion(users)
             })
         })
-        
     }
     
     static func getEvents(success: @escaping ([Event]) -> (Void)) {
@@ -109,3 +108,4 @@ struct UserService {
         })
     }
 }
+

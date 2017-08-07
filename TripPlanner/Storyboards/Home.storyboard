@@ -24,22 +24,14 @@
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
                                 <rect key="frame" x="35" y="124" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="aho-PG-aAj"/>
-                                    <constraint firstAttribute="height" constant="60" id="tBM-iC-Nak"/>
-                                </constraints>
                                 <state key="normal" image="btn_lakes"/>
                                 <connections>
                                     <action selector="lakesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="asI-CN-rq2"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
-                                <rect key="frame" x="35" y="211" width="60" height="60"/>
+                                <rect key="frame" x="35" y="227" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="PVq-sU-TYg"/>
-                                    <constraint firstAttribute="width" constant="60" id="nNG-xB-hYG"/>
-                                </constraints>
                                 <state key="normal" image="btn_beaches"/>
                                 <connections>
                                     <action selector="beachesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="qxj-Ks-VKf"/>
@@ -47,32 +39,20 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
                                 <rect key="frame" x="280" y="124" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="JAs-WF-y0E"/>
-                                    <constraint firstAttribute="height" constant="60" id="p2h-2O-YqF"/>
-                                </constraints>
                                 <state key="normal" image="btn_campgrounds"/>
                                 <connections>
                                     <action selector="campgroundsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="Xiy-LN-2qI"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
-                                <rect key="frame" x="280" y="211" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="h6k-HR-R6Y"/>
-                                    <constraint firstAttribute="height" constant="60" id="k1M-qK-Owf"/>
-                                </constraints>
+                                <rect key="frame" x="280" y="227" width="60" height="60"/>
                                 <state key="normal" image="btn_pools"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
-                                <rect key="frame" x="158" y="211" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="NMH-Sb-UEF"/>
-                                    <constraint firstAttribute="height" constant="60" id="RpC-b5-aEc"/>
-                                </constraints>
+                                <rect key="frame" x="158" y="227" width="60" height="60"/>
                                 <state key="normal" image="btn_trails"/>
                                 <connections>
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
@@ -81,7 +61,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a location" textAlignment="center" minimumFontSize="17" background="GMSNavNightModeSprites-0-2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-F7-Zha">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Evx-Hb-Alg"/>
+                                    <constraint firstAttribute="height" constant="44" id="Afl-1y-ehv"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
@@ -91,34 +71,34 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-aC-TTq">
-                                <rect key="frame" x="0.0" y="289" width="375" height="329"/>
+                                <rect key="frame" x="0.0" y="318" width="375" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="80" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
-                                                    <rect key="frame" x="30" y="8" width="104" height="64"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
+                                                    <rect key="frame" x="30" y="8" width="300" height="64"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="104" id="eIM-ba-xab"/>
+                                                        <constraint firstAttribute="width" constant="300" id="kJr-Yd-CB8"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="centerY" secondItem="yLY-Oj-aMN" secondAttribute="centerY" id="A9d-n2-jxo"/>
-                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="top" secondItem="yLY-Oj-aMN" secondAttribute="topMargin" id="P2B-2z-Dg4"/>
-                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="leading" secondItem="yLY-Oj-aMN" secondAttribute="leadingMargin" constant="22" id="RUA-Cw-A9U"/>
-                                                <constraint firstAttribute="trailing" secondItem="pm6-uO-9rx" secondAttribute="trailing" constant="35" id="a24-2s-mJv"/>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="top" secondItem="yLY-Oj-aMN" secondAttribute="topMargin" id="GC9-6R-6op"/>
+                                                <constraint firstAttribute="trailing" secondItem="pm6-uO-9rx" secondAttribute="trailing" constant="45" id="Lyf-W9-Tjt"/>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="centerY" secondItem="yLY-Oj-aMN" secondAttribute="centerY" id="YEV-zf-mSt"/>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="leading" secondItem="yLY-Oj-aMN" secondAttribute="leadingMargin" constant="22" id="gjk-ef-LBq"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="tintColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="placesLabel" destination="pm6-uO-9rx" id="7yh-pb-yy1"/>
                                         </connections>
@@ -127,37 +107,82 @@
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
                                 <rect key="frame" x="158" y="124" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="KdI-zB-Njt"/>
-                                    <constraint firstAttribute="width" constant="60" id="sQx-VY-qzV"/>
-                                </constraints>
                                 <state key="normal" image="btn_parks"/>
                                 <connections>
                                     <action selector="parksButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9FV-nc-Raj"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-cv-Uc9">
+                                <rect key="frame" x="284" y="186" width="60" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Ultralight" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beaches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE9-bp-e93">
+                                <rect key="frame" x="37" y="289" width="57" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Ultralight" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trails" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQV-jj-3KS">
+                                <rect key="frame" x="170" y="289" width="39" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Ultralight" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkM-ct-jLy">
+                                <rect key="frame" x="293" y="289" width="37" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Ultralight" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWZ-q3-fsq">
+                                <rect key="frame" x="171" y="186" width="38" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Ultralight" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lakes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-j2-Vbz">
+                                <rect key="frame" x="45" y="186" width="40" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Ultralight" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="16" id="087-OT-P0b"/>
-                            <constraint firstItem="oFy-oL-LYV" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="bottom" constant="27" id="0pO-sn-CDP"/>
-                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="27" id="9de-Rf-WDu"/>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="Drp-PB-eHB"/>
-                            <constraint firstAttribute="trailing" secondItem="gYE-ES-11t" secondAttribute="trailing" constant="35" id="Ju0-Yb-763"/>
-                            <constraint firstItem="jFG-aC-TTq" firstAttribute="top" secondItem="oFy-oL-LYV" secondAttribute="bottom" constant="18" id="Mnr-sw-ue3"/>
-                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="16" id="NCR-e5-KF3"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" id="SZ2-SM-nA4"/>
-                            <constraint firstItem="jFG-aC-TTq" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="Uuz-nu-LJh"/>
-                            <constraint firstAttribute="trailing" secondItem="jFG-aC-TTq" secondAttribute="trailing" id="dkB-Y1-jNe"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="egT-Eb-8TO"/>
-                            <constraint firstItem="oFy-oL-LYV" firstAttribute="centerX" secondItem="sSm-aC-QEq" secondAttribute="centerX" id="geS-yC-LwZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Zi5-fw-tdM" secondAttribute="trailing" constant="35" id="hdo-W7-FNQ"/>
-                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="16" id="lCR-Pa-Ctg"/>
-                            <constraint firstItem="gYE-ES-11t" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="bottom" constant="27" id="li2-8q-leP"/>
-                            <constraint firstItem="CJR-iR-vIn" firstAttribute="top" secondItem="jFG-aC-TTq" secondAttribute="bottom" id="nkK-cY-C65"/>
-                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="centerX" secondItem="sSm-aC-QEq" secondAttribute="centerX" id="rDu-Kq-Pz0"/>
-                            <constraint firstItem="eMf-nX-RwE" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="35" id="xo1-m1-twK"/>
-                            <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="yYg-7s-49A"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="top" id="0h8-YR-ful"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="centerX" secondItem="5iI-j2-Vbz" secondAttribute="centerX" id="0kP-p4-S2d"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="leading" id="2af-ri-u8V"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="trailing" secondItem="jFG-aC-TTq" secondAttribute="trailing" id="5cV-L3-CST"/>
+                            <constraint firstItem="5iI-j2-Vbz" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="2" id="7WB-Qa-seD"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="centerX" secondItem="Puf-Tc-Wpm" secondAttribute="centerX" id="7ZP-PO-4K7"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="oFy-oL-LYV" secondAttribute="leading" id="8aP-st-8J7"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="Puf-Tc-Wpm" secondAttribute="trailing" constant="62" id="8hp-jg-qrp"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="oFy-oL-LYV" secondAttribute="top" id="8yc-lE-ikI"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="Bot-Vu-Lvq"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="centerX" secondItem="JQV-jj-3KS" secondAttribute="centerX" id="FrI-KD-TSl"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="baseline" secondItem="HpO-cv-Uc9" secondAttribute="baseline" id="GL2-bb-AeE"/>
+                            <constraint firstItem="JQV-jj-3KS" firstAttribute="baseline" secondItem="kkM-ct-jLy" secondAttribute="baseline" id="JHH-EM-A3a"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="trailing" secondItem="JQV-jj-3KS" secondAttribute="trailing" id="Mdp-n8-UPe"/>
+                            <constraint firstItem="jE9-bp-e93" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="2" id="PPX-K2-n0O"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="centerX" secondItem="jE9-bp-e93" secondAttribute="centerX" id="PnV-74-PfJ"/>
+                            <constraint firstItem="jE9-bp-e93" firstAttribute="baseline" secondItem="JQV-jj-3KS" secondAttribute="baseline" id="UWm-yw-eWO"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="5iI-j2-Vbz" secondAttribute="bottom" constant="20" id="Vl6-zG-rTZ"/>
+                            <constraint firstItem="HpO-cv-Uc9" firstAttribute="leading" secondItem="FWZ-q3-fsq" secondAttribute="trailing" constant="75" id="ZRe-Xv-8iz"/>
+                            <constraint firstItem="JQV-jj-3KS" firstAttribute="leading" secondItem="jE9-bp-e93" secondAttribute="trailing" constant="76" id="aOq-j5-s6g"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="top" id="aP6-bc-KBF"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="hfh-sF-vXS"/>
+                            <constraint firstItem="5iI-j2-Vbz" firstAttribute="baseline" secondItem="FWZ-q3-fsq" secondAttribute="baseline" id="j6b-hA-ReS"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="jFG-aC-TTq" secondAttribute="leading" id="oKZ-D3-fWv"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="16" id="pgR-p4-ujc"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="top" secondItem="jE9-bp-e93" secondAttribute="bottom" constant="8" id="qpZ-ay-Wew"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="WBa-bH-5sU" secondAttribute="trailing" constant="63" id="qsB-cn-ihw"/>
+                            <constraint firstItem="oFy-oL-LYV" firstAttribute="top" secondItem="gYE-ES-11t" secondAttribute="top" id="sIV-78-0Gr"/>
+                            <constraint firstItem="mIS-F7-Zha" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" id="sPf-q0-Atr"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="gYE-ES-11t" secondAttribute="leading" id="vID-Hl-7gL"/>
+                            <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="wbB-rC-dAO"/>
+                            <constraint firstItem="kkM-ct-jLy" firstAttribute="leading" secondItem="JQV-jj-3KS" secondAttribute="trailing" constant="84" id="z6K-eU-Ofc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activities" id="1Uq-E0-Ivp">
@@ -169,14 +194,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="beachesButton" destination="eMf-nX-RwE" id="VFe-2b-s5G"/>
+                        <outlet property="beachesLabel" destination="jE9-bp-e93" id="f0B-Vu-Mg8"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
+                        <outlet property="campingLabel" destination="HpO-cv-Uc9" id="ngm-bX-4ka"/>
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
+                        <outlet property="lakesLabel" destination="5iI-j2-Vbz" id="8vG-eM-WXJ"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
                         <outlet property="nextButton" destination="VPV-rP-ZOp" id="8o8-PP-Rfn"/>
                         <outlet property="parksButton" destination="Puf-Tc-Wpm" id="mcj-WV-euq"/>
+                        <outlet property="parksLabel" destination="FWZ-q3-fsq" id="AUJ-KV-5qQ"/>
                         <outlet property="placesTableView" destination="jFG-aC-TTq" id="oh3-Oj-NQQ"/>
                         <outlet property="poolsButton" destination="gYE-ES-11t" id="IMd-Tu-q3W"/>
+                        <outlet property="poolsLabel" destination="kkM-ct-jLy" id="cCG-6H-GTv"/>
                         <outlet property="trailsButton" destination="oFy-oL-LYV" id="LTZ-aX-PDx"/>
+                        <outlet property="trailsLabel" destination="JQV-jj-3KS" id="kVc-5g-SNh"/>
                         <segue destination="l8r-7H-fq4" kind="show" identifier="nextButton" id="yoR-wh-9Cv"/>
                     </connections>
                 </viewController>
