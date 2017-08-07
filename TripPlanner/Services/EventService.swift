@@ -100,6 +100,8 @@ struct EventService {
             .child("places")
         
         ref2.updateChildValues(["\(placeIndex)": cnt])
+        
+        success(true)
     }
  
     

@@ -69,20 +69,18 @@ extension VotingViewController: VotingTableViewCellDelegate {
         print("voting row: \(indexPath.row)")
 
         var cnt = 1
+        cell.voteButton.isSelected = !cell.voteButton.isSelected
+
         if votedPlaces[indexPath.row] > 0 {
-            cell.voteButton.isSelected = false
-            cnt = -1
-            votedPlaces[indexPath.row] = 0
-        } else {
-            cell.voteButton.isSelected = true
-            cnt = 1
-            votedPlaces[indexPath.row] = 1
+            cnt *= -1
         }
         
         EventService.updateEventVote(eventId: event.id, placeIndex: indexPath.row, cnt: cnt)  { status in
+            self.votedPlaces[indexPath.row] += cnt
+            let t = Int(cell.totalVotesLabel.text!)! + cnt
+            cell.totalVotesLabel.text = "\(t)"
             print("successfully updated vote \(status)")
         }
-        
         
     }
 }
