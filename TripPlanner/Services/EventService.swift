@@ -10,8 +10,6 @@ import Foundation
 import FirebaseDatabase
 
 struct EventService {
-
-    //for the voting vc i need to get the places, who invited & users invited, event name
     
     static func getEventInfo(eventID: String, success: @escaping (Event, [Int]) -> (Void)) {
         let ref = Database.database().reference().child("events").child(eventID)

@@ -17,6 +17,7 @@ class Event: NSObject {
     var invitedUsers: [String]
     var places: [Place]
     var numberOfVotes: Int
+//    var key: String?
     
     init(id: String, createdBy: String, eventName: String, invitedUsers: [String], places: [Place], numberOfVotes: Int) {
         self.createdBy = createdBy

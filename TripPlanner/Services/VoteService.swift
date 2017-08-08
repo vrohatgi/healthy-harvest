@@ -68,6 +68,11 @@ struct VoteService {
     
     static func isPlaceVotedFor(_ event: Event, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
         
+//        guard let eventKey = event.key else {
+//            assertionFailure("Error: event must have key.")
+//            return completion(false)
+//        }
+        
         let votesRef = Database.database().reference().child("events").child(event.id)
         votesRef.queryEqual(toValue: nil, childKey: User.current.uid).observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? [String : Bool] {

@@ -99,6 +99,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
+        
+        lakesButton.isSelected = true
+        parksButton.isSelected = false
+        campgroundsButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -108,6 +116,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
+        
+        parksButton.isSelected = true
+        lakesButton.isSelected = false
+        campgroundsButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -117,6 +133,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = true
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -126,6 +150,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = false
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = true
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -135,6 +167,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func trailsButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = false
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = true
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -144,6 +184,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = false
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = true
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,

@@ -25,6 +25,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
                                 <rect key="frame" x="35" y="124" width="60" height="60"/>
                                 <state key="normal" image="btn_lakes"/>
+                                <state key="selected" image="btn_lakes_blu"/>
                                 <connections>
                                     <action selector="lakesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="asI-CN-rq2"/>
                                 </connections>
@@ -32,6 +33,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
                                 <rect key="frame" x="35" y="227" width="60" height="60"/>
                                 <state key="normal" image="btn_beaches"/>
+                                <state key="selected" image="btn_beaches_blu"/>
                                 <connections>
                                     <action selector="beachesButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="qxj-Ks-VKf"/>
                                 </connections>
@@ -39,6 +41,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
                                 <rect key="frame" x="280" y="124" width="60" height="60"/>
                                 <state key="normal" image="btn_campgrounds"/>
+                                <state key="selected" image="btn_campgrounds_blu"/>
                                 <connections>
                                     <action selector="campgroundsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="Xiy-LN-2qI"/>
                                 </connections>
@@ -46,6 +49,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
                                 <rect key="frame" x="280" y="227" width="60" height="60"/>
                                 <state key="normal" image="btn_pools"/>
+                                <state key="selected" image="btn_pools_blu"/>
                                 <connections>
                                     <action selector="poolsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9mg-Ih-zz7"/>
                                 </connections>
@@ -53,6 +57,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
                                 <rect key="frame" x="158" y="227" width="60" height="60"/>
                                 <state key="normal" image="btn_trails"/>
+                                <state key="selected" image="btn_trails_blu"/>
                                 <connections>
                                     <action selector="trailsButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="H9g-gh-tTn"/>
                                 </connections>
@@ -106,6 +111,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
                                 <rect key="frame" x="158" y="124" width="60" height="60"/>
                                 <state key="normal" image="btn_parks"/>
+                                <state key="selected" image="btn_parks_blu"/>
                                 <connections>
                                     <action selector="parksButtonTapped:" destination="pUm-Eu-FVc" eventType="touchUpInside" id="9FV-nc-Raj"/>
                                 </connections>
@@ -146,8 +152,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
+                                <rect key="frame" x="0.0" y="397" width="375" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,7 +162,6 @@
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="top" id="0h8-YR-ful"/>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="centerX" secondItem="5iI-j2-Vbz" secondAttribute="centerX" id="0kP-p4-S2d"/>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="leading" id="2af-ri-u8V"/>
-                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" id="3y5-m7-A9m"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="trailing" secondItem="jFG-aC-TTq" secondAttribute="trailing" id="5cV-L3-CST"/>
                             <constraint firstItem="5iI-j2-Vbz" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="2" id="7WB-Qa-seD"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="centerX" secondItem="Puf-Tc-Wpm" secondAttribute="centerX" id="7ZP-PO-4K7"/>
@@ -164,19 +170,16 @@
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="oFy-oL-LYV" secondAttribute="top" id="8yc-lE-ikI"/>
                             <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="Bot-Vu-Lvq"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="centerX" secondItem="JQV-jj-3KS" secondAttribute="centerX" id="FrI-KD-TSl"/>
-                            <constraint firstAttribute="trailing" secondItem="CRf-Ac-UnQ" secondAttribute="trailing" id="FzA-oZ-1Me"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="baseline" secondItem="HpO-cv-Uc9" secondAttribute="baseline" id="GL2-bb-AeE"/>
                             <constraint firstItem="JQV-jj-3KS" firstAttribute="baseline" secondItem="kkM-ct-jLy" secondAttribute="baseline" id="JHH-EM-A3a"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="trailing" secondItem="JQV-jj-3KS" secondAttribute="trailing" id="Mdp-n8-UPe"/>
                             <constraint firstItem="jE9-bp-e93" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="2" id="PPX-K2-n0O"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="centerX" secondItem="jE9-bp-e93" secondAttribute="centerX" id="PnV-74-PfJ"/>
-                            <constraint firstItem="CJR-iR-vIn" firstAttribute="top" secondItem="CRf-Ac-UnQ" secondAttribute="bottom" id="TSe-YF-bBn"/>
                             <constraint firstItem="jE9-bp-e93" firstAttribute="baseline" secondItem="JQV-jj-3KS" secondAttribute="baseline" id="UWm-yw-eWO"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="5iI-j2-Vbz" secondAttribute="bottom" constant="20" id="Vl6-zG-rTZ"/>
                             <constraint firstItem="HpO-cv-Uc9" firstAttribute="leading" secondItem="FWZ-q3-fsq" secondAttribute="trailing" constant="75" id="ZRe-Xv-8iz"/>
                             <constraint firstItem="JQV-jj-3KS" firstAttribute="leading" secondItem="jE9-bp-e93" secondAttribute="trailing" constant="76" id="aOq-j5-s6g"/>
                             <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="top" id="aP6-bc-KBF"/>
-                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="glM-kC-ytc"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="hfh-sF-vXS"/>
                             <constraint firstItem="5iI-j2-Vbz" firstAttribute="baseline" secondItem="FWZ-q3-fsq" secondAttribute="baseline" id="j6b-hA-ReS"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="jFG-aC-TTq" secondAttribute="leading" id="oKZ-D3-fWv"/>
@@ -344,11 +347,17 @@
         <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
         <image name="activity" width="32" height="32"/>
         <image name="btn_beaches" width="60" height="60"/>
+        <image name="btn_beaches_blu" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
+        <image name="btn_campgrounds_blu" width="60" height="60"/>
         <image name="btn_lakes" width="60" height="60"/>
+        <image name="btn_lakes_blu" width="60" height="60"/>
         <image name="btn_parks" width="60" height="60"/>
+        <image name="btn_parks_blu" width="60" height="60"/>
         <image name="btn_pools" width="60" height="60"/>
+        <image name="btn_pools_blu" width="60" height="60"/>
         <image name="btn_trails" width="60" height="60"/>
+        <image name="btn_trails_blu" width="60" height="60"/>
         <image name="ocean1" width="960" height="1280"/>
     </resources>
 </document>
