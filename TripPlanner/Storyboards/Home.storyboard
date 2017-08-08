@@ -152,9 +152,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
-                                <rect key="frame" x="0.0" y="397" width="375" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -171,16 +170,20 @@
                             <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="Bot-Vu-Lvq"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="centerX" secondItem="JQV-jj-3KS" secondAttribute="centerX" id="FrI-KD-TSl"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="baseline" secondItem="HpO-cv-Uc9" secondAttribute="baseline" id="GL2-bb-AeE"/>
+                            <constraint firstAttribute="trailing" secondItem="CRf-Ac-UnQ" secondAttribute="trailing" id="HZt-pH-fmV"/>
+                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="Hed-N4-yft"/>
                             <constraint firstItem="JQV-jj-3KS" firstAttribute="baseline" secondItem="kkM-ct-jLy" secondAttribute="baseline" id="JHH-EM-A3a"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="trailing" secondItem="JQV-jj-3KS" secondAttribute="trailing" id="Mdp-n8-UPe"/>
                             <constraint firstItem="jE9-bp-e93" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="2" id="PPX-K2-n0O"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="centerX" secondItem="jE9-bp-e93" secondAttribute="centerX" id="PnV-74-PfJ"/>
                             <constraint firstItem="jE9-bp-e93" firstAttribute="baseline" secondItem="JQV-jj-3KS" secondAttribute="baseline" id="UWm-yw-eWO"/>
+                            <constraint firstItem="CJR-iR-vIn" firstAttribute="top" secondItem="CRf-Ac-UnQ" secondAttribute="bottom" id="UZv-tB-EKV"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="5iI-j2-Vbz" secondAttribute="bottom" constant="20" id="Vl6-zG-rTZ"/>
                             <constraint firstItem="HpO-cv-Uc9" firstAttribute="leading" secondItem="FWZ-q3-fsq" secondAttribute="trailing" constant="75" id="ZRe-Xv-8iz"/>
                             <constraint firstItem="JQV-jj-3KS" firstAttribute="leading" secondItem="jE9-bp-e93" secondAttribute="trailing" constant="76" id="aOq-j5-s6g"/>
                             <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="top" id="aP6-bc-KBF"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="hfh-sF-vXS"/>
+                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" id="i4h-Up-D48"/>
                             <constraint firstItem="5iI-j2-Vbz" firstAttribute="baseline" secondItem="FWZ-q3-fsq" secondAttribute="baseline" id="j6b-hA-ReS"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="jFG-aC-TTq" secondAttribute="leading" id="oKZ-D3-fWv"/>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="16" id="pgR-p4-ujc"/>
