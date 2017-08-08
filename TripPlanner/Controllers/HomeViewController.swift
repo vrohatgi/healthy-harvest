@@ -4,7 +4,7 @@
 //
 //  Created by vanya rohatgi on 7/24/17.
 //  Copyright © 2017 Vanya Rohatgi. All rights reserved.
-//
+//hi here comment
 
 import Foundation
 import UIKit
@@ -45,6 +45,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var trailsLabel: UILabel!
     @IBOutlet weak var poolsLabel: UILabel!
     @IBOutlet weak var beachesLabel: UILabel!
+    @IBOutlet weak var natureImageView: UIImageView!
     
     
     // MARK: - IBActions
@@ -244,6 +245,8 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         trailsLabel.isHidden = false
         poolsLabel.isHidden = false
         placesTableView.isHidden = false
+        natureImageView.isHidden = true 
+        
         
         dismiss(animated: true, completion: nil)
     }

@@ -77,7 +77,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx">
@@ -146,12 +146,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="top" id="0h8-YR-ful"/>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="centerX" secondItem="5iI-j2-Vbz" secondAttribute="centerX" id="0kP-p4-S2d"/>
                             <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="leading" id="2af-ri-u8V"/>
+                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" id="3y5-m7-A9m"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="trailing" secondItem="jFG-aC-TTq" secondAttribute="trailing" id="5cV-L3-CST"/>
                             <constraint firstItem="5iI-j2-Vbz" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="2" id="7WB-Qa-seD"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="centerX" secondItem="Puf-Tc-Wpm" secondAttribute="centerX" id="7ZP-PO-4K7"/>
@@ -160,16 +164,19 @@
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="oFy-oL-LYV" secondAttribute="top" id="8yc-lE-ikI"/>
                             <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="Bot-Vu-Lvq"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="centerX" secondItem="JQV-jj-3KS" secondAttribute="centerX" id="FrI-KD-TSl"/>
+                            <constraint firstAttribute="trailing" secondItem="CRf-Ac-UnQ" secondAttribute="trailing" id="FzA-oZ-1Me"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="baseline" secondItem="HpO-cv-Uc9" secondAttribute="baseline" id="GL2-bb-AeE"/>
                             <constraint firstItem="JQV-jj-3KS" firstAttribute="baseline" secondItem="kkM-ct-jLy" secondAttribute="baseline" id="JHH-EM-A3a"/>
                             <constraint firstItem="FWZ-q3-fsq" firstAttribute="trailing" secondItem="JQV-jj-3KS" secondAttribute="trailing" id="Mdp-n8-UPe"/>
                             <constraint firstItem="jE9-bp-e93" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="2" id="PPX-K2-n0O"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="centerX" secondItem="jE9-bp-e93" secondAttribute="centerX" id="PnV-74-PfJ"/>
+                            <constraint firstItem="CJR-iR-vIn" firstAttribute="top" secondItem="CRf-Ac-UnQ" secondAttribute="bottom" id="TSe-YF-bBn"/>
                             <constraint firstItem="jE9-bp-e93" firstAttribute="baseline" secondItem="JQV-jj-3KS" secondAttribute="baseline" id="UWm-yw-eWO"/>
                             <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="5iI-j2-Vbz" secondAttribute="bottom" constant="20" id="Vl6-zG-rTZ"/>
                             <constraint firstItem="HpO-cv-Uc9" firstAttribute="leading" secondItem="FWZ-q3-fsq" secondAttribute="trailing" constant="75" id="ZRe-Xv-8iz"/>
                             <constraint firstItem="JQV-jj-3KS" firstAttribute="leading" secondItem="jE9-bp-e93" secondAttribute="trailing" constant="76" id="aOq-j5-s6g"/>
                             <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="top" id="aP6-bc-KBF"/>
+                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="glM-kC-ytc"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="hfh-sF-vXS"/>
                             <constraint firstItem="5iI-j2-Vbz" firstAttribute="baseline" secondItem="FWZ-q3-fsq" secondAttribute="baseline" id="j6b-hA-ReS"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="jFG-aC-TTq" secondAttribute="leading" id="oKZ-D3-fWv"/>
@@ -198,6 +205,7 @@
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
                         <outlet property="lakesLabel" destination="5iI-j2-Vbz" id="8vG-eM-WXJ"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
+                        <outlet property="natureImageView" destination="CRf-Ac-UnQ" id="bGi-jQ-CvC"/>
                         <outlet property="nextButton" destination="VPV-rP-ZOp" id="8o8-PP-Rfn"/>
                         <outlet property="parksButton" destination="Puf-Tc-Wpm" id="mcj-WV-euq"/>
                         <outlet property="parksLabel" destination="FWZ-q3-fsq" id="AUJ-KV-5qQ"/>
@@ -252,7 +260,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgS-q7-fBz" id="Pmi-6j-Bwp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blj-cw-2FF">
@@ -341,5 +349,6 @@
         <image name="btn_parks" width="60" height="60"/>
         <image name="btn_pools" width="60" height="60"/>
         <image name="btn_trails" width="60" height="60"/>
+        <image name="ocean1" width="960" height="1280"/>
     </resources>
 </document>
