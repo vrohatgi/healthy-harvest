@@ -151,6 +151,7 @@
                                                     <state key="normal" title="Vote"/>
                                                     <connections>
                                                         <action selector="didTapVoteButton:" destination="vqh-pt-ZHc" eventType="touchUpInside" id="29e-rx-k8a"/>
+                                                        <action selector="didTapVoteButton:" destination="Jfc-Ke-6SG" eventType="touchUpInside" id="8Pp-kz-yEQ"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">

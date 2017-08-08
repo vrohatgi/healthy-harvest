@@ -17,7 +17,6 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     var authHandle: AuthStateDidChangeListenerHandle?
     var eventPlaces = [Int: String]()
-    
     var eventNames = [Event]()
     
     

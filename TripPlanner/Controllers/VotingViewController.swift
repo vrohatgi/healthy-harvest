@@ -14,14 +14,20 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var eventID: String = ""
     var votedPlaces = [Int](repeating: 0, count: 1)
     var event = Event(id: "hi", createdBy: "vanya", eventName: "picnic", invitedUsers: ["poop"], places: [Place(name: "butt", vicinity: "poop", types: [], votes: 1)], numberOfVotes: 10)
-    
-    // MARK: -IBOutlets
+    var placeIsVotedFor: Bool = false
     
     @IBOutlet weak var eventName: UILabel!
     
     @IBOutlet weak var peopleVoting: UILabel!
 
     @IBOutlet weak var votingTableView: UITableView!
+    
+    @IBAction func didTapVoteButton(_ sender: UIButton) {
+        if placeIsVotedFor == false {
+            placeIsVotedFor = true } else {
+                self.placeIsVotedFor = false
+            }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

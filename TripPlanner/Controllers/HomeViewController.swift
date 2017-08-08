@@ -165,7 +165,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.nextButton.isEnabled = false
         placesTableView.delegate = self
         placesTableView.dataSource = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let generateRandomImage = Int(arc4random_uniform(10))+1
         let imageName = "ocean\(generateRandomImage)"
         
