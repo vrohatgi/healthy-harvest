@@ -95,11 +95,11 @@ struct UserService {
         
         // 2. now lets get events he is invited to
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            let events = snapshot.value as! [String: Any]
+            let events = snapshot.value as? [String: Any]
             
             var eventsArr = [Event]()
             
-            for (eventId, value) in events {
+            for (eventId, value) in events ?? [:] {
                 let dict = value as? [String: Any]
                 eventsArr.append(Event(id: eventId, createdBy: dict?["createdBy"] as? String ?? "", name: dict?["name"] as? String ?? ""))
             }

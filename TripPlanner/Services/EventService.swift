@@ -38,10 +38,18 @@ struct EventService {
             ref2.observeSingleEvent(of: .value, with: { (snap) in
                 var votedPlaces = [Int](repeating: 0, count: places.count)
                 
-                for (k, v) in snap.value as? [String: Int] ?? [:] {
-                    votedPlaces[Int(k)!] = v
-                }
+                print("*** getEventInfo: snap.value=\(snap.value ?? "")")
                 
+                let arr = snap.value as? [String: Int]
+                for (k,v) in arr ?? [:] {
+                    let sIndex = k.index(k.startIndex, offsetBy: 5)
+                    let eIndex = k.endIndex
+                    let range = sIndex..<eIndex
+                    let x = k.substring(with: range)
+                    print("k,v=\(k,v) x=\(x)")
+                    votedPlaces[Int(x)!] = v
+                }
+
                 success(event, votedPlaces)
             })
         })
@@ -97,7 +105,12 @@ struct EventService {
             .child(eventId)
             .child("places")
         
-        ref2.updateChildValues(["\(placeIndex)": cnt])
+        var vote = 0
+        if cnt > 0 {
+            vote = 1
+        }
+
+        ref2.updateChildValues(["index\(placeIndex)": vote])
         
         success(true)
     }

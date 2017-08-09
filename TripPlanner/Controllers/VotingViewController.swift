@@ -34,6 +34,8 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         print("got eventId: \(self.eventID)")
         
         EventService.getEventInfo(eventID: eventID) { (eventInfo, votedPlaces) in
+            print("*** votingController: votedPlaces=\(votedPlaces)")
+
             self.eventName.text = eventInfo.eventName
             self.peopleVoting.text = "\(eventInfo.invitedUsers.joined(separator: ", "))"
             self.event = eventInfo
