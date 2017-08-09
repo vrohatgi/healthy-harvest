@@ -133,9 +133,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
-                                                    <rect key="frame" x="17" y="35" width="337" height="67"/>
-                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
+                                                    <rect key="frame" x="17" y="35" width="337" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -157,24 +158,28 @@
                                                         <action selector="didTapVoteButton:" destination="Jfc-Ke-6SG" eventType="touchUpInside" id="8Pp-kz-yEQ"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7t-nh-3U4" userLabel="Place Address Label">
+                                                    <rect key="frame" x="17" y="73" width="282" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="muA-Ax-YLw" firstAttribute="leading" secondItem="myz-mo-3Q2" secondAttribute="trailing" constant="1" id="00D-yl-fqN"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="5Hz-QE-RwH" secondAttribute="trailing" constant="13" id="3ep-Xj-jOS"/>
                                                 <constraint firstItem="myz-mo-3Q2" firstAttribute="bottom" secondItem="muA-Ax-YLw" secondAttribute="bottom" id="73e-br-bAs"/>
-                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="5Hz-QE-RwH" secondAttribute="leading" id="8Db-dy-hYa"/>
                                                 <constraint firstItem="bos-Bo-AkZ" firstAttribute="firstBaseline" secondItem="myz-mo-3Q2" secondAttribute="firstBaseline" id="EJk-lL-Q0P"/>
                                                 <constraint firstItem="bos-Bo-AkZ" firstAttribute="baseline" secondItem="myz-mo-3Q2" secondAttribute="baseline" id="Ewa-4F-vov"/>
                                                 <constraint firstItem="myz-mo-3Q2" firstAttribute="top" secondItem="muA-Ax-YLw" secondAttribute="top" id="FDY-Oa-uat"/>
                                                 <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leadingMargin" constant="9" id="WCO-Is-NwH"/>
                                                 <constraint firstItem="myz-mo-3Q2" firstAttribute="leading" secondItem="bos-Bo-AkZ" secondAttribute="trailing" constant="7" id="YdR-ML-MGu"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bos-Bo-AkZ" secondAttribute="bottom" constant="57.5" id="dUs-gS-PKg"/>
-                                                <constraint firstItem="5Hz-QE-RwH" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="topMargin" constant="27" id="kVT-i2-QHc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5Hz-QE-RwH" secondAttribute="bottom" constant="-0.5" id="opd-tg-yp0"/>
                                                 <constraint firstItem="bos-Bo-AkZ" firstAttribute="top" secondItem="68c-zP-Qkh" secondAttribute="top" id="tuU-kq-HZv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="placeAddressLabel" destination="W7t-nh-3U4" id="VUK-01-afU"/>
                                             <outlet property="placeInfoLabel" destination="5Hz-QE-RwH" id="CaG-oF-3CB"/>
                                             <outlet property="totalVotesLabel" destination="bos-Bo-AkZ" id="nbW-H1-tEa"/>
                                             <outlet property="voteButton" destination="muA-Ax-YLw" id="jef-cv-h7t"/>

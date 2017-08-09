@@ -58,7 +58,9 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         cell.totalVotesLabel.text = "\(event.places[indexPath.row].votes)"
 
-        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name) \(event.places[indexPath.row].vicinity)"
+        cell.placeInfoLabel.text = "\(event.places[indexPath.row].name)"
+        
+        cell.placeAddressLabel.text = "\(event.places[indexPath.row].vicinity)"
 
         if votedPlaces[indexPath.row] > 0 {
             cell.voteButton.isSelected = true

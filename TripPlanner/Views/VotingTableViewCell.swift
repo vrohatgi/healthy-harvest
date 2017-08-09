@@ -23,7 +23,10 @@ class VotingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var placeInfoLabel: UILabel!
     
+    @IBOutlet weak var placeAddressLabel: UILabel!
+    
     @IBOutlet weak var voteButton: UIButton!
+    
     @IBAction func didTapVoteButton(_ sender: UIButton) {
         
             delegate?.didTapVoteButton(sender, on: self)
