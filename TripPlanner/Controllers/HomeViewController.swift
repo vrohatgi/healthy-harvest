@@ -216,7 +216,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let generateRandomImage = Int(arc4random_uniform(10))+1
+        let generateRandomImage = Int(arc4random_uniform(4))+1
         let imageName = "ocean\(generateRandomImage)"
         
         natureImageView.image = UIImage(imageLiteralResourceName: imageName)

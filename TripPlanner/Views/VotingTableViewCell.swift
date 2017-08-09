@@ -25,7 +25,6 @@ class VotingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var voteButton: UIButton!
     @IBAction func didTapVoteButton(_ sender: UIButton) {
-        print("i am here")
         
             delegate?.didTapVoteButton(sender, on: self)
     }
@@ -38,5 +37,4 @@ class VotingTableViewCell: UITableViewCell {
         voteButton.setTitle("Vote", for: .normal)
         voteButton.setTitle("Voted", for: .selected)
     }
-    
 }

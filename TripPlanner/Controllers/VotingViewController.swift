@@ -72,7 +72,6 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 extension VotingViewController: VotingTableViewCellDelegate {
     func didTapVoteButton(_ inviteButton: UIButton, on cell: VotingTableViewCell) {
-        print("inside didTapVoteButton")
         
         guard let indexPath = votingTableView.indexPath(for: cell) else { return }
         
