@@ -30,9 +30,18 @@ class CreateUsernameViewController: UIViewController {
             let username = usernameTextField.text,
             !username.isEmpty else { return }
         
-        UserService.create(firUser, username: username) { (user) in
+        UserService.create(firUser, username: username) { (user, error) in
             guard let user = user else {
-                // handle error
+                let message = error ?? "unable to save user, please try again"
+
+                let alert = UIAlertView()
+                alert.title = "Unable to save user!"
+                alert.message = message
+                
+                alert.addButton(withTitle: "Ok")
+                
+                alert.show()
+
                 return
             }
             
