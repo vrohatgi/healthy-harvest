@@ -211,9 +211,16 @@
                             <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="z52-aH-v8k"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Vote" id="Vou-bc-FjJ"/>
+                    <navigationItem key="navigationItem" title="Vote" id="Vou-bc-FjJ">
+                        <barButtonItem key="rightBarButtonItem" image="btn_options_black" id="Vf8-5M-zCV">
+                            <connections>
+                                <action selector="didTapOptionsButton:" destination="Jfc-Ke-6SG" id="FH7-Jb-Y77"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventName" destination="unk-wz-Ktb" id="pmP-Dp-ONt"/>
+                        <outlet property="optionsButton" destination="Vf8-5M-zCV" id="DU7-nS-jjH"/>
                         <outlet property="peopleVoting" destination="ToY-ks-wiw" id="uZj-es-mt3"/>
                         <outlet property="votingTableView" destination="beY-1F-1Uw" id="iKa-qv-di0"/>
                     </connections>
@@ -244,6 +251,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_options_black" width="24" height="24"/>
         <image name="events" width="32" height="32"/>
     </resources>
 </document>

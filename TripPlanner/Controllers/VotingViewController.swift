@@ -22,12 +22,31 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var votingTableView: UITableView!
     
+    @IBOutlet weak var optionsButton: UIBarButtonItem!
+    
     @IBAction func didTapVoteButton(_ sender: UIButton) {
         if placeIsVotedFor == false {
             placeIsVotedFor = true } else {
                 self.placeIsVotedFor = false
             }
     }
+    
+    @IBAction func didTapOptionsButton(_ sender: UIBarButtonItem) {
+        let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        ac.addAction(UIAlertAction(title: "Report User and Event", style: UIAlertActionStyle.default) { action -> Void in
+            print("hello reported \(self.event.createdBy)")
+
+            UserService.report(uid: self.event.createdBy)
+        })
+        ac.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+
+        let popover = ac.popoverPresentationController
+        popover?.sourceView = view
+        popover?.sourceRect = CGRect(x: 32, y: 32, width: 64, height: 64)
+        present(ac, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

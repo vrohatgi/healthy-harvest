@@ -17,6 +17,7 @@ class User: NSObject {
     let uid: String
     let username: String
     var isInvited = false
+    var isReported = false
     
     // MARK: - Singleton
     
