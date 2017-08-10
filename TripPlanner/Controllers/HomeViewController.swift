@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Subviews
     
+    @IBOutlet weak var creditsButton: UIButton!
     @IBOutlet var nextButton: UIBarButtonItem!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var beachesButton: UIButton!
@@ -299,7 +300,8 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         trailsLabel.isHidden = false
         poolsLabel.isHidden = false
         placesTableView.isHidden = false
-        natureImageView.isHidden = true 
+        natureImageView.isHidden = true
+        creditsButton.isHidden = true
         
         
         dismiss(animated: true, completion: nil)

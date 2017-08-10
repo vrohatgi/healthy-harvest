@@ -229,14 +229,16 @@
             </objects>
             <point key="canvasLocation" x="2178.4000000000001" y="930.58470764617698"/>
         </scene>
-        <!--My Events-->
+        <!--Navigation Controller-->
         <scene sceneID="LCb-37-eKE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBd-b6-agT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Events" image="events" id="OxW-st-TCq"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_find_friends_black" id="OxW-st-TCq">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiE-6E-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -252,6 +254,6 @@
     </scenes>
     <resources>
         <image name="btn_options_black" width="24" height="24"/>
-        <image name="events" width="32" height="32"/>
+        <image name="tab_find_friends_black" width="25" height="25"/>
     </resources>
 </document>

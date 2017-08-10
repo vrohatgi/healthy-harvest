@@ -80,8 +80,8 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.placeInfoLabel.text = "\(event.places[indexPath.row].name)"
         
         cell.placeAddressLabel.text = "\(event.places[indexPath.row].vicinity)"
-
-        if votedPlaces[indexPath.row] > 0 {
+        print("index \(votedPlaces[indexPath.row])")
+        if votedPlaces[indexPath.row] == 1 {
             cell.voteButton.isSelected = true
         }
         
@@ -112,8 +112,9 @@ extension VotingViewController: VotingTableViewCellDelegate {
             let t = Int(cell.totalVotesLabel.text!)! + cnt
             cell.totalVotesLabel.text = "\(t)"
             print("successfully updated vote \(status)")
+            print(indexPath.row)
+            self.votingTableView.reloadData()
         }
-        
     }
 }
 

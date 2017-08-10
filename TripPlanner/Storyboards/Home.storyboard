@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-bH-5sU" userLabel="Lakes Button">
-                                <rect key="frame" x="35" y="124" width="60" height="60"/>
+                                <rect key="frame" x="36" y="116" width="60" height="60"/>
                                 <state key="normal" image="btn_lakes"/>
                                 <state key="selected" image="btn_lakes_blu"/>
                                 <connections>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-nX-RwE" userLabel="Beaches Button">
-                                <rect key="frame" x="35" y="227" width="60" height="60"/>
+                                <rect key="frame" x="36" y="209" width="60" height="60"/>
                                 <state key="normal" image="btn_beaches"/>
                                 <state key="selected" image="btn_beaches_blu"/>
                                 <connections>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-fw-tdM" userLabel="Campgrounds Button">
-                                <rect key="frame" x="280" y="124" width="60" height="60"/>
+                                <rect key="frame" x="279" y="116" width="60" height="60"/>
                                 <state key="normal" image="btn_campgrounds"/>
                                 <state key="selected" image="btn_campgrounds_blu"/>
                                 <connections>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-ES-11t" userLabel="Pools Button">
-                                <rect key="frame" x="280" y="227" width="60" height="60"/>
+                                <rect key="frame" x="279" y="212" width="60" height="60"/>
                                 <state key="normal" image="btn_pools"/>
                                 <state key="selected" image="btn_pools_blu"/>
                                 <connections>
@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-oL-LYV" userLabel="Trails Button">
-                                <rect key="frame" x="158" y="227" width="60" height="60"/>
+                                <rect key="frame" x="157" y="212" width="60" height="60"/>
                                 <state key="normal" image="btn_trails"/>
                                 <state key="selected" image="btn_trails_blu"/>
                                 <connections>
@@ -75,24 +75,23 @@
                                 </connections>
                             </textField>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-aC-TTq">
-                                <rect key="frame" x="0.0" y="318" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="297" width="375" height="321"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlacesTableViewCell" rowHeight="80" id="14b-z4-0f3" customClass="PlacesTableViewCell" customModule="TripPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14b-z4-0f3" id="yLY-Oj-aMN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx" userLabel="Place Name Label">
-                                                    <rect key="frame" x="30" y="8" width="300" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-uO-9rx" userLabel="Place Name Label">
+                                                    <rect key="frame" x="35" y="8" width="44" height="36"/>
                                                     <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd3-pA-igv" userLabel="Place Address Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd3-pA-igv" userLabel="Place Address Label">
                                                     <rect key="frame" x="30" y="50" width="300" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,6 +99,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pm6-uO-9rx" firstAttribute="leading" secondItem="yLY-Oj-aMN" secondAttribute="leading" constant="35" id="raU-0q-dh5"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="placeAddressLabel" destination="qd3-pA-igv" id="26q-wF-2dm"/>
@@ -109,7 +111,7 @@
                                 </prototypes>
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puf-Tc-Wpm" userLabel="Parks Button">
-                                <rect key="frame" x="158" y="124" width="60" height="60"/>
+                                <rect key="frame" x="158" y="116" width="60" height="60"/>
                                 <state key="normal" image="btn_parks"/>
                                 <state key="selected" image="btn_parks_blu"/>
                                 <connections>
@@ -117,83 +119,93 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beaches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE9-bp-e93">
-                                <rect key="frame" x="36.5" y="289" width="58.5" height="21"/>
+                                <rect key="frame" x="37" y="274" width="59" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trails" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQV-jj-3KS">
-                                <rect key="frame" x="171" y="289" width="39" height="21"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkM-ct-jLy">
-                                <rect key="frame" x="294" y="289" width="38" height="21"/>
+                                <rect key="frame" x="171" y="274" width="39" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWZ-q3-fsq">
-                                <rect key="frame" x="171" y="186" width="39" height="21"/>
+                                <rect key="frame" x="171" y="178" width="39" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lakes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-j2-Vbz">
-                                <rect key="frame" x="45" y="186" width="49" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lakes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-j2-Vbz">
+                                <rect key="frame" x="45" y="178" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Camping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-cv-Uc9">
-                                <rect key="frame" x="280" y="186" width="61.5" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-cv-Uc9">
+                                <rect key="frame" x="279" y="178" width="62" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ocean1" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-Ac-UnQ">
+                                <rect key="frame" x="0.0" y="542" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYJ-Gs-Rdd">
+                                <rect key="frame" x="320" y="584" width="45" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                                <state key="normal" title="credits">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lvK-WL-Gsn" kind="show" id="0g1-6H-sCz"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkM-ct-jLy">
+                                <rect key="frame" x="290" y="274" width="38" height="21"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="top" id="0h8-YR-ful"/>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="centerX" secondItem="5iI-j2-Vbz" secondAttribute="centerX" id="0kP-p4-S2d"/>
-                            <constraint firstItem="CJR-iR-vIn" firstAttribute="top" secondItem="CRf-Ac-UnQ" secondAttribute="bottom" id="298-9T-SX7"/>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="eMf-nX-RwE" secondAttribute="leading" id="2af-ri-u8V"/>
-                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" id="2cg-Pu-xPO"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="trailing" secondItem="jFG-aC-TTq" secondAttribute="trailing" id="5cV-L3-CST"/>
-                            <constraint firstItem="5iI-j2-Vbz" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="2" id="7WB-Qa-seD"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="centerX" secondItem="Puf-Tc-Wpm" secondAttribute="centerX" id="7ZP-PO-4K7"/>
-                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="oFy-oL-LYV" secondAttribute="leading" id="8aP-st-8J7"/>
-                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="Puf-Tc-Wpm" secondAttribute="trailing" constant="62" id="8hp-jg-qrp"/>
-                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="oFy-oL-LYV" secondAttribute="top" id="8yc-lE-ikI"/>
-                            <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="Bot-Vu-Lvq"/>
-                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="centerX" secondItem="JQV-jj-3KS" secondAttribute="centerX" id="FrI-KD-TSl"/>
-                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="baseline" secondItem="HpO-cv-Uc9" secondAttribute="baseline" id="GL2-bb-AeE"/>
-                            <constraint firstItem="JQV-jj-3KS" firstAttribute="baseline" secondItem="kkM-ct-jLy" secondAttribute="baseline" id="JHH-EM-A3a"/>
-                            <constraint firstItem="CRf-Ac-UnQ" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="M81-pn-T4l"/>
-                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="trailing" secondItem="JQV-jj-3KS" secondAttribute="trailing" id="Mdp-n8-UPe"/>
-                            <constraint firstItem="jE9-bp-e93" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="2" id="PPX-K2-n0O"/>
-                            <constraint firstItem="eMf-nX-RwE" firstAttribute="centerX" secondItem="jE9-bp-e93" secondAttribute="centerX" id="PnV-74-PfJ"/>
-                            <constraint firstItem="jE9-bp-e93" firstAttribute="baseline" secondItem="JQV-jj-3KS" secondAttribute="baseline" id="UWm-yw-eWO"/>
-                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="5iI-j2-Vbz" secondAttribute="bottom" constant="20" id="Vl6-zG-rTZ"/>
-                            <constraint firstItem="HpO-cv-Uc9" firstAttribute="leading" secondItem="FWZ-q3-fsq" secondAttribute="trailing" constant="75" id="ZRe-Xv-8iz"/>
-                            <constraint firstItem="JQV-jj-3KS" firstAttribute="leading" secondItem="jE9-bp-e93" secondAttribute="trailing" constant="76" id="aOq-j5-s6g"/>
-                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="top" id="aP6-bc-KBF"/>
-                            <constraint firstAttribute="trailing" secondItem="CRf-Ac-UnQ" secondAttribute="trailing" id="b6Z-yI-wha"/>
+                            <constraint firstAttribute="trailing" secondItem="gYE-ES-11t" secondAttribute="trailing" constant="36" id="2YU-ey-LNU"/>
+                            <constraint firstItem="jE9-bp-e93" firstAttribute="top" secondItem="eMf-nX-RwE" secondAttribute="bottom" constant="5" id="2zs-ky-jf2"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="36" id="5Ci-Ge-NEc"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="trailing" secondItem="eMf-nX-RwE" secondAttribute="trailing" id="6zV-Xy-aSh"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="top" secondItem="Zi5-fw-tdM" secondAttribute="top" id="AJG-Un-AsH"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="8" symbolic="YES" id="B1a-31-XEN"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="centerX" secondItem="5iI-j2-Vbz" secondAttribute="centerX" id="Baj-uj-Ylk"/>
+                            <constraint firstItem="5iI-j2-Vbz" firstAttribute="baseline" secondItem="FWZ-q3-fsq" secondAttribute="baseline" id="GYb-rQ-8KQ"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="Puf-Tc-Wpm" secondAttribute="top" id="J0M-AC-Enj"/>
+                            <constraint firstItem="oFy-oL-LYV" firstAttribute="top" secondItem="gYE-ES-11t" secondAttribute="top" id="JkT-Qy-qir"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="leading" secondItem="5iI-j2-Vbz" secondAttribute="trailing" constant="84" id="MIl-5k-c38"/>
+                            <constraint firstItem="oFy-oL-LYV" firstAttribute="centerX" secondItem="sSm-aC-QEq" secondAttribute="centerX" id="MWb-7C-LvM"/>
+                            <constraint firstItem="JQV-jj-3KS" firstAttribute="baseline" secondItem="kkM-ct-jLy" secondAttribute="baseline" id="SgZ-WJ-POS"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="baseline" secondItem="HpO-cv-Uc9" secondAttribute="baseline" id="VjW-J3-9Dc"/>
+                            <constraint firstItem="JQV-jj-3KS" firstAttribute="top" secondItem="oFy-oL-LYV" secondAttribute="bottom" constant="2" id="WBV-ym-18u"/>
+                            <constraint firstAttribute="trailing" secondItem="Zi5-fw-tdM" secondAttribute="trailing" constant="36" id="Xc6-eE-Qo2"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="leading" secondItem="JQV-jj-3KS" secondAttribute="leading" id="XjR-cB-Oof"/>
+                            <constraint firstItem="JQV-jj-3KS" firstAttribute="leading" secondItem="jE9-bp-e93" secondAttribute="trailing" constant="75" id="YgO-4x-H8t"/>
+                            <constraint firstItem="gYE-ES-11t" firstAttribute="centerX" secondItem="kkM-ct-jLy" secondAttribute="centerX" id="Z4W-Gv-zzq"/>
+                            <constraint firstItem="jE9-bp-e93" firstAttribute="baseline" secondItem="JQV-jj-3KS" secondAttribute="baseline" id="ako-EL-t1e"/>
+                            <constraint firstItem="5iI-j2-Vbz" firstAttribute="top" secondItem="WBa-bH-5sU" secondAttribute="bottom" constant="2" id="cai-5F-DQx"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="trailing" secondItem="jE9-bp-e93" secondAttribute="trailing" id="e3C-Kl-g2u"/>
+                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="centerX" secondItem="sSm-aC-QEq" secondAttribute="centerX" id="gBd-4s-dNv"/>
+                            <constraint firstItem="FWZ-q3-fsq" firstAttribute="trailing" secondItem="JQV-jj-3KS" secondAttribute="trailing" id="h7t-Vg-we3"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" id="hfh-sF-vXS"/>
-                            <constraint firstItem="5iI-j2-Vbz" firstAttribute="baseline" secondItem="FWZ-q3-fsq" secondAttribute="baseline" id="j6b-hA-ReS"/>
-                            <constraint firstItem="mIS-F7-Zha" firstAttribute="leading" secondItem="jFG-aC-TTq" secondAttribute="leading" id="oKZ-D3-fWv"/>
-                            <constraint firstItem="WBa-bH-5sU" firstAttribute="top" secondItem="mIS-F7-Zha" secondAttribute="bottom" constant="16" id="pgR-p4-ujc"/>
-                            <constraint firstItem="jFG-aC-TTq" firstAttribute="top" secondItem="jE9-bp-e93" secondAttribute="bottom" constant="8" id="qpZ-ay-Wew"/>
-                            <constraint firstItem="Puf-Tc-Wpm" firstAttribute="leading" secondItem="WBa-bH-5sU" secondAttribute="trailing" constant="63" id="qsB-cn-ihw"/>
-                            <constraint firstItem="oFy-oL-LYV" firstAttribute="top" secondItem="gYE-ES-11t" secondAttribute="top" id="sIV-78-0Gr"/>
+                            <constraint firstItem="WBa-bH-5sU" firstAttribute="leading" secondItem="sSm-aC-QEq" secondAttribute="leading" constant="36" id="jFQ-G5-2NV"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="top" secondItem="jE9-bp-e93" secondAttribute="bottom" constant="2" id="k9X-bF-Ltl"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="leading" secondItem="mIS-F7-Zha" secondAttribute="leading" id="odu-NA-GG4"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="qH6-JH-LSF"/>
                             <constraint firstItem="mIS-F7-Zha" firstAttribute="top" secondItem="4lp-N4-dvb" secondAttribute="bottom" id="sPf-q0-Atr"/>
-                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="gYE-ES-11t" secondAttribute="leading" id="vID-Hl-7gL"/>
+                            <constraint firstItem="jFG-aC-TTq" firstAttribute="bottom" secondItem="CJR-iR-vIn" secondAttribute="top" id="uYG-7O-qwW"/>
+                            <constraint firstItem="eMf-nX-RwE" firstAttribute="top" secondItem="5iI-j2-Vbz" secondAttribute="bottom" constant="10" id="vZw-An-R8E"/>
                             <constraint firstAttribute="trailing" secondItem="mIS-F7-Zha" secondAttribute="trailing" id="wbB-rC-dAO"/>
-                            <constraint firstItem="kkM-ct-jLy" firstAttribute="leading" secondItem="JQV-jj-3KS" secondAttribute="trailing" constant="84" id="z6K-eU-Ofc"/>
+                            <constraint firstItem="Zi5-fw-tdM" firstAttribute="leading" secondItem="HpO-cv-Uc9" secondAttribute="leading" id="zsz-BD-7d9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activities" id="1Uq-E0-Ivp">
@@ -208,6 +220,7 @@
                         <outlet property="beachesLabel" destination="jE9-bp-e93" id="f0B-Vu-Mg8"/>
                         <outlet property="campgroundsButton" destination="Zi5-fw-tdM" id="lDK-dh-UXS"/>
                         <outlet property="campingLabel" destination="HpO-cv-Uc9" id="ngm-bX-4ka"/>
+                        <outlet property="creditsButton" destination="UYJ-Gs-Rdd" id="I1B-DK-5yT"/>
                         <outlet property="lakesButton" destination="WBa-bH-5sU" id="AFa-CS-u0d"/>
                         <outlet property="lakesLabel" destination="5iI-j2-Vbz" id="8vG-eM-WXJ"/>
                         <outlet property="locationTextField" destination="mIS-F7-Zha" id="S2s-Av-eCv"/>
@@ -226,6 +239,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXP-lM-Xgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1368.8" y="-542.87856071964018"/>
+        </scene>
+        <!--Credits-->
+        <scene sceneID="7as-02-4dH">
+            <objects>
+                <viewController id="lvK-WL-Gsn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wix-BT-xmR"/>
+                        <viewControllerLayoutGuide type="bottom" id="los-WK-KIa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rga-Yl-D1A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zcA-UT-2XJ">
+                                <rect key="frame" x="89.5" y="249.5" width="196" height="168"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.flaticon.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3u-yx-8wG">
+                                        <rect key="frame" x="26" y="0.0" width="144.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lakes icon: Freepik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubw-Z4-SSv">
+                                        <rect key="frame" x="24" y="24" width="148" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="parks icon: Freepik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-n2-hHk">
+                                        <rect key="frame" x="23" y="48" width="150.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pools icon: Madebyoliver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th2-b1-YQQ">
+                                        <rect key="frame" x="0.0" y="72" width="196" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trails icon: Freepik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaZ-1O-07o">
+                                        <rect key="frame" x="25" y="96" width="146" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beaches icon: Freepik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C7-g1-ePG">
+                                        <rect key="frame" x="11.5" y="120" width="173" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="camping icon: Freepik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-c7-cLk">
+                                        <rect key="frame" x="11" y="144" width="174.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zcA-UT-2XJ" firstAttribute="centerX" secondItem="rga-Yl-D1A" secondAttribute="centerX" id="Rcc-Po-epo"/>
+                            <constraint firstItem="zcA-UT-2XJ" firstAttribute="centerY" secondItem="rga-Yl-D1A" secondAttribute="centerY" id="S5V-2M-Fk2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Credits" id="Rvz-rX-JhG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ml3-ei-kO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1476" y="114.69265367316342"/>
         </scene>
         <!--Invite-->
         <scene sceneID="hOF-ax-DpV">
@@ -257,6 +342,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didFinishNamingEvent:" destination="l8r-7H-fq4" eventType="editingDidEnd" id="KvC-SD-myl"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="itI-1P-Hci">
                                 <rect key="frame" x="0.0" y="131" width="375" height="422"/>
@@ -266,7 +354,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgS-q7-fBz" id="Pmi-6j-Bwp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blj-cw-2FF">
@@ -326,11 +414,13 @@
             </objects>
             <point key="canvasLocation" x="2109.5999999999999" y="-543.77811094452773"/>
         </scene>
-        <!--Select Activity-->
+        <!--Navigation Controller-->
         <scene sceneID="nrU-yK-w1N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p9a-K4-4Nv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Select Activity" image="activity" id="MMs-Ab-Pzp"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="MMs-Ab-Pzp">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O9V-J4-tYf">
@@ -349,7 +439,6 @@
     </scenes>
     <resources>
         <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
-        <image name="activity" width="32" height="32"/>
         <image name="btn_beaches" width="60" height="60"/>
         <image name="btn_beaches_blu" width="60" height="60"/>
         <image name="btn_campgrounds" width="60" height="60"/>
@@ -363,5 +452,6 @@
         <image name="btn_trails" width="60" height="60"/>
         <image name="btn_trails_blu" width="60" height="60"/>
         <image name="ocean1" width="960" height="1280"/>
+        <image name="tab_home_black" width="25" height="25"/>
     </resources>
 </document>

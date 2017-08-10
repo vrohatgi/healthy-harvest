@@ -21,6 +21,11 @@ class FriendsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var eventNameTextField: UITextField!
     
+    @IBAction func didFinishNamingEvent(_ sender: UITextField) {
+        self.friendsTableView.isHidden = false
+    }
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -64,6 +69,7 @@ class FriendsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.eventNameTextField.delegate = self
         self.createEventButton.isEnabled = false
+        self.friendsTableView.isHidden = true
         
         // remove separators for empty cells
         friendsTableView.tableFooterView = UIView()
