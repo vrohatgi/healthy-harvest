@@ -31,7 +31,7 @@ struct UserService {
             let x = snap.value as? String ?? ""
 
             if x.characters.count > 0 {
-                completion(nil, "Username: \(username) already exists")
+                return completion(nil, "Username: \(username) already exists")
             }
             
             let userAttrs = ["username": username]
@@ -50,7 +50,7 @@ struct UserService {
                 
                 ref.observeSingleEvent(of: .value, with: { (snapshot) in
                     let user = User(snapshot: snapshot)
-                    completion(user, nil)
+                    return completion(user, nil)
                 })
             }
             

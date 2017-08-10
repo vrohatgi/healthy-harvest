@@ -18,10 +18,16 @@ class CreateUsernameViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    var errInCreatingUser = false
+    
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.layer.cornerRadius = 6
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
     }
     
     // MARK: - IBActions
@@ -30,43 +36,38 @@ class CreateUsernameViewController: UIViewController {
             let username = usernameTextField.text,
             !username.isEmpty else { return }
         
-        let dispatchGroup = DispatchGroup()
-        let ref = Database.database().reference().child("users")
+        UserService.create(firUser, username: username) { (user, error) in
+            if (error?.characters.count ?? 0) > 0 {
 
-        dispatchGroup.enter()
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            let snap = snapshot.value as? [String: Any]
-            
-            for value in (snap?.values)! {
-                let userDict = value as? [String: String]
-                if let name = userDict?["username"] {
-                    if name == username {
-                        return
-                    }
-                }
+                self.errInCreatingUser = true
+
+                let alert = UIAlertView()
+                alert.title = "Username already taken!"
+                alert.message = "Choose another username."
+                alert.addButton(withTitle: "Ok")
+                alert.show()
+
+                return
             }
-            dispatchGroup.leave()
-        })
-        
-        dispatchGroup.notify(queue: .main) { 
-            UserService.create(firUser, username: username) { (user, error) in
-                guard let user = user else {
-                    
-                    let alert = UIAlertController(title: "Username already taken!", message: "Choose another username.", preferredStyle: UIAlertControllerStyle.alert)
-                    
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
-                    
-                    self.present(alert, animated: true, completion: nil)
-                    
-                    return
-                }
             
-                User.setCurrent(user, writeToUserDefaults: true)
+            if user == nil {
+                self.errInCreatingUser = true
                 
-                let initialViewController = UIStoryboard.initialViewController(for: .main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
+                let alert = UIAlertController(title: "Error creating user", message: "Please try again.", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+                return
             }
+            
+            User.setCurrent(user!, writeToUserDefaults: true)
+            
+            let initialViewController = UIStoryboard.initialViewController(for: .main)
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
         }
+        
     }
 }
