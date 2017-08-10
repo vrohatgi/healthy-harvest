@@ -30,26 +30,43 @@ class CreateUsernameViewController: UIViewController {
             let username = usernameTextField.text,
             !username.isEmpty else { return }
         
-        UserService.create(firUser, username: username) { (user, error) in
-            guard let user = user else {
-                let message = error ?? "unable to save user, please try again"
+        let dispatchGroup = DispatchGroup()
+        let ref = Database.database().reference().child("users")
 
-                let alert = UIAlertView()
-                alert.title = "Unable to save user!"
-                alert.message = message
-                
-                alert.addButton(withTitle: "Ok")
-                
-                alert.show()
-
-                return
+        dispatchGroup.enter()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let snap = snapshot.value as? [String: Any]
+            
+            for value in (snap?.values)! {
+                let userDict = value as? [String: String]
+                if let name = userDict?["username"] {
+                    if name == username {
+                        return
+                    }
+                }
             }
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.notify(queue: .main) { 
+            UserService.create(firUser, username: username) { (user, error) in
+                guard let user = user else {
+                    
+                    let alert = UIAlertController(title: "Username already taken!", message: "Choose another username.", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+                }
             
-            User.setCurrent(user, writeToUserDefaults: true)
-            
-            let initialViewController = UIStoryboard.initialViewController(for: .main)
-            self.view.window?.rootViewController = initialViewController
-            self.view.window?.makeKeyAndVisible()
+                User.setCurrent(user, writeToUserDefaults: true)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            }
         }
     }
 }

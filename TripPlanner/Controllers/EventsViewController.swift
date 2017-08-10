@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class EventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -49,15 +50,28 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - IBActions
     
     @IBAction func didTapLogOutButton(_ sender: UIBarButtonItem) {
-        print("i am in logout!")
-        
         do {
             try Auth.auth().signOut()
         } catch let error as NSError {
             assertionFailure("Error signing out: \(error.localizedDescription)")
         }
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        print("iamsignedout")
+        if editingStyle == .delete {
+            
+            let ref = Database.database().reference().child("users").child(User.current.uid).child("events").child(eventNames[indexPath.row].id)
+           
+            ref.removeValue()
+            eventNames.remove(at: indexPath.row)
+
+            self.eventsTableView.reloadData()
+            
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

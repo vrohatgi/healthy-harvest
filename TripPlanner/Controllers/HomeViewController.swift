@@ -51,7 +51,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - IBActions
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        //self.performSegue(withIdentifier: "nextButton", sender: self)
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
         
@@ -60,7 +59,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         myVC.eventPlaces = self.myPlaces.buildList(places: [Place](), selectedOnly: true)
         
         navigationController?.pushViewController(myVC, animated: true)
-        print("hi next working")
     }
     
     func fetchActivities(location: String, radius: Int, type: String, keyword: String, key: String) {

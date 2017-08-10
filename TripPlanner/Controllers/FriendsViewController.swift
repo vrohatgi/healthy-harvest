@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FriendsViewController: UIViewController {
+class FriendsViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Subviews
     
@@ -20,6 +20,13 @@ class FriendsViewController: UIViewController {
     var invitedUsers = [User]()
     
     @IBOutlet weak var eventNameTextField: UITextField!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    @IBOutlet weak var createEventButton: UIButton!
     
     // MARK: - Properties
     
@@ -45,6 +52,7 @@ class FriendsViewController: UIViewController {
                 let alert = UIAlertView()
                 alert.title = "Unable to save event!"
                 alert.addButton(withTitle: "Ok")
+                alert.show()
                 return
             }
         }
@@ -54,8 +62,8 @@ class FriendsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(eventPlaces)
+        self.eventNameTextField.delegate = self
+        self.createEventButton.isEnabled = false
         
         // remove separators for empty cells
         friendsTableView.tableFooterView = UIView()
@@ -100,6 +108,7 @@ extension FriendsViewController: UITableViewDataSource {
 
 extension FriendsViewController: FriendsTableViewCellDelegate {
     func didTapInviteButton(_ inviteButton: UIButton, on cell: FriendsTableViewCell) {
+        self.createEventButton.isEnabled = true
         guard let indexPath = friendsTableView.indexPath(for: cell) else { return }
         
         let friend = users[indexPath.row]
