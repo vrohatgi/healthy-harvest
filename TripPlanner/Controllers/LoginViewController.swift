@@ -37,7 +37,9 @@ class LoginViewController: UIViewController {
     
         let authViewController = authUI.authViewController()
         
-        authViewController.isNavigationBarHidden = true
+        //HAHA
+        
+        authViewController.isNavigationBarHidden = false
 
         present(authViewController, animated: true)
         

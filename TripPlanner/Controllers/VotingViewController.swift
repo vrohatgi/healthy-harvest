@@ -71,6 +71,7 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "VotingTableViewCell") as! VotingTableViewCell
         
         cell.delegate = self as VotingTableViewCellDelegate
@@ -80,8 +81,9 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.placeInfoLabel.text = "\(event.places[indexPath.row].name)"
         
         cell.placeAddressLabel.text = "\(event.places[indexPath.row].vicinity)"
-        print("index \(votedPlaces[indexPath.row])")
-        if votedPlaces[indexPath.row] == 1 {
+        
+
+        if votedPlaces[indexPath.row] > 0 {
             cell.voteButton.isSelected = true
         }
         
@@ -102,7 +104,7 @@ extension VotingViewController: VotingTableViewCellDelegate {
 
         var cnt = 1
         cell.voteButton.isSelected = !cell.voteButton.isSelected
-
+        
         if votedPlaces[indexPath.row] > 0 {
             cnt *= -1
         }
@@ -113,7 +115,6 @@ extension VotingViewController: VotingTableViewCellDelegate {
             cell.totalVotesLabel.text = "\(t)"
             print("successfully updated vote \(status)")
             print(indexPath.row)
-            self.votingTableView.reloadData()
         }
     }
 }

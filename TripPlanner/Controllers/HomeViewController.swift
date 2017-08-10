@@ -228,6 +228,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return displayArr.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "PlacesTableViewCell"
