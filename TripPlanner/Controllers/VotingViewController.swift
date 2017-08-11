@@ -50,6 +50,10 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        votingTableView.delegate = self
+        votingTableView.dataSource = self
+        
         print("got eventId: \(self.eventID)")
         
         EventService.getEventInfo(eventID: eventID) { (eventInfo, votedPlaces) in
@@ -72,6 +76,7 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        print("cell:: \(indexPath.row) name: \(event.places[indexPath.row].name) voted: \(votedPlaces[indexPath.row])")
         let cell = tableView.dequeueReusableCell(withIdentifier: "VotingTableViewCell", for: indexPath) as! VotingTableViewCell
         
         cell.delegate = self as VotingTableViewCellDelegate
@@ -85,6 +90,8 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         if votedPlaces[indexPath.row] > 0 {
             cell.voteButton.isSelected = true
+        } else {
+            cell.voteButton.isSelected = false
         }
         
         return cell
@@ -111,6 +118,7 @@ extension VotingViewController: VotingTableViewCellDelegate {
         
         EventService.updateEventVote(eventId: event.id, placeIndex: indexPath.row, cnt: cnt)  { status in
             self.votedPlaces[indexPath.row] += cnt
+            self.event.places[indexPath.row].votes += cnt
             let t = Int(cell.totalVotesLabel.text!)! + cnt
             cell.totalVotesLabel.text = "\(t)"
             print("successfully updated vote \(status)")
