@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cBd-b6-agT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events-->
+        <scene sceneID="qri-q0-gYD">
+            <objects>
+                <viewController id="xWM-bY-cx2" customClass="EventsViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G45-8d-k5l"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dj-Ua-Pug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pc2-Cw-hCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pby-aO-6Y3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsTableViewCell" rowHeight="44" id="FSC-zI-jH1" customClass="EventsTableViewCell" customModule="TripPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FSC-zI-jH1" id="MXZ-9f-vhK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3O-4E-NJH">
+                                                    <rect key="frame" x="19" y="0.0" width="348" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="centerY" secondItem="MXZ-9f-vhK" secondAttribute="centerY" id="Li1-zW-PFO"/>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="leading" secondItem="MXZ-9f-vhK" secondAttribute="leadingMargin" constant="11" id="R9C-4n-abc"/>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="top" secondItem="MXZ-9f-vhK" secondAttribute="top" id="ZSe-b8-4Js"/>
+                                                <constraint firstItem="Y3O-4E-NJH" firstAttribute="trailing" secondItem="MXZ-9f-vhK" secondAttribute="trailingMargin" id="oMs-d0-eY6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y3O-4E-NJH" secondAttribute="bottom" id="oow-rf-qGX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventsLabel" destination="Y3O-4E-NJH" id="frE-xx-cQQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xWM-bY-cx2" id="bzN-6u-YBk"/>
+                                    <outlet property="delegate" destination="xWM-bY-cx2" id="5PG-SM-QgG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70769479489999998" green="0.82998743699999999" blue="0.86171478430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pby-aO-6Y3" secondAttribute="bottom" id="5i9-66-vB8"/>
+                            <constraint firstItem="pby-aO-6Y3" firstAttribute="leading" secondItem="Pc2-Cw-hCQ" secondAttribute="leading" id="D5u-lA-IOv"/>
+                            <constraint firstAttribute="bottom" secondItem="pby-aO-6Y3" secondAttribute="bottom" id="DK6-LL-WfT"/>
+                            <constraint firstItem="pby-aO-6Y3" firstAttribute="top" secondItem="Pc2-Cw-hCQ" secondAttribute="top" id="FMO-Ug-NVC"/>
+                            <constraint firstAttribute="trailing" secondItem="pby-aO-6Y3" secondAttribute="trailing" id="KD6-wj-08l"/>
+                            <constraint firstItem="pby-aO-6Y3" firstAttribute="leading" secondItem="Pc2-Cw-hCQ" secondAttribute="leading" id="Phd-o5-nSP"/>
+                            <constraint firstAttribute="trailing" secondItem="pby-aO-6Y3" secondAttribute="trailing" id="Ub4-Do-Cx6"/>
+                            <constraint firstItem="pby-aO-6Y3" firstAttribute="top" secondItem="Pc2-Cw-hCQ" secondAttribute="top" id="tz5-Cn-aOA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="TSw-4v-6KL">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="4kx-o5-0il">
+                            <connections>
+                                <action selector="didTapLogOutButton:" destination="xWM-bY-cx2" id="UHM-i5-3YL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="eventsTableView" destination="pby-aO-6Y3" id="CVn-o2-iF9"/>
+                        <outlet property="logOutButton" destination="4kx-o5-0il" id="o6K-2n-sLI"/>
+                        <segue destination="Jfc-Ke-6SG" kind="show" id="6od-28-Ez5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoD-Sd-w9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="930.58470764617698"/>
+        </scene>
+        <!--Vote-->
+        <scene sceneID="uWd-5N-hmO">
+            <objects>
+                <viewController storyboardIdentifier="VotingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jfc-Ke-6SG" customClass="VotingViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LFz-hD-R9s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dr2-wt-LHT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jTc-CI-AbY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tDJ-cb-FVp">
+                                <rect key="frame" x="20" y="84" width="335" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-wz-Ktb">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToY-ks-wiw">
+                                        <rect key="frame" x="0.0" y="35" width="335" height="28"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beY-1F-1Uw" userLabel="Voting Table View">
+                                <rect key="frame" x="0.0" y="155" width="375" height="463"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VotingTableViewCell" rowHeight="100" id="vqh-pt-ZHc" userLabel="VotingTableViewCell" customClass="VotingTableViewCell" customModule="TripPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="vqh-pt-ZHc" id="68c-zP-Qkh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="votes |" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myz-mo-3Q2">
+                                                    <rect key="frame" x="35" y="0.0" width="51.5" height="44"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tO9-vk-T14">
+                                                    <rect key="frame" x="20" y="48" width="335" height="54.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-QE-RwH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="24"/>
+                                                            <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7t-nh-3U4" userLabel="Place Address Label">
+                                                            <rect key="frame" x="0.0" y="34" width="335" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="5Hz-QE-RwH" secondAttribute="trailing" constant="20" id="7cR-IJ-Vmz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="W7t-nh-3U4" secondAttribute="trailing" constant="20" id="RmQ-HQ-ZPB"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-Bo-AkZ">
+                                                    <rect key="frame" x="20" y="10" width="10.5" height="24"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muA-Ax-YLw">
+                                                    <rect key="frame" x="106.5" y="0.0" width="37" height="44"/>
+                                                    <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                                    <state key="normal" title="Vote"/>
+                                                    <connections>
+                                                        <action selector="didTapVoteButton:" destination="vqh-pt-ZHc" eventType="touchUpInside" id="29e-rx-k8a"/>
+                                                        <action selector="didTapVoteButton:" destination="Jfc-Ke-6SG" eventType="touchUpInside" id="8Pp-kz-yEQ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="myz-mo-3Q2" firstAttribute="centerY" secondItem="bos-Bo-AkZ" secondAttribute="centerY" id="7hO-hJ-Hch"/>
+                                                <constraint firstItem="bos-Bo-AkZ" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leading" constant="20" id="GcD-lI-k3c"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="centerY" secondItem="bos-Bo-AkZ" secondAttribute="centerY" id="Ho8-lM-dHy"/>
+                                                <constraint firstItem="muA-Ax-YLw" firstAttribute="leading" secondItem="myz-mo-3Q2" secondAttribute="trailing" constant="20" id="Kgi-YV-vAM"/>
+                                                <constraint firstItem="myz-mo-3Q2" firstAttribute="leading" secondItem="bos-Bo-AkZ" secondAttribute="trailing" constant="5" id="UM7-8M-uZE"/>
+                                                <constraint firstAttribute="trailing" secondItem="tO9-vk-T14" secondAttribute="trailing" constant="20" id="c0e-SW-4PY"/>
+                                                <constraint firstItem="tO9-vk-T14" firstAttribute="top" secondItem="muA-Ax-YLw" secondAttribute="bottom" constant="5" id="fmn-iG-ZEY"/>
+                                                <constraint firstItem="tO9-vk-T14" firstAttribute="leading" secondItem="68c-zP-Qkh" secondAttribute="leading" constant="20" id="sg4-XK-X9b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="placeAddressLabel" destination="W7t-nh-3U4" id="VUK-01-afU"/>
+                                            <outlet property="placeInfoLabel" destination="5Hz-QE-RwH" id="CaG-oF-3CB"/>
+                                            <outlet property="totalVotesLabel" destination="bos-Bo-AkZ" id="nbW-H1-tEa"/>
+                                            <outlet property="voteButton" destination="muA-Ax-YLw" id="jef-cv-h7t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jfc-Ke-6SG" id="gBD-Qp-IEV"/>
+                                    <outlet property="delegate" destination="Jfc-Ke-6SG" id="b2l-9C-qp7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dr2-wt-LHT" firstAttribute="top" secondItem="beY-1F-1Uw" secondAttribute="bottom" id="4vk-e4-hVd"/>
+                            <constraint firstAttribute="trailing" secondItem="beY-1F-1Uw" secondAttribute="trailing" id="FF0-Ev-eOc"/>
+                            <constraint firstItem="tDJ-cb-FVp" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" constant="20" id="GS0-JN-wsr"/>
+                            <constraint firstItem="tDJ-cb-FVp" firstAttribute="top" secondItem="LFz-hD-R9s" secondAttribute="bottom" constant="20" id="GUK-y8-SrD"/>
+                            <constraint firstAttribute="trailing" secondItem="tDJ-cb-FVp" secondAttribute="trailing" constant="20" id="RmU-K4-OY0"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="top" secondItem="tDJ-cb-FVp" secondAttribute="bottom" constant="8" id="dA9-Oc-WYW"/>
+                            <constraint firstItem="beY-1F-1Uw" firstAttribute="leading" secondItem="jTc-CI-AbY" secondAttribute="leading" id="gaU-xI-tmi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Vote" id="Vou-bc-FjJ">
+                        <barButtonItem key="rightBarButtonItem" image="btn_options_black" id="Vf8-5M-zCV">
+                            <connections>
+                                <action selector="didTapOptionsButton:" destination="Jfc-Ke-6SG" id="FH7-Jb-Y77"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="eventName" destination="unk-wz-Ktb" id="pmP-Dp-ONt"/>
+                        <outlet property="optionsButton" destination="Vf8-5M-zCV" id="DU7-nS-jjH"/>
+                        <outlet property="peopleVoting" destination="ToY-ks-wiw" id="uZj-es-mt3"/>
+                        <outlet property="votingTableView" destination="beY-1F-1Uw" id="iKa-qv-di0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y13-21-F0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2178.4000000000001" y="930.58470764617698"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LCb-37-eKE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBd-b6-agT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab_find_friends_black" id="OxW-st-TCq">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QiE-6E-SOT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xWM-bY-cx2" kind="relationship" relationship="rootViewController" id="8Dq-TL-yhH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rib-Uh-5o0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="930.58470764617698"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_options_black" width="24" height="24"/>
+        <image name="tab_find_friends_black" width="25" height="25"/>
+    </resources>
+</document>

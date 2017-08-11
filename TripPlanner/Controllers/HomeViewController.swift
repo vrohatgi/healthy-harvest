@@ -4,7 +4,7 @@
 //
 //  Created by vanya rohatgi on 7/24/17.
 //  Copyright © 2017 Vanya Rohatgi. All rights reserved.
-//
+//hi here comment
 
 import Foundation
 import UIKit
@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Subviews
     
+    @IBOutlet weak var creditsButton: UIButton!
     @IBOutlet var nextButton: UIBarButtonItem!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var beachesButton: UIButton!
@@ -39,20 +40,26 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var parksButton: UIButton!
     @IBOutlet weak var lakesButton: UIButton!
     @IBOutlet weak var placesTableView: UITableView!
+    @IBOutlet weak var lakesLabel: UILabel!
+    @IBOutlet weak var parksLabel: UILabel!
+    @IBOutlet weak var campingLabel: UILabel!
+    @IBOutlet weak var trailsLabel: UILabel!
+    @IBOutlet weak var poolsLabel: UILabel!
+    @IBOutlet weak var beachesLabel: UILabel!
+    @IBOutlet weak var natureImageView: UIImageView!
+    
     
     // MARK: - IBActions
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        //self.performSegue(withIdentifier: "nextButton", sender: self)
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "FriendsViewController") as! FriendsViewController
         
         self.myPlaces.saveSelectedPlaces(places: self.displayArr)
-
+        
         myVC.eventPlaces = self.myPlaces.buildList(places: [Place](), selectedOnly: true)
-
+        
         navigationController?.pushViewController(myVC, animated: true)
-        print("hi next working")
     }
     
     func fetchActivities(location: String, radius: Int, type: String, keyword: String, key: String) {
@@ -78,7 +85,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 let p = Place(name: info["name"] as! String,
                               vicinity: x,
-                              types: info["types"] as! [String])
+                              types: info["types"] as! [String], votes: 0)
                 
                 list.append(p)
             }
@@ -91,6 +98,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     @IBAction func lakesButtonTapped(_ sender: UIButton) {
+        
+        lakesButton.isSelected = true
+        parksButton.isSelected = false
+        campgroundsButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -100,6 +115,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func parksButtonTapped(_ sender: UIButton) {
+        
+        parksButton.isSelected = true
+        lakesButton.isSelected = false
+        campgroundsButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -109,6 +132,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = true
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -118,6 +149,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func beachesButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = false
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = false
+        beachesButton.isSelected = true
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -127,6 +166,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func trailsButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = false
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = true
+        poolsButton.isSelected = false
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -136,6 +183,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func poolsButtonTapped(_ sender: UIButton) {
+        
+        campgroundsButton.isSelected = false
+        parksButton.isSelected = false
+        lakesButton.isSelected = false
+        trailsButton.isSelected = false
+        poolsButton.isSelected = true
+        beachesButton.isSelected = false
+        
         fetchActivities(
             location: "\(selectedLatitude),\(selectedLongitude)",
             radius: 30000,
@@ -159,6 +214,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         placesTableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let generateRandomImage = Int(arc4random_uniform(4))+1
+        let imageName = "ocean\(generateRandomImage)"
+        
+        natureImageView.image = UIImage(imageLiteralResourceName: imageName)
+    }
+    
     // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -166,6 +228,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return displayArr.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "PlacesTableViewCell"
@@ -183,7 +248,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         //Loop through place.types and add to a new variable sting to display down here \/
-        cell.placesLabel.text = "\(place.name) \(place.vicinity) \(place.types)"
+        cell.placesLabel.text = "\(place.name)"
+        cell.placeAddressLabel.text = "\(place.vicinity)"
         
         
         return cell
@@ -209,9 +275,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 
-
-
-
 extension HomeViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
@@ -233,6 +296,16 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         campgroundsButton.isHidden = false
         parksButton.isHidden = false
         lakesButton.isHidden = false
+        lakesLabel.isHidden = false
+        parksLabel.isHidden = false
+        campingLabel.isHidden = false
+        beachesLabel.isHidden = false
+        trailsLabel.isHidden = false
+        poolsLabel.isHidden = false
+        placesTableView.isHidden = false
+        natureImageView.isHidden = true
+        creditsButton.isHidden = true
+        
         
         dismiss(animated: true, completion: nil)
     }

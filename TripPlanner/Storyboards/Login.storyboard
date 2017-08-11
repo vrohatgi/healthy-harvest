@@ -22,62 +22,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKX-cU-aCV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="265"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icf-NU-t5g">
+                                        <rect key="frame" x="36" y="341" width="305" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.74901960784313726" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="T1e-r2-9mC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
+                                        <state key="normal" title="Register or Log In"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="zdG-cS-yjY" eventType="touchUpInside" id="UUi-9t-WSQ"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="QZf-AP-jWf">
-                                        <rect key="frame" x="68" y="80.5" width="240" height="104.5"/>
+                                        <rect key="frame" x="67" y="158" width="240" height="123.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TripPlanner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VA-Yk-lfX">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="36"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="w a n d e r" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VA-Yk-lfX">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to plan a trip with your friends." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMC-ky-pl2">
-                                                <rect key="frame" x="0.0" y="68.5" width="240" height="36"/>
+                                                <rect key="frame" x="0.0" y="75.5" width="240" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="voJ-hP-kJj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.47194267445406951" green="0.86171478426395942" blue="0.78992422196157552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.70588235294117641" green="0.83137254901960778" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="QZf-AP-jWf" firstAttribute="centerY" secondItem="wKX-cU-aCV" secondAttribute="centerY" id="BH6-cH-Ria"/>
-                                    <constraint firstAttribute="height" constant="265" id="EDW-Nk-loa"/>
-                                    <constraint firstItem="QZf-AP-jWf" firstAttribute="centerX" secondItem="wKX-cU-aCV" secondAttribute="centerX" id="Jcw-U9-GoP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Icf-NU-t5g" secondAttribute="trailing" constant="34" id="MHS-cd-qtb"/>
+                                    <constraint firstItem="QZf-AP-jWf" firstAttribute="centerX" secondItem="wKX-cU-aCV" secondAttribute="centerX" id="P9L-nD-dug"/>
+                                    <constraint firstItem="Icf-NU-t5g" firstAttribute="leading" secondItem="wKX-cU-aCV" secondAttribute="leading" constant="36" id="Uf0-iy-aru"/>
+                                    <constraint firstItem="Icf-NU-t5g" firstAttribute="top" secondItem="QZf-AP-jWf" secondAttribute="bottom" constant="59" id="cnc-Z7-k3u"/>
+                                    <constraint firstItem="QZf-AP-jWf" firstAttribute="top" secondItem="wKX-cU-aCV" secondAttribute="top" constant="158" id="gkd-Rq-Oof"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZ2-6p-XFw">
-                                <rect key="frame" x="133" y="484" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icf-NU-t5g">
-                                <rect key="frame" x="35" y="310" width="305" height="44"/>
-                                <color key="backgroundColor" red="0.2196078431372549" green="0.59215686274509804" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="y06-2B-xkX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Register or Log In"/>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="zdG-cS-yjY" eventType="touchUpInside" id="UUi-9t-WSQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Icf-NU-t5g" secondAttribute="trailing" constant="35" id="Pze-ei-Pwf"/>
-                            <constraint firstAttribute="trailing" secondItem="wKX-cU-aCV" secondAttribute="trailing" id="Ui9-Pg-4tB"/>
-                            <constraint firstItem="wKX-cU-aCV" firstAttribute="leading" secondItem="qpt-Ar-Cai" secondAttribute="leading" id="hgO-VI-ABb"/>
-                            <constraint firstItem="Icf-NU-t5g" firstAttribute="top" secondItem="wKX-cU-aCV" secondAttribute="bottom" constant="25" id="klp-Vi-kQK"/>
-                            <constraint firstItem="Icf-NU-t5g" firstAttribute="leading" secondItem="qpt-Ar-Cai" secondAttribute="leading" constant="35" id="utf-XC-W0e"/>
-                            <constraint firstItem="wKX-cU-aCV" firstAttribute="top" secondItem="YoH-la-hYX" secondAttribute="bottom" id="yjl-MC-J0c"/>
+                            <constraint firstItem="wKX-cU-aCV" firstAttribute="leading" secondItem="qpt-Ar-Cai" secondAttribute="leading" id="6d2-ZZ-3CZ"/>
+                            <constraint firstAttribute="trailing" secondItem="wKX-cU-aCV" secondAttribute="trailing" id="T68-dQ-Nbg"/>
+                            <constraint firstItem="wKX-cU-aCV" firstAttribute="bottom" secondItem="PoK-op-G1W" secondAttribute="top" id="UVz-B1-fbY"/>
+                            <constraint firstItem="wKX-cU-aCV" firstAttribute="top" secondItem="YoH-la-hYX" secondAttribute="bottom" id="YZb-al-fAW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="du1-wW-mam"/>
@@ -103,37 +98,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hBp-SE-Gvx">
-                                <rect key="frame" x="35" y="65" width="305" height="209.5"/>
+                                <rect key="frame" x="35" y="65" width="305" height="229.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHM-af-nmM">
-                                        <rect key="frame" x="59.5" y="0.0" width="186.5" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHM-af-nmM">
+                                        <rect key="frame" x="44.5" y="0.0" width="216" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a username so your friends can find you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-a9-DY4">
-                                        <rect key="frame" x="4" y="47" width="297" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your username is how your friends find you on Wander." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlr-a9-DY4">
+                                        <rect key="frame" x="14" y="57.5" width="277" height="48"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Light" family="PingFang TC" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnE-RU-uPL">
-                                        <rect key="frame" x="0.0" y="103.5" width="305" height="44"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="305" height="44"/>
                                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="npS-HP-t6Q"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxu-NU-k2N">
-                                        <rect key="frame" x="0.0" y="165.5" width="305" height="44"/>
-                                        <color key="backgroundColor" red="0.38039215686274508" green="0.6588235294117647" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="185.5" width="305" height="44"/>
+                                        <color key="backgroundColor" red="0.98998647928237915" green="0.74966937303543091" blue="0.50407868623733521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="AbS-RU-Qmo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Medium" family="PingFang TC" pointSize="17"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="nextButtonTapped:" destination="K1n-AF-DIx" eventType="touchUpInside" id="rmM-wW-3ek"/>
@@ -148,7 +143,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hBp-SE-Gvx" secondAttribute="trailing" constant="35" id="8Ug-ql-ByQ"/>
                             <constraint firstItem="hBp-SE-Gvx" firstAttribute="leading" secondItem="U4b-02-8cM" secondAttribute="leading" constant="35" id="98N-eb-rF7"/>
@@ -169,7 +164,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BI7-gV-Nfn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iy0-WG-jMq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iy0-WG-jMq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

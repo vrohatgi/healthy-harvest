@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class EventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -17,7 +18,8 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     var authHandle: AuthStateDidChangeListenerHandle?
     var eventPlaces = [Int: String]()
-
+    var eventNames = [Event]()
+    
     
     // MARK: - VC Lifecycle
     
@@ -48,20 +50,44 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - IBActions
     
     @IBAction func didTapLogOutButton(_ sender: UIBarButtonItem) {
-        print("i am in logout!")
-        
         do {
             try Auth.auth().signOut()
         } catch let error as NSError {
             assertionFailure("Error signing out: \(error.localizedDescription)")
         }
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        print("iamsignedout")
+        if editingStyle == .delete {
+            
+            let ref = Database.database().reference().child("users").child(User.current.uid).child("events").child(eventNames[indexPath.row].id)
+           
+            ref.removeValue()
+            eventNames.remove(at: indexPath.row)
+
+            self.eventsTableView.reloadData()
+            
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return eventNames.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "VotingViewController") as! VotingViewController
+        
+        myVC.eventID = self.eventNames[indexPath.row].id
+        
+        navigationController?.pushViewController(myVC, animated: true)
+        
+        print("hi selectRow working")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,7 +98,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
         //let place = places[indexPath.row]
         cell.accessoryType = .none
-        //cell.placesLabel.text = place
+        cell.eventsLabel.text = "\(eventNames[indexPath.row].eventName) | \(eventNames[indexPath.row].createdBy)"
         
         // Configure the cell...
         
@@ -85,6 +111,18 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UserService.getEvents { [unowned self] (events) in
+            self.eventNames = events
+            
+            DispatchQueue.main.async {
+                self.eventsTableView.reloadData()
+            }
+        }
     }
 
 }
