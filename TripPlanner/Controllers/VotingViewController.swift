@@ -72,7 +72,7 @@ class VotingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VotingTableViewCell") as! VotingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VotingTableViewCell", for: indexPath) as! VotingTableViewCell
         
         cell.delegate = self as VotingTableViewCellDelegate
 
