@@ -109,7 +109,7 @@
 		2D9D2BBE1F259E5F00F4B343 = {
 			isa = PBXGroup;
 			children = (
-				2D9D2BC91F259E5F00F4B343 /* TripPlanner */,
+				2D9D2BC91F259E5F00F4B343 /* HealthyHarvest */,
 				2D9D2BC81F259E5F00F4B343 /* Products */,
 				2693F93819D9FE036187CCB6 /* Pods */,
 				B0C7DAF683F5AAC7CA39C4F9 /* Frameworks */,
@@ -124,7 +124,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D9D2BC91F259E5F00F4B343 /* TripPlanner */ = {
+		2D9D2BC91F259E5F00F4B343 /* HealthyHarvest */ = {
 			isa = PBXGroup;
 			children = (
 				2D9D2BCA1F259E5F00F4B343 /* AppDelegate.swift */,
@@ -137,7 +137,7 @@
 				2D9D2C011F2676BA00F4B343 /* Extensions */,
 				2D6896BC1F2BAD7800EEAEFE /* Views */,
 			);
-			path = TripPlanner;
+			path = HealthyHarvest;
 			sourceTree = "<group>";
 		};
 		2D9D2BEC1F26575300F4B343 /* View Controllers */ = {
@@ -467,7 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D8FYK73U57;
-				INFOPLIST_FILE = "$(SRCROOT)/TripPlanner/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HealthyHarvest/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.HealthyHarvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D8FYK73U57;
-				INFOPLIST_FILE = "$(SRCROOT)/TripPlanner/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HealthyHarvest/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.HealthyHarvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
