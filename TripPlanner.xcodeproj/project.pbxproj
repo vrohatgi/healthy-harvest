@@ -469,7 +469,7 @@
 				DEVELOPMENT_TEAM = D8FYK73U57;
 				INFOPLIST_FILE = "$(SRCROOT)/TripPlanner/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.TripPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.HealthyHarvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -483,7 +483,7 @@
 				DEVELOPMENT_TEAM = D8FYK73U57;
 				INFOPLIST_FILE = "$(SRCROOT)/TripPlanner/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.TripPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vanyarohatgi.HealthyHarvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
