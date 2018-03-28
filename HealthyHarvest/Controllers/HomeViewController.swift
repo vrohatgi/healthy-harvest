@@ -33,19 +33,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var creditsButton: UIButton!
     @IBOutlet var nextButton: UIBarButtonItem!
     @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var beachesButton: UIButton!
-    @IBOutlet weak var trailsButton: UIButton!
-    @IBOutlet weak var poolsButton: UIButton!
-    @IBOutlet weak var campgroundsButton: UIButton!
-    @IBOutlet weak var parksButton: UIButton!
-    @IBOutlet weak var lakesButton: UIButton!
     @IBOutlet weak var placesTableView: UITableView!
-    @IBOutlet weak var lakesLabel: UILabel!
-    @IBOutlet weak var parksLabel: UILabel!
-    @IBOutlet weak var campingLabel: UILabel!
-    @IBOutlet weak var trailsLabel: UILabel!
-    @IBOutlet weak var poolsLabel: UILabel!
-    @IBOutlet weak var beachesLabel: UILabel!
     @IBOutlet weak var natureImageView: UIImageView!
     
     
@@ -96,115 +84,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
-    @IBAction func lakesButtonTapped(_ sender: UIButton) {
-        
-        lakesButton.isSelected = true
-        parksButton.isSelected = false
-        campgroundsButton.isSelected = false
-        trailsButton.isSelected = false
-        poolsButton.isSelected = false
-        beachesButton.isSelected = false
-        
-        fetchActivities(
-            location: "\(selectedLatitude),\(selectedLongitude)",
-            radius: 30000,
-            type: "",
-            keyword: "lake",
-            key: activitiesKey)
-    }
-    
-    @IBAction func parksButtonTapped(_ sender: UIButton) {
-        
-        parksButton.isSelected = true
-        lakesButton.isSelected = false
-        campgroundsButton.isSelected = false
-        trailsButton.isSelected = false
-        poolsButton.isSelected = false
-        beachesButton.isSelected = false
-        
-        fetchActivities(
-            location: "\(selectedLatitude),\(selectedLongitude)",
-            radius: 30000,
-            type: "",
-            keyword: "park",
-            key: activitiesKey)
-    }
-    
-    @IBAction func campgroundsButtonTapped(_ sender: UIButton) {
-        
-        campgroundsButton.isSelected = true
-        parksButton.isSelected = false
-        lakesButton.isSelected = false
-        trailsButton.isSelected = false
-        poolsButton.isSelected = false
-        beachesButton.isSelected = false
-
-        fetchActivities(
-            location: "\(selectedLatitude),\(selectedLongitude)",
-            radius: 30000,
-            type: "",
-            keyword: "campground",
-            key: activitiesKey)
-    }
-    
-    @IBAction func beachesButtonTapped(_ sender: UIButton) {
-        
-        campgroundsButton.isSelected = false
-        parksButton.isSelected = false
-        lakesButton.isSelected = false
-        trailsButton.isSelected = false
-        poolsButton.isSelected = false
-        beachesButton.isSelected = true
-        
-        fetchActivities(
-            location: "\(selectedLatitude),\(selectedLongitude)",
-            radius: 30000,
-            type: "",
-            keyword: "beach",
-            key: activitiesKey)
-    }
-    
-    @IBAction func trailsButtonTapped(_ sender: UIButton) {
-        
-        campgroundsButton.isSelected = false
-        parksButton.isSelected = false
-        lakesButton.isSelected = false
-        trailsButton.isSelected = true
-        poolsButton.isSelected = false
-        beachesButton.isSelected = false
-        
-        fetchActivities(
-            location: "\(selectedLatitude),\(selectedLongitude)",
-            radius: 30000,
-            type: "",
-            keyword: "trail",
-            key: activitiesKey)
-    }
-    
-    @IBAction func poolsButtonTapped(_ sender: UIButton) {
-        
-        campgroundsButton.isSelected = false
-        parksButton.isSelected = false
-        lakesButton.isSelected = false
-        trailsButton.isSelected = false
-        poolsButton.isSelected = true
-        beachesButton.isSelected = false
-        
-        fetchActivities(
-            location: "\(selectedLatitude),\(selectedLongitude)",
-            radius: 30000,
-            type: "",
-            keyword: "pool",
-            key: activitiesKey)
-    }
-    
     @IBAction func editingSearchBegin(_ sender: UITextField) {
         
         // Present the Autocomplete view controller when the button is pressed.
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
+        present(autocompleteController, animated: true, completion: {
+            self.fetchActivities(
+                location: "\(self.selectedLatitude),\(self.selectedLongitude)",
+                radius: 30000,
+                type: "",
+                keyword: "farmers+market",
+                key: self.activitiesKey)
+        })
     }
     
     override func viewDidLoad() {
@@ -212,6 +104,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.nextButton.isEnabled = false
         placesTableView.delegate = self
         placesTableView.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -290,18 +183,7 @@ extension HomeViewController: GMSAutocompleteViewControllerDelegate {
         
         locationTextField.text = "\(place.formattedAddress ?? space)"
         
-        beachesButton.isHidden = false
-        trailsButton.isHidden = false
-        poolsButton.isHidden = false
-        campgroundsButton.isHidden = false
-        parksButton.isHidden = false
-        lakesButton.isHidden = false
-        lakesLabel.isHidden = false
-        parksLabel.isHidden = false
-        campingLabel.isHidden = false
-        beachesLabel.isHidden = false
-        trailsLabel.isHidden = false
-        poolsLabel.isHidden = false
+        
         placesTableView.isHidden = false
         natureImageView.isHidden = true
         creditsButton.isHidden = true

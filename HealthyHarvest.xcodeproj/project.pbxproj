@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D9D2BC21F259E5F00F4B343 /* Build configuration list for PBXProject "TripPlanner" */;
+			buildConfigurationList = 2D9D2BC21F259E5F00F4B343 /* Build configuration list for PBXProject "HealthyHarvest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -492,7 +492,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D9D2BC21F259E5F00F4B343 /* Build configuration list for PBXProject "TripPlanner" */ = {
+		2D9D2BC21F259E5F00F4B343 /* Build configuration list for PBXProject "HealthyHarvest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D9D2BD71F259E5F00F4B343 /* Debug */,

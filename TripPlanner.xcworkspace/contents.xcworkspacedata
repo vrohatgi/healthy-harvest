@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TripPlanner.xcodeproj">
+      location = "group:/Users/vanya/healthy-harvest/HealthyHarvest.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
